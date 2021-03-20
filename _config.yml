@@ -1,2 +1,4 @@
 theme: jekyll-theme-hacker
 title: Hack Life Commands
+github:
+    is_project_page: false
