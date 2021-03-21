@@ -44,6 +44,7 @@ maltego # recherche d'infos sur une personne, un nom de domaine...
 
 
 ## Google dorks Search filters
+
 | Filter                                     | Description                                                                                       |
 | :----------------------------------------- | :------------------------------------------------------------------------------------------------ |
 | `allintext:"keyword"`                      | Searches for occurrences of all the keywords given.                                               |
