@@ -3,7 +3,7 @@
 
 
 <details>
-<summary>Testing collapsible list</summary>
+
 
 1. [Bruteforce](attacks/bruteforce/index.md)
 2. [DDOS](attacks/ddos/index.md)
