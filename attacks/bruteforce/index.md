@@ -2,19 +2,19 @@
 
 ### Hydra
 
-Hydra : outil développé par THC (The Hacker's Choice), utilise des attaques brutes sur différents protocoles
+Hydra: tool developed by THC (The Hacker's Choice), uses bruteforce attacks on different protocols
 
 
 ```sh
 hydra -l root -x 1:9:aA1 [@IP] ssh
 ```
 
-* l : utilisateur pour lequel il faut tester
-* x : les mdp testés auront entre 1 et 9 caractères avec min et MAJ et des chiffres
+* l : user to test for
+* x: the tested password will have between 1 and 9 characters with min and shift and numbers
 * V : verbose
 
 ```sh
-hydra -V -L usernames.txt -P pass.txt [@IP] [protocol] # effectue les combinaisons entre chaque mot des fichiers textes.
+hydra -V -L usernames.txt -P pass.txt [@IP] [protocol] # performs the combinations between each word in the text files.
 ```
 
 
@@ -22,9 +22,8 @@ hydra -V -L usernames.txt -P pass.txt [@IP] [protocol] # effectue les combinaiso
 hydra [@Host] -V -L usernames.txt -P pass.txt http-get-form "path/to/the/form/:username=^USER^&password=^PASS^&Login:F-incorrect:H=cookie:PHPSESSID=[cookie];security=high"
 ```
 
-Login = nom du bouton et on répète tant que c'est incorrect
+Login = name of the button and repeat as long as it is incorrect
 
-informations facilement récupérables avec burpSuite
 
 <br>
 <br>
@@ -32,27 +31,27 @@ informations facilement récupérables avec burpSuite
 ___
 ### John The Ripper (JTR)
 
-#### Utilisation par défaut
+#### Default use
 
 ```sh
-john --wordlist=[fichierWordList] [fichierACraquer] # Pour faire un crack basé sur une wordList
+john --wordlist=[fichierWordList] [fichierACraquer] # To make a crack based on a wordList
 ```
 
 ```sh
-john --list=formats # tous les types de hash que peut craquer JTR
+john --list=formats # all hash types that can be cracked by JTR
 ```
-#### Cracker /etc/shadow
+#### Crack /etc/shadow
 
 ```sh
 cp /etc/passwd ./
 cp /etc/shadow ./
 unshadow passwd shadow > passwords
-john passwords # détection automatique du hash et commence à craquer (appuyer sur une touche pour connaitre l'évolution (sauf 'q' car cela quitte)
-john -show passwords # dans le dossier où on effectue le crack => pour vérifier ce qui a été trouvé
+john passwords # automatic detection of the hash and starts cracking (press a key to know the evolution (except 'q' because it quits)
+john -show passwords # in the folder where the crack is made => to check what has been found
 ```
 
 
-#### Récupérer la passphrase d'une clé privée
+#### Recovering the passphrase of a private key
 
 ```sh
 ssh2john id_rsa > hash.txt
