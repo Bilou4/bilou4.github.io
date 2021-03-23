@@ -13,6 +13,7 @@
 6. [SQL injection](attacks/sqli/index.md)
 7. [Buffer Overflow](attacks/bufferOverflow/index.md)
 8. [Click & Cursor Jacking](attacks/click&cursorJacking/index.md)
+9. [CSRF](attacks/csrf/index.md)
 
 </details>
 
