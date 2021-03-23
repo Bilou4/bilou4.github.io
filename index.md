@@ -10,7 +10,8 @@
 3. [Network Sniffing](attacks/networkSniffing/index.md)
 4. [Phone Hack](attacks/phoneHack/index.md)
 5. [Social Engineering](attacks/socialEngineering/index.md)
-6. [SQL inkection](attacks/sqli/index.md)
+6. [SQL injection](attacks/sqli/index.md)
+7. [Buffer Overflow](attacks/bufferOverflow/index.md)
 
 </details>
 
@@ -25,7 +26,6 @@
 
 
 <details>
-<!-- <summary>Testing collapsible list</summary> -->
 
 1. Script 1
 2. ...
