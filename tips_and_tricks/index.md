@@ -65,8 +65,6 @@ maltego # recherche d'infos sur une personne, un nom de domaine...
 
 
 <details>
-<summary>Google Dorks Operators</summary>
-
 
 #### OR - AND
 
