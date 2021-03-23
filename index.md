@@ -12,6 +12,7 @@
 5. [Social Engineering](attacks/socialEngineering/index.md)
 6. [SQL injection](attacks/sqli/index.md)
 7. [Buffer Overflow](attacks/bufferOverflow/index.md)
+8. [Click & Cursor Jacking](attacks/click&cursorJacking/index.md)
 
 </details>
 
