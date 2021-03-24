@@ -14,6 +14,9 @@
 7. [Buffer Overflow](attacks/bufferOverflow/index.md)
 8. [Click & Cursor Jacking](attacks/click&cursorJacking/index.md)
 9. [CSRF](attacks/csrf/index.md)
+10. [DNS Spoofing](attacks/dnsSpoofing/index.md)
+11. [MITM](attacks/mitm/index.md)
+12. [LFI & RFI](attacks/lfi&rfi/index.md)
 
 </details>
 
