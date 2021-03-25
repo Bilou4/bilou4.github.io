@@ -17,6 +17,10 @@
 10. [DNS Spoofing](attacks/dnsSpoofing/index.md)
 11. [MITM](attacks/mitm/index.md)
 12. [LFI & RFI](attacks/lfi&rfi/index.md)
+13. [Network Spoofing](attacks/networkSpoofing/index.md)
+14. [Wifi](attacks/wifi/index.md)
+15. [XSS](attacks/xss/index.md)
+16. [Zombie scanning](attacks/zombieScanning/index.md)
 
 </details>
 
