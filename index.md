@@ -28,6 +28,7 @@
 ## CTF
 
 1. [CTF phases](tips_and_tricks/index.md)
+2. [Google Dorks](tips_and_tricks/googleDorks/index.md)
 
 
 ## Scripts
