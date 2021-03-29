@@ -41,3 +41,7 @@
 2. ...
 
 </details>
+
+## Other Tools & Tips
+
+[Tools & Tips](tips_and_tricks/otherToolsAndTips/index.md)
