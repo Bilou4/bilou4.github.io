@@ -31,17 +31,12 @@
 2. [Google Dorks](tips_and_tricks/googleDorks/index.md)
 
 
-## Scripts
-
-
+## Scripts, Git Repository & Tools
 
 <details>
 
-1. Script 1
-2. ...
+1. [Scripts](scripts/index.md)
+2. [Git repository](gitRepository/index.md)
+3. [Tools & Tips](tips_and_tricks/otherToolsAndTips/index.md)
 
 </details>
-
-## Other Tools & Tips
-
-[Tools & Tips](tips_and_tricks/otherToolsAndTips/index.md)
