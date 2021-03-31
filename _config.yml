@@ -3,3 +3,5 @@ title: Hack Life Commands
 markdown: kramdown
 kramdown:
     parse_block_html: true
+exclude:
+    - test.txt
