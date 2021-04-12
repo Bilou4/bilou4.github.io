@@ -11,7 +11,7 @@ Aims to create an offset between where you appear to click and where you actuall
 
 Example of cursorjacking code
 
-```HTML
+{% highlight html %}
 <html>
     <head>
         <title>A good example of cursorjacking</title>
@@ -57,4 +57,4 @@ Example of cursorjacking code
         </script>
     </body>
 </html>
-```
+{% endhighlight %}

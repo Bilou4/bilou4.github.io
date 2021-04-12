@@ -1,5 +1,7 @@
 # Google dorks Search filters
 
+## Summary
+
 | Filter                                     | Description                                                                                       |
 | :----------------------------------------- | :------------------------------------------------------------------------------------------------ |
 | `allintext:"keyword"`                      | Searches for occurrences of all the keywords given.                                               |
@@ -19,7 +21,7 @@
 | `cache:www.google.com`                     | Shows the version of the web page that Google has in its cache.                                   |
 
 
-
+### Features
 
 #### OR - AND
 
@@ -54,3 +56,7 @@ Putting an asterisk in a search tells Google ‘I don’t know what goes  here�
 ```
 site:*.com
 ```
+
+## Tools
+
+[https://github.com/Zarcolio/sitedorks](https://github.com/Zarcolio/sitedorks) : Search Google/Bing/Ecosia/DuckDuckGo/Yandex/Yahoo for a search term with a default set of websites, bug bounty programs or a custom collection.

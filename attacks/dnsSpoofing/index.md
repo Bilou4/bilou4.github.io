@@ -80,5 +80,3 @@ Now as soon as the victim visits the site indicated in etter.dns, they will be r
 
 It is possible to detect if someone is using this technique on our network (https://null-byte.wonderhowto.com/how-to/tutorial-dns-spoofing-0167796)
 
-
-Translated with www.DeepL.com/Translator (free version)

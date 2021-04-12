@@ -49,7 +49,6 @@ allow to include a remote file (mainly shell - command execution - XSS - DOS...)
 
 
 ```sh
-
 url...?page=include.php
 
 url...?page=http://www.google.fr # will add the google page to the page ==> get a reverse shell

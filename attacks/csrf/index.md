@@ -28,7 +28,7 @@ There is a (really lousy) platform that offers to change your password in a GET 
 
 We can therefore create an HTML file as follows (locally possible but you need an internet connection for the request).
 
-```html
+{% highlight sh %}
 <html>
     <body>
         <form action="http://192.168.133.129/dvwa/vulnerabilites/csrf/?" method="GET">
@@ -43,7 +43,7 @@ We can therefore create an HTML file as follows (locally possible but you need a
     </body>
 
 </html>
-```
+{% endhighlight %}
 
 The latter will make the request with the appropriate parameters and change the password from titi to tutu.
 
