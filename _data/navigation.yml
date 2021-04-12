@@ -1,0 +1,38 @@
+- title: Posts
+  url: /posts/
+- title: Google Dorks
+  url: /google-dorks/
+- title: Attacks
+  sublinks:
+      - title: BufferOverflow
+        url: /attacks/bufferOverflow/
+      - title: Bruteforce
+        url: /attacks/bruteforce/
+      - title: Click & Cursor jacking
+        url: /attacks/click&cursorJacking/
+      - title: CSRF
+        url: /attacks/csrf/
+      - title: DDOS
+        url: /attacks/ddos/
+      - title: DNS Spoofing
+        url: /attacks/dnsSpoofing/
+      - title: LFI & RFI
+        url: /attacks/lfi&rfi/
+      - title: MITM
+        url: /attacks/mitm/
+      - title: Network Sniffing
+        url: /attacks/networkSniffing/
+      - title: Network Spoofing
+        url: /attacks/networkSpoofing/
+      - title: Phone Hack
+        url: /attacks/phoneHack/
+      - title: Social Engineering
+        url: /attacks/socialEngineering/
+      - title: SQL injection
+        url: /attacks/sqli/
+      - title: Wifi
+        url: /attacks/wifi/
+      - title: XSS
+        url: /attacks/xss/
+      - title: Zombie scanning
+        url: /attacks/zombieScanning/
