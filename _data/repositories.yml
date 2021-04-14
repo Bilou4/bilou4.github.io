@@ -1,0 +1,248 @@
+- class: A
+  projects:
+      - url: https://github.com/rust-unofficial/awesome-rust
+        name:
+        description:
+        categories:
+      - url: https://github.com/coreb1t/awesome-pen-cheat-sheets
+        name:
+        description:
+        categories:
+      - url: https://github.com/luong-komorebi/Awesome-Linux-Software
+        name:
+        description:
+        categories:
+      - url: https://asciinema.org/
+        name:
+        description: Create video of a terminal, simple recording, copy & paste, embedding. This is just text so you can do CTRL+C & CTRL+V on the video.
+        categories:
+      - url: https://www.browserling.com/tools/aes-decrypt
+- class: B
+  projects:
+      - url: https://github.com/microsoft/botbuilder-python
+        name:
+        description:
+        categories:
+      - url: https://doc.ubuntu-fr.org/borgbackup
+- class: C
+  projects:
+      - url: https://github.com/jpillora/chisel
+        name:
+        description:
+        categories:
+      - url: https://github.com/dr5hn/countries-states-cities-database
+        name:
+        description:
+        categories:
+      - url: https://github.com/chubin/cheat.sh
+        name:
+        description:
+        categories:
+- class: D
+  projects:
+      - url: https://github.com/raspberrypi/documentation
+        name:
+        description:
+        categories:
+      - url: https://github.com/pavlobu/deskreen
+        name:
+        description:
+        categories:
+      - url: https://github.com/ihebski/DefaultCreds-cheat-sheet
+        name:
+        description:
+        categories:
+      - url: https://github.com/digininja/DVWA
+        name:
+        description:
+        categories:
+- class: E
+  projects:
+
+- class: F
+  projects:
+      - url: https://github.com/epi052/feroxbuster
+        name:
+        description:
+        categories:
+      - url: https://github.com/firstcontributions/first-contributions
+- class: G
+  projects:
+      - url: https://github.com/gradyh/GradyHillhouseGarduino
+        name:
+        description:
+        categories:
+      - url: https://github.com/conwnet/github1s
+        name:
+        description: Need to explore a project on github quickly without cloning it? Just add '1s' after 'github' in the url bar to access the project in a vs code instance, without leaving the browser.
+        categories:
+- class: H
+  projects:
+      - url: https://github.com/LasCC/Hack-Tools
+        name:
+        description:
+        categories:
+      - url: https://github.com/megadose/holehe
+        name:
+        description:
+        categories:
+- class: I
+  projects:
+- class: J
+  projects:
+      - url: https://github.com/lydiahallie/javascript-questions
+        name:
+        description:
+        categories:
+- class: K
+  projects:
+      - url: https://github.com/cheesecakeufo/komorebi
+        name:
+        description:
+        categories:
+- class: L
+  projects:
+      - url: https://github.com/0xAX/linux-insides
+        name:
+        description:
+        categories:
+      - url: https://github.com/torvalds/linux
+        name:
+        description:
+        categories:
+      - url: https://github.com/josharsh/100LinesOfCode
+        name:
+        description:
+        categories:
+- class: M
+  projects:
+      - url: https://github.com/vxunderground/MalwareSourceCode
+        name:
+        description:
+        categories:
+      - url: https://github.com/microsoft/msticpy
+        name:
+        description:
+        categories:
+- class: N
+  projects:
+- class: O
+  projects:
+      - url: https://github.com/OlivierLaflamme/Offensive-Go-Scripts
+        name:
+        description:
+        categories:
+- class: P
+  projects:
+      - url: https://github.com/waveform80/picamera
+        name:
+        description:
+        categories:
+      - url: https://github.com/penmonkey/php-reverse-shell
+        name:
+        description:
+        categories:
+      - url: https://github.com/swisskyrepo/PayloadsAllTheThings
+        name:
+        description:
+        categories:
+- class: Q
+  projects:
+- class: R
+  projects:
+      - url: https://github.com/willmcgugan/rich
+        name: Rich
+        description:
+        categories:
+      - url: https://github.com/f0rb1dd3n/Reptile
+        name:
+        description:
+        categories:
+- class: S
+  projects:
+      - url: https://github.com/Genymobile/scrcpy
+        name:
+        description:
+        categories:
+      - url: https://github.com/Stellarium/stellarium
+        name:
+        description:
+        categories:
+      - url: https://github.com/Stellarium/stellarium--engine
+        name:
+        description:
+        categories:
+      - url: https://github.com/Genymobile/scrcpy
+        name:
+        description:
+        categories:
+      - url: https://github.com/SySS-Research/Seth
+        name:
+        description:
+        categories:
+      - url: https://github.com/danielmiessler/SecLists
+        name:
+        description:
+        categories:
+      - url: https://github.com/king-millez/snapmap-archiver
+        name:
+        description:
+        categories:
+      - url: https://github.com/mytechnotalent/Reverse-Engineering
+        name:
+        description:
+        categories:
+      - url: https://github.com/six2dez/reconftw
+        name:
+        description:
+        categories:
+      - url: https://www.snort.org/
+        name:
+        description:
+        categories:
+      - url: http://www.squid-cache.org/
+        name:
+        description:
+        categories:
+      - url: https://github.com/marionebl/svg-term-cli
+        name:
+        description: If you need to embed the video in Markdown.
+        categories:
+- class: T
+  projects:
+      - url: https://github.com/hackerschoice/thc-tips-tricks-hacks-cheat-sheet
+        name:
+        description:
+        categories:
+- class: U
+  projects:
+      - url: https://github.com/jopohl/urh
+        name:
+        description:
+        categories:
+      - url: https://github.com/sc0tfree/updog
+        name:
+        description:
+        categories:
+- class: V
+  projects:
+      - url: https://github.com/hashicorp/vagrant
+        name:
+        description:
+        categories:
+      - url: https://github.com/microsoft/vscode
+        name:
+        description:
+        categories:
+- class: W
+  projects:
+      - url: https://github.com/chubin/wttr.in
+        name:
+        description:
+        categories:
+- class: X
+  projects:
+- class: Y
+  projects:
+- class: Z
+  projects:

@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+{%- include head.html -%}
+
+
+  <body>
+    {%- include header.html -%}
+
+    <div class="container">
+      <section id="main_content">
+          <h1>{{ page.title }}</h1>
+        {% for obj in site.data.repositories %}
+            {% assign psize = obj.projects | size %}
+            {% if psize != 0 %}
+                <h2>{{obj.class}}</h2>
+                {% for repository in obj.projects %}
+                    <a href="{{repository.url}}">{{ repository.name }}</a>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        {{ content }}
+      </section>
+    </div>
+
+</body>
+</html>
