@@ -2,6 +2,8 @@
   url: /posts/
 - title: Google Dorks
   url: /google-dorks/
+- title: Cool Stuff
+  url: /repositories/
 - title: Attacks
   sublinks:
       - title: BufferOverflow
