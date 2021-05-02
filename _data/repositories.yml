@@ -2,15 +2,15 @@
   projects:
       - url: https://github.com/rust-unofficial/awesome-rust
         name: awesome-rust
-        description:
+        description: A curated list of Rust code and resources.
         categories:
-      - url: https://github.com/coreb1t/awesome-pen-cheat-sheets
+      - url: https://github.com/coreb1t/awesome-pentest-cheat-sheets
         name: awesome-pen-cheat-sheets
-        description:
+        description: Collection of the cheat sheets useful for pentesting
         categories:
       - url: https://github.com/luong-komorebi/Awesome-Linux-Software
         name: Awesome-Linux-Software
-        description:
+        description: A list of awesome applications, software, tools and other materials for Linux distros.
         categories:
       - url: https://asciinema.org/
         name: Asciinema
@@ -18,49 +18,49 @@
         categories:
       - url: https://www.browserling.com/tools/aes-decrypt
         name: aes-decrypt
-        description:
+        description: World's simplest AES decryptor.
         categories:
 - class: B
   projects:
       - url: https://github.com/microsoft/botbuilder-python
         name: botbuilder-python
-        description:
+        description: The Microsoft Bot Framework provides what you need to build and connect intelligent bots that interact naturally wherever your users are talking, from text/sms to Skype, Slack, Office 365 mail and other popular services.
         categories:
       - url: https://doc.ubuntu-fr.org/borgbackup
         name: borgbackup
-        description:
+        description: extremely simple but powerful backup tool (with deduplication support)
         categories:
 - class: C
   projects:
       - url: https://github.com/jpillora/chisel
         name: chisel
-        description:
+        description: A fast TCP/UDP tunnel over HTTP
         categories:
       - url: https://github.com/dr5hn/countries-states-cities-database
         name: countries states cities database
-        description:
+        description: World countries, states, regions, provinces, cities, towns in JSON, SQL, XML, PLIST, YAML, and CSV. All Countries, States, Cities with ISO2, ISO3, Country Code, Phone Code, Capital, Native Language, Timezones, Latitude, Longitude, Region, Subregion, Flag Emoji, and Currency.
         categories:
       - url: https://github.com/chubin/cheat.sh
         name: cheat.sh
-        description:
+        description: the only cheat sheet you need
         categories:
 - class: D
   projects:
       - url: https://github.com/raspberrypi/documentation
         name: Documentation (Raspberry Pi)
-        description:
+        description: Official documentation for the Raspberry Pi
         categories:
       - url: https://github.com/pavlobu/deskreen
         name: deskreen
-        description:
+        description: Deskreen turns any device with a web browser into a secondary screen for your computer
         categories:
       - url: https://github.com/ihebski/DefaultCreds-cheat-sheet
         name: DefaultCreds-cheat-sheet
-        description:
+        description: One place for all the default credentials to assist the Blue/Red teamers activities on finding devices with default password
         categories:
       - url: https://github.com/digininja/DVWA
         name: Dammn Vulnerable Web App
-        description:
+        description: PHP/MySQL web application that is damn vulnerable. Its main goals are to be an aid for security professionals to test their skills and tools in a legal environment, help web developers better understand the processes of securing web applications and aid teachers/students to teach/learn web application security in a class room environment.
         categories:
 - class: E
   projects:
@@ -69,31 +69,31 @@
   projects:
       - url: https://github.com/epi052/feroxbuster
         name: Feroxbuster
-        description:
+        description: A fast, simple, recursive content discovery tool written in Rust.
         categories:
       - url: https://github.com/firstcontributions/first-contributions
         name: first-contributions
-        description:
+        description: Help beginners to contribute to open source projects
         categories:
 - class: G
   projects:
       - url: https://github.com/gradyh/GradyHillhouseGarduino
         name: Grady Hill house Garduino
-        description:
+        description: Arduino Garden Controller and Data Logger
         categories:
       - url: https://github.com/conwnet/github1s
         name: Github1s
-        description: Need to explore a project on github quickly without cloning it? Just add '1s' after 'github' in the url bar to access the project in a vs code instance, without leaving the browser.
+        description: One second to read GitHub code with VS Code.
         categories:
 - class: H
   projects:
       - url: https://github.com/LasCC/Hack-Tools
         name: Hack-Tools
-        description:
+        description: The all-in-one Red Team extension for Web Pentester
         categories:
       - url: https://github.com/megadose/holehe
         name: Holehe
-        description:
+        description: holehe allows you to check if the mail is used on different sites like twitter, instagram and will retrieve information on sites with the forgotten password function.
         categories:
 - class: I
   projects:
@@ -101,37 +101,37 @@
   projects:
       - url: https://github.com/lydiahallie/javascript-questions
         name: javascript questions
-        description:
+        description: A long list of (advanced) JavaScript questions, and their explanations
         categories:
 - class: K
   projects:
       - url: https://github.com/cheesecakeufo/komorebi
         name: komorebi
-        description:
+        description: A beautiful and customizable wallpapers manager for Linux
         categories:
 - class: L
   projects:
       - url: https://github.com/0xAX/linux-insides
         name: linux-insides
-        description:
+        description: A little bit about a linux kernel
         categories:
       - url: https://github.com/torvalds/linux
         name: Linux
-        description:
+        description: Linux kernel source tree
         categories:
       - url: https://github.com/josharsh/100LinesOfCode
         name: 100 lines of Code
-        description:
+        description: Let's build something productive in less than 100 Lines of Code.
         categories:
 - class: M
   projects:
       - url: https://github.com/vxunderground/MalwareSourceCode
         name: Malware source Code
-        description:
+        description: Collection of malware source code for a variety of platforms in an array of different programming languages.
         categories:
       - url: https://github.com/microsoft/msticpy
         name: msticpy
-        description:
+        description: Microsoft Threat Intelligence Security Tools
         categories:
 - class: N
   projects:
@@ -139,21 +139,21 @@
   projects:
       - url: https://github.com/OlivierLaflamme/Offensive-Go-Scripts
         name: Offensive Go Scripts
-        description:
+        description: scripts I make in golang will end up here and notes I took during my study of the language
         categories:
 - class: P
   projects:
       - url: https://github.com/waveform80/picamera
         name: Picamera
-        description:
+        description: A pure Python interface to the Raspberry Pi camera module
         categories:
-      - url: https://github.com/penmonkey/php-reverse-shell
+      - url: https://github.com/pentestmonkey/php-reverse-shell
         name: php reverse shell
         description:
         categories:
       - url: https://github.com/swisskyrepo/PayloadsAllTheThings
         name: Payloads All the Things
-        description:
+        description: A list of useful payloads and bypass for Web Application Security and Pentest/CTF
         categories:
 - class: Q
   projects:
@@ -161,89 +161,89 @@
   projects:
       - url: https://github.com/willmcgugan/rich
         name: Rich
-        description:
+        description: Rich is a Python library for rich text and beautiful formatting in the terminal.
         categories:
       - url: https://github.com/f0rb1dd3n/Reptile
         name: Reptile
-        description:
+        description: LKM Linux rootkit
         categories:
 - class: S
   projects:
       - url: https://github.com/Genymobile/scrcpy
         name: Scrcpy
-        description:
+        description: Display and control your Android device
         categories:
       - url: https://github.com/Stellarium/stellarium
         name: Stellarium
-        description:
+        description: Stellarium is a free GPL software which renders realistic skies in real time with OpenGL. It is available for Linux/Unix, Windows and MacOSX. With Stellarium, you really see what you can see with your eyes, binoculars or a small telescope.
         categories:
-      - url: https://github.com/Stellarium/stellarium--engine
+      - url: https://github.com/Stellarium/stellarium-web-engine
         name: Stellarium engine
-        description:
+        description: JavaScript planetarium engine
         categories:
       - url: https://github.com/SySS-Research/Seth
         name: Seth
-        description:
+        description: Perform a MitM attack and extract clear text credentials from RDP connections
         categories:
       - url: https://github.com/danielmiessler/SecLists
         name: SecLists
-        description:
+        description: SecLists is the security tester's companion. It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more.
         categories:
       - url: https://github.com/king-millez/snapmap-archiver
         name: SnapMap Archiver
-        description:
+        description: Download all Snapmaps content from a specific location.
         categories:
       - url: https://github.com/mytechnotalent/Reverse-Engineering
         name: Reverse Engineering
-        description:
+        description: A FREE comprehensive reverse engineering course covering x86, x64, 32-bit ARM & 64-bit ARM architectures.
         categories:
       - url: https://github.com/six2dez/reconftw
         name: Reconftw
-        description:
+        description: reconFTW is a tool designed to perform automated recon on a target domain by running the best set of tools to perform scanning and finding out vulnerabilities
         categories:
       - url: https://www.snort.org/
         name: Snort
-        description:
+        description: Protect your network with the world's most powerful Open Source detection software.
         categories:
       - url: http://www.squid-cache.org/
         name: Squid cache
-        description:
+        description: Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator. It runs on most available operating systems, including Windows and is licensed under the GNU GPL.
         categories:
       - url: https://github.com/marionebl/svg-term-cli
         name: svg term cli
-        description: If you need to embed the video in Markdown.
+        description: Share terminal sessions via SVG and CSS
         categories:
 - class: T
   projects:
       - url: https://github.com/hackerschoice/thc-tips-tricks-hacks-cheat-sheet
         name: THC tips tricks hacks cheat sheet
-        description:
+        description: Various tips & tricks
         categories:
 - class: U
   projects:
       - url: https://github.com/jopohl/urh
         name: URH
-        description:
+        description: Universal Radio Hacker - Investigate Wireless Protocols Like A Boss
         categories:
       - url: https://github.com/sc0tfree/updog
         name: updog
-        description:
+        description: Updog is a replacement for Python's SimpleHTTPServer. It allows uploading and downloading via HTTP/S, can set ad hoc SSL certificates and use http basic auth.
         categories:
 - class: V
   projects:
       - url: https://github.com/hashicorp/vagrant
         name: Vagrant
-        description:
+        description: Vagrant is a tool for building and distributing development environments.
         categories:
       - url: https://github.com/microsoft/vscode
         name: VsCode
-        description:
+        description: Visual Studio Code
         categories:
 - class: W
   projects:
       - url: https://github.com/chubin/wttr.in
         name: wttr.in
-        description:
+        description: The right way to check the weather
         categories:
 - class: X
   projects:
