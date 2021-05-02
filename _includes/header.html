@@ -8,35 +8,33 @@
 
     <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="{{ '/' | relative_url }}">{{ site.title | default: site.github.repository_name }}
-            <span class="sr-only">(current)</span>
-            </a>
-        </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ '/' | relative_url }}">{{ site.title | default: site.github.repository_name }}
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
 
-        {%- for link in site.data.navigation -%}
-            {% assign class = nil %}
-            {% if page.url contains link.url %}
-                {% assign class = 'active' %}
-            {% endif %}
-            {% if link.sublinks %}
+            {%- for link in site.data.navigation -%}
+                {% assign class = nil %}
+                {% if page.url contains link.url %}
+                    {% assign class = 'active' %}
+                {% endif %}
+                {% if link.sublinks %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
+                        <div class="dropdown-menu">
+                            {% for sublink in link.sublinks %}
+                                <a class="dropdown-item" href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                    <div class="dropdown-menu">
-                        {% for sublink in link.sublinks %}
-                            <a class="dropdown-item" href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
-
-                        {% endfor %}
-                    </ul>
-                </li>
-            {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
-                </li>
-            {% endif %}
-        {% endfor %}
-
+                            {% endfor %}
+                        </div>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
 
         </ul>
         <!-- <form class="form-inline my-2 my-lg-0">
