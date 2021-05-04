@@ -4,6 +4,8 @@
   url: /google-dorks/
 - title: Cool Stuff
   url: /repositories/
+- title: Gists
+  url: /gists/
 - title: Attacks
   sublinks:
       - title: BufferOverflow

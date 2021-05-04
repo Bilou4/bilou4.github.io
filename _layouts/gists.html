@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+    {%- include head.html -%}
+
+
+    <body>
+        {%- include header.html -%}
+
+        <div class="container">
+            <section id="main_content">
+                <h1>Gists</h1>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Filename</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for obj in site.data.gist %}
+                            <tr>
+                                <th scope="row"><a href="#{{obj.name}}">{{obj.name}}</a></th>
+                                <td>{{obj.description}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% for obj in site.data.gist %}
+                <p id="{{obj.name}}">
+                    {{ obj.name }} - {{ obj.description }}
+                    <script src="{{ obj.url }}"></script>
+                </p>
+                {% endfor %}
+            </section>
+            {{ content }}
+        </div>
+
+    </body>
+</html>

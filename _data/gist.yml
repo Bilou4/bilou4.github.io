@@ -1,0 +1,18 @@
+- name: getHashes.py
+  url: https://gist.github.com/Bilou4/ea7e6185c209ff0a340c1ada64d0d4f3.js
+  description: Allows to calculate different hashes for the same file.
+- name: cool_functions_to_share.sh
+  url: https://gist.github.com/Bilou4/ff62e06a2d8e118a5f9081ac9c0fec04.js
+  description: Some cool functions I use in bash.
+- name: extractLinks.py
+  url: https://gist.github.com/Bilou4/1149b19120c956cc428e886be9640548.js
+  description: Allows to retrieve all the links present in a web page (recursivity is possible /!\ do not abuse it)
+- name: backupFiles.py
+  url: https://gist.github.com/Bilou4/f88c50d2bb28ed412033698cd96eda9e.js
+  description: From a url, this script checks the presence of backup files according to a predefined list.
+- name: exportGitHistory.sh
+  url: https://gist.github.com/Bilou4/fe23f8a0eb368ca20247f87fc4dd4500.js
+  description: Export all git history from the current repository given a filename.
+- name: GoogleSearch.py & WordReferenceSearch.py
+  url: https://gist.github.com/Bilou4/02068a471ce36e6ca3660a9ff2b48663.js
+  description: These scripts allow you to search the associated platforms by taking as content what is highlighted on the screen. Very useful with a keyboard shortcut.
