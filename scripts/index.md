@@ -1,9 +1,0 @@
-# Scripts
-
-| Script                                                                        | Description                                                                                                                                             |
-| :---------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [getHashes.py](getHashes.py)                                                  | Allows to calculate different hashes for the same file.                                                                                                 |
-| [extractLinks.py](getHashes.py)                                               | Allows to retrieve all the links present in a web page (recursivity is possible /!\ do not abuse it)                                                    |
-| [google_search](google_search) / [wordreference_search](wordreference_search) | Performs a web search based on what is selected by your cursor. Very handy with a keyboard shortcut to get a search/translation in the blink of an eye. |
-| [backupFiles.py](backupFiles.py)                                              | From a url, this script checks the presence of backup files according to a predefined list.                                                             |
-| [utils/utils.py](utils/utils.py)                                              | Contains the functions: to retrieve the content of the clipboard and open a firefox tab.                                                                |
