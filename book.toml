@@ -1,2 +1,14 @@
 [output.html.fold]
 enable = true
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+marker = "[TOC]"
+
+[output.html]
+default-theme = "ayu"
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
