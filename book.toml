@@ -9,6 +9,9 @@ command = "mdbook-toc"
 renderer = ["html"]
 marker = "[TOC]"
 
+[preprocessor.graph]
+command = "python preprocessor.py"
+
 [output.html]
 default-theme = "ayu"
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
