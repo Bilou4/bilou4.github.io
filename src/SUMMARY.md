@@ -30,6 +30,7 @@
 
 - [Programming]()
   - [Python](it/programming/python/index.md)
+  - [Rust](it/programming/rust/index.md)
 
 - [AI]()
   - [Deepfake audio](it/AI/deepfake-audio/index.md)
