@@ -53,7 +53,7 @@
   - [Web Scrapping](it/technics/web-scrapping/index.md)
 
 
-- [Pentest]()
+- [Pentest](it/pentest/index.md)
   - [Recognition](it/pentest/recognition/index.md)
   - [Scanning](it/pentest/scanning/index.md)
   - [Exploit](it/pentest/exploit/index.md)
