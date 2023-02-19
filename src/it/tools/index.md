@@ -44,11 +44,25 @@ nip.io allows you to do that by mapping any IP Address to a hostname using the f
 
 Create video of a terminal, simple recording, copy & paste, embedding. This is just text so you can do `CTRL+C` & `CTRL+V` on the video.
 
+### Recording a tmux session
+
+```bash
+tmux new -s terminal-capture # start a new session
+<C-b> + d # detach from the session
+asciinema rec -c "tmux attach -t terminal-capture" # record the tmux session
+# do your stuff
+<C-b> + d # detach from the session to stop recording
+```
+
 ### Related
 
 - [svg-term-cli](https://github.com/marionebl/svg-term-cli): Render asciicast to animated SVG
 - [VHS](https://github.com/charmbracelet/vhs): Your CLI home video recorder vhs
+- [peek](https://github.com/phw/peek): Simple animated GIF screen recorder with an easy to use interface.
 
+## [Flameshot](https://github.com/flameshot-org/flameshot)
+
+Powerful yet simple to use screenshot software.
 
 ## [borgbackup](https://doc.ubuntu-fr.org/borgbackup)
 
