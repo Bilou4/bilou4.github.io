@@ -29,6 +29,7 @@
 
 
 - [Programming]()
+  - [Go](it/programming/go/index.md)
   - [Python](it/programming/python/index.md)
   - [Rust](it/programming/rust/index.md)
 
