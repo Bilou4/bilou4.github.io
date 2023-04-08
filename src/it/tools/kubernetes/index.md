@@ -1,4 +1,5 @@
 # Kubernetes
+
 Container orchestrator
 
 - Single API to manage everything
@@ -13,7 +14,9 @@ A Kubernetes cluster contains 2 roles:
 - `master`: where the Control Manager (CM), scheduler, API Server → cluster management runs
 - `workers`: where our containers run, composed of a `kubelet`, `kubeproxy`,`docker runtime`
 
+## Try it locally
 
+minikube.sigs.k8s.io/docs
 
 ## ETCD
 
@@ -46,3 +49,7 @@ Example: Docker Runtime,... → client/server to interact with elements
 ## add-ons
 
 DNS server (CoreDNS or kubeDNS)
+
+## Pentest on Kubernetes
+
+[Kubernetes Goat](https://github.com/madhuakula/kubernetes-goat): Interactive Kubernetes Security Learning Playground 

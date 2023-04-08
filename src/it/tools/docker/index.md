@@ -16,6 +16,7 @@ docker commit <container-id> <repository:tag> # create a new image from containe
 # Networks managing: None, Host, Bridge (default)
 docker network create --driver <driver> --subnet x.x.x.x/x --gateway x.x.x.x <network-name> # create a new network
 docker network connect <network-name> <container-id> [--ip x.x.x.x] # connect a container to a network (and changing the default ip)
+docker rmi $(docker images|grep none|awk '{ print $3 }') # remove docker images with tag or name at none
 ```
 
 
@@ -73,8 +74,6 @@ The others use glibc. The 2 are not compatible (i.e. compiling on glibc and runn
 - Dive: exploring image, layer, contents
 
 - LiME: Linux Memory Extractor
-
-  
 
 # Docker-compose
 
