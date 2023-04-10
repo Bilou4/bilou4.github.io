@@ -8,6 +8,10 @@
 - [Attacks]()
   - [Bruteforce](it/attacks/bruteforce/index.md)
   - [Buffer Overflow](it/attacks/buffer-overflow/index.md)
+  - [Web]()
+    - [LFI & RFI](it/attacks/web/lfi-rfi/index.md)
+    - [SQLi](it/attacks/web/sqli/index.md)
+
   - [Network]()
     - [DDOS](it/attacks/network/ddos/index.md)
     - [DNS](it/attacks/network/dns/index.md)
@@ -15,11 +19,7 @@
     - [MITM](it/attacks/network/mitm/index.md)
     - [Network Sniffing](it/attacks/network/network-sniffing/index.md)
     - [Network Spoofing](it/attacks/network/network-spoofing/index.md)
-  - [Click & Cursor Jacking](it/attacks/click-and-cursor-jacking/index.md)
-  - [CSRF](it/attacks/csrf/index.md)
   - [Social Engineering](it/attacks/social-engineering/index.md)
-  - [SQLi](it/attacks/sqli/index.md)
-  - [XSS](it/attacks/xss/index.md)
 
 - [OSINT](it/OSINT/index.md)
   - [Google Dorks](it/OSINT/google-dorks/index.md)
