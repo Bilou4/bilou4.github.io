@@ -44,7 +44,7 @@ def generate_graph_how_dns_work():
 
     with Diagram(
         "How DNS requests work?",
-        filename="src/it/attacks/dns/img/how_dns_work",
+        filename="src/it/attacks/network/dns/img/how_dns_work",
         outformat="png",
         direction="LR",
         graph_attr=graph_attr,
