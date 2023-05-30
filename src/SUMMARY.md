@@ -65,6 +65,8 @@
   - [Bandit](ctf-write-up/over-the-wire/bandit/index.md)
   - [Leviathan](ctf-write-up/over-the-wire/leviathan/index.md)
   - [Natas](ctf-write-up/over-the-wire/natas/index.md)
+- [TryHackMe]()
+  - [Simple CTF](ctf-write-up/try-hack-me/simple_ctf/README.md)
 
 # Astronomy
 
