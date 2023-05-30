@@ -67,6 +67,7 @@
   - [Natas](ctf-write-up/over-the-wire/natas/index.md)
 - [TryHackMe]()
   - [Simple CTF](ctf-write-up/try-hack-me/simple_ctf/README.md)
+  - [Vulnversity](ctf-write-up/try-hack-me/vulnversity//README.md)
 
 # Astronomy
 
