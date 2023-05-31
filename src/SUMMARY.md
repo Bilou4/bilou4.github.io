@@ -19,6 +19,8 @@
     - [MITM](it/attacks/network/mitm/index.md)
     - [Network Sniffing](it/attacks/network/network-sniffing/index.md)
     - [Network Spoofing](it/attacks/network/network-spoofing/index.md)
+    - [Wifi](it/attacks/network/wifi/index.md)
+    - [Zombie Scanning](it/attacks/network/zombie-scanning/index.md)
   - [Social Engineering](it/attacks/social-engineering/index.md)
 
 - [OSINT](it/OSINT/index.md)
