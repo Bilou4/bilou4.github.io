@@ -189,6 +189,61 @@ srv.Shutdown()
 log.Println("server stopped")
 ```
 
+## Hot reload
+
+`SIGHUP` is a signal sent to a process when its controlling terminal is closed. It is commn practice for daemonized process to use `SIGHUP` for configuration reload .This allows us to not terminatethe process while making changes.
+
+```bash
+kill -SIGHUP PID
+```
+
+```go
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"os"
+	"os/signal"
+	"syscall"
+)
+
+type config struct {
+	Msg string
+}
+
+var conf = &config{Msg: "Hello World"}
+
+func main() {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Write(([]byte(conf.Msg)))
+	})
+
+	sigs := make(chan os.Signal, 1)
+
+	signal.Notify(sigs, syscall.SIGHUP)
+	go http.ListenAndServe(":8000", nil)
+	fmt.Println("Program PID:", os.Getpid())
+	for {
+		// blocking if no default
+		select {
+		case <-sigs:
+			conf.Msg = "Go Go Go"
+		}
+	}
+}
+```
+
+```bash
+$ ./server &
+Program PID: 17247
+$ curl localhost:8000
+Hello World
+$ kill -SIGHUP 17247 
+$ curl localhost:8000
+Go Go Go
+```
+
 ## Using a map as a Set
 
 There are 2 possibilities.
