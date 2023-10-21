@@ -69,6 +69,18 @@ Alpine uses musl but there is the possibility to install build-base
 
 The others use glibc. The 2 are not compatible (i.e. compiling on glibc and running on alpine will not work)
 
+## Capturing network traffic in a container
+
+To capture network packets in a container with Wireshark on your host, do the following:
+
+```bash
+# Get PID of the container
+docker inspect --format "{{ State.Pid }}" <container-id>
+# Enter the same network name space
+ns enter -n -t "<PID>"
+# run wireshark
+```
+
 ## Docker Forensic
 
 - Dive: exploring image, layer, contents

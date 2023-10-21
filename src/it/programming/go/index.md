@@ -286,3 +286,31 @@ Output format
 BenchmarkFunctionName-<number-of-CPU> <number-of-execution> <speed-of-each-operation>
 # number-of-execution = b.N
 ```
+
+## The internal package in Go
+
+```bash
+.
+├── bar
+│   └── bar.go           # Cannot access
+├── foo
+│   ├── foo.go           # Can access
+│   ├── internal
+│   │   └── internal.go  # Exported identifiers are only accessible to the direct package of 'internal' and the siblings package of 'internal'
+│   └── sibling
+│       └── sibling.go   # Can access
+└── go.mod
+```
+
+## Type Alias
+
+In the following example, `Bar` is an alias of `Foo`. It has everything `Foo` has and it does not need type conversion.
+```Go
+type Foo struct{}
+
+func (f Foo) Hello() string {
+	return "Hello"
+}
+
+type Bar = Foo
+```
