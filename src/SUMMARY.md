@@ -51,6 +51,8 @@
 - [Technics]()
   - [Natural Referencing](it/technics/natural-referencing/index.md)
   - [Web Scrapping](it/technics/web-scrapping/index.md)
+  - [Reverse Engineering](it/technics/reverse-engineering/index.md)
+    - [Complete Analysis Example](it/technics/reverse-engineering/complete-analysis-example/index.md)
 
 
 - [Pentest](it/pentest/index.md)
