@@ -53,9 +53,10 @@ The multiplication of the origins of the requests allows
 * This address will be replaced by the address of the server to be saturated so that the responses of the machines contacted reach it directly.
 * If the number of responses is high enough and/or if the messages received involve significant processing, the target and/or the network will be saturated and their proper functioning compromised.
 
-Nota Bene:
-> * UDP has priority over TCP and does not implement a congestion control mechanism.
-> * UDP works without session => possibility to modify the source address.
+```admonish note
+- UDP has priority over TCP and does not implement a congestion control mechanism.
+- UDP works without session => possibility to modify the source address.
+```
 
 
 ### Amplification attack
