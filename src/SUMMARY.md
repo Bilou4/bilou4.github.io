@@ -45,6 +45,7 @@
     - [Dockerfile](it/tools/docker/dockerfile/index.md)
   - [Kubernetes](it/tools/kubernetes/index.md)
   - [Git](it/tools/git/index.md)
+    - [Quickly share your git repository](it/tools/git/git-daemon.md)
   - [Matplotlib](it/tools/matplotlib/index.md)
 
 

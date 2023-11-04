@@ -1,5 +1,11 @@
 # Git
 
+## Specific topics
+
+- [Quickly share your git repository](./git-daemon.md)
+
+## Basic commands
+
 - Cancel last local commit
 
 ```bash
