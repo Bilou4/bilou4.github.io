@@ -68,3 +68,6 @@ Powerful yet simple to use screenshot software.
 
 Extremely simple but powerful backup tool (with deduplication support)
 
+## [Damn Vulnerable Web App](https://github.com/digininja/DVWA)
+
+The aim of DVWA is to practice some of the most common web vulnerabilities, with various levels of difficulty, with a simple straightforward interface.

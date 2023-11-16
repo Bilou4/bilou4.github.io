@@ -5,10 +5,10 @@
 ---
 # IT
 
-- [Attacks]()
+- [Attacks](it/attacks/index.md)
   - [Bruteforce](it/attacks/bruteforce/index.md)
   - [Buffer Overflow](it/attacks/buffer-overflow/index.md)
-  - [Web]()
+  - [Web](it/attacks/web/index.md)
     - [LFI & RFI](it/attacks/web/lfi-rfi/index.md)
     - [SQLi](it/attacks/web/sqli/index.md)
 
