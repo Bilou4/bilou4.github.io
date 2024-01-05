@@ -1,0 +1,5 @@
+book
+venv
+__pycache__
+*.pyc
+src/it/attacks/network/dns/img
