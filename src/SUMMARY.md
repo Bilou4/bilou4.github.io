@@ -9,8 +9,11 @@
   - [Bruteforce](it/attacks/bruteforce/index.md)
   - [Buffer Overflow](it/attacks/buffer-overflow/index.md)
   - [Web](it/attacks/web/index.md)
+    - [Click & Cursor Jacking](it/attacks/web/click-and-cursor-jacking/index.md)
+    - [CSRF](it/attacks/web/csrf/index.md)
     - [LFI & RFI](it/attacks/web/lfi-rfi/index.md)
     - [SQLi](it/attacks/web/sqli/index.md)
+    - [XSS](it/attacks/web/xss/index.md)
 
   - [Network]()
     - [DDOS](it/attacks/network/ddos/index.md)

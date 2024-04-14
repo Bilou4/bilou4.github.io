@@ -21,9 +21,8 @@ It is called non-persistent because it is not stored on the server (file or data
 The persistent XSS flaw is the most dangerous because it will be executed at each loading of the site. Indeed, the latter is stored either in a file or in a database. As an example, an attacker posts a comment on a discussion forum containing the malicious content. When other users go to the page containing the fraudulent message or comment, it will be executed.
 
 
-
 ## Protect yourself from it:
-- Convert special characters to HTML entities (`htmlsepcialchars()`: Example `& → &amp; | " → &quot;`
+- Convert special characters to HTML entities (`htmlsepcialchars()`: Example `& → &amp; | " → &quot;`)
 - Filter characters equivalent to html and js coding (`htmlentities()`)
 - Remove tags
 - Do not include user-supplied content in the output page
