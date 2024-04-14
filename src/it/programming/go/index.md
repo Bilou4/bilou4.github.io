@@ -173,9 +173,10 @@ func main() {
 ## Gracefully shutdown your server
 
 ```Go
+var err error
 ctx := context.Background()
 done := make(chan os.Signal, 1)
-
+errChan := make(chan error, 1)
 signal.Notify(done, os.Interrupt, syscall.SIGTERM)
 
 serv := &http.Server{
@@ -183,15 +184,27 @@ serv := &http.Server{
   Handler: routes,
 }
 
-go srv.ListenAndServe()
-<- done
-srv.Shutdown()
+go func() {
+	err = srv.ListenAndServe()
+	if err != nil {
+		errChan <- err
+	}
+}()
+
+select {
+	case <- done:
+	case <- errChan:
+		// do something with the error
+}
+
+err = srv.Shutdown()
+// do something with the error
 log.Println("server stopped")
 ```
 
 ## Hot reload
 
-`SIGHUP` is a signal sent to a process when its controlling terminal is closed. It is commn practice for daemonized process to use `SIGHUP` for configuration reload .This allows us to not terminatethe process while making changes.
+`SIGHUP` is a signal sent to a process when its controlling terminal is closed. It is common practice for daemonized process to use `SIGHUP` for configuration reload .This allows us to not terminate the process while making changes.
 
 ```bash
 kill -SIGHUP PID
