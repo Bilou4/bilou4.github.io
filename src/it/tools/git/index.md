@@ -73,6 +73,15 @@ git tag <tag-name>
 git push --tags
 ```
 
+- Remove unwanted files that are not tracked by git.
+
+```bash
+git clean -fd -x
+# -x: remove ignored files too
+# -X: remove only ignored files
+# -n: for dry run
+```
+
 
 - Use GIT with a GUI
 

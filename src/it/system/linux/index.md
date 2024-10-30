@@ -45,6 +45,7 @@ umount /mnt/data
 /dev/null # empty, import anything, it will disappear
 /dev/zero # endless zeros
 /dev/urandom # endless random numbers
+/dev/full # file that always returns the error code ENOSPC (No space left on device)
 
 # following ones are links to the kernel file descriptor
 /dev/stdin # standard input stream 			# 0
@@ -192,3 +193,17 @@ TCP window size: 85.0 KByte (default)
 [  3]  0.0-10.3 sec  1.38 MBytes  1.12 Mbits/sec
 ```
 
+
+### Exiftool
+
+#### Rename images to their creation/modification date attributes
+
+```bash
+exiftool -ext jpg '-FileName<CreateDate' -d %Y%m%d_%H%M%S%%-c.%%e current_filename.jpg
+# -d: specify a date format Y=year m=month d=day H=hours M=minutes S=seconds
+# %-c: add a counter if multiple images have the same name.
+# %%e: keep the extension
+
+exiftool -ext jpg '-FileName<filemodifydate' -d %Y%m%d_%H%M%S%%-c.%%e ./some-directory
+# it will execute the command on all images inside the directory
+```
