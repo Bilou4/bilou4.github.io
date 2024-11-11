@@ -207,3 +207,74 @@ exiftool -ext jpg '-FileName<CreateDate' -d %Y%m%d_%H%M%S%%-c.%%e current_filena
 exiftool -ext jpg '-FileName<filemodifydate' -d %Y%m%d_%H%M%S%%-c.%%e ./some-directory
 # it will execute the command on all images inside the directory
 ```
+
+### iperf
+
+Tool used to measure the maximum achievable bandwidth on IP networks. More on this: [iperf3](https://iperf.fr/).
+
+```bash
+# server side
+iperf --server
+# client side
+iperf --client HOST_IP
+```
+
+### iptables
+
+Here are some useful commands for the `iptables` firewall:
+
+#### List rules
+
+```bash
+iptables -L -v
+# -v: verbose mode
+```
+
+#### Reset rules
+
+```bash
+# Start with empty tables
+iptables --flush [chain] # delete all rules in chain or all chains
+iptables --delete-chain [chain] # delete a user-defined chain or all chains
+```
+
+#### IP black listing
+
+```bash
+iptables -A INPUT -s IP -j DROP
+# -A: append a rule to the INPUT chain (incoming traffic)
+
+# you can log all incoming traffic from specific IP
+iptables -A INPUT -s IP -j LOG --log-prefix "Blocked IP: "
+
+# deleting a rule blocking traffic from an IP address
+iptables -D INPUT -s IP -j DROP
+# -D: delete
+```
+
+#### Accept connection to a specific port
+
+```bash
+# Accept connection on port 22 using the TCP protocol
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+
+# if you don't need that port anymore
+iptables -D INPUT -p tcp --dport 22 -j ACCEPT
+```
+
+#### Save current rules
+
+```bash
+iptables-save > file.txt
+```
+
+#### Restore rules
+
+```bash
+iptables-restore < file.txt
+```
+
+#### DROP vs REJECT
+
+- use `REJECT` when you want the other end to know the port is closed (e.g. a `ping` would get a `Destination Port Unreachable` error. This indicates the destination was reached but no `echo reply` was sent back).
+- use `DROP` for connections to hosts you don't want people to see (e.g. a `ping` would not get any response at all. The request will time out).
