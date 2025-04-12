@@ -278,3 +278,20 @@ iptables-restore < file.txt
 
 - use `REJECT` when you want the other end to know the port is closed (e.g. a `ping` would get a `Destination Port Unreachable` error. This indicates the destination was reached but no `echo reply` was sent back).
 - use `DROP` for connections to hosts you don't want people to see (e.g. a `ping` would not get any response at all. The request will time out).
+
+
+### SOCAT - TCP/TLS Proxy
+
+The following commands will redirect traffic incoming on port `7000` to a remote host (`127.0.0.1:4444`).
+
+#### TCP Proxy
+
+```bash
+socat -d TCP-LISTEN:7000,fork,reuseaddr TCP4:127.0.0.1:4444
+```
+
+#### TLS Proxy
+
+```bash
+socat openssl-listen:7000,fork,reuseaddr,verify=0,key=./key.pem,cert=./cert.pem openssl-connect:127.0.0.1:4444,verify=0
+```
