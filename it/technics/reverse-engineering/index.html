@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Reverse Engineering</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../.././mdbook-admonish.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../../index.html">Introduction</a></li><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">IT</li><li class="chapter-item "><a href="../../../it/attacks/index.html"><strong aria-hidden="true">1.</strong> Attacks</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/attacks/bruteforce/index.html"><strong aria-hidden="true">1.1.</strong> Bruteforce</a></li><li class="chapter-item "><a href="../../../it/attacks/buffer-overflow/index.html"><strong aria-hidden="true">1.2.</strong> Buffer Overflow</a></li><li class="chapter-item "><a href="../../../it/attacks/web/index.html"><strong aria-hidden="true">1.3.</strong> Web</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/attacks/web/click-and-cursor-jacking/index.html"><strong aria-hidden="true">1.3.1.</strong> Click &amp; Cursor Jacking</a></li><li class="chapter-item "><a href="../../../it/attacks/web/csrf/index.html"><strong aria-hidden="true">1.3.2.</strong> CSRF</a></li><li class="chapter-item "><a href="../../../it/attacks/web/lfi-rfi/index.html"><strong aria-hidden="true">1.3.3.</strong> LFI &amp; RFI</a></li><li class="chapter-item "><a href="../../../it/attacks/web/sqli/index.html"><strong aria-hidden="true">1.3.4.</strong> SQLi</a></li><li class="chapter-item "><a href="../../../it/attacks/web/xss/index.html"><strong aria-hidden="true">1.3.5.</strong> XSS</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">1.4.</strong> Network</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/attacks/network/ddos/index.html"><strong aria-hidden="true">1.4.1.</strong> DDOS</a></li><li class="chapter-item "><a href="../../../it/attacks/network/dns/index.html"><strong aria-hidden="true">1.4.2.</strong> DNS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/attacks/network/dns/dns-spoofing/index.html"><strong aria-hidden="true">1.4.2.1.</strong> DNS Spoofing</a></li></ol></li><li class="chapter-item "><a href="../../../it/attacks/network/mitm/index.html"><strong aria-hidden="true">1.4.3.</strong> MITM</a></li><li class="chapter-item "><a href="../../../it/attacks/network/network-sniffing/index.html"><strong aria-hidden="true">1.4.4.</strong> Network Sniffing</a></li><li class="chapter-item "><a href="../../../it/attacks/network/network-spoofing/index.html"><strong aria-hidden="true">1.4.5.</strong> Network Spoofing</a></li><li class="chapter-item "><a href="../../../it/attacks/network/wifi/index.html"><strong aria-hidden="true">1.4.6.</strong> Wifi</a></li><li class="chapter-item "><a href="../../../it/attacks/network/zombie-scanning/index.html"><strong aria-hidden="true">1.4.7.</strong> Zombie Scanning</a></li></ol></li><li class="chapter-item "><a href="../../../it/attacks/social-engineering/index.html"><strong aria-hidden="true">1.5.</strong> Social Engineering</a></li></ol></li><li class="chapter-item "><a href="../../../it/OSINT/index.html"><strong aria-hidden="true">2.</strong> OSINT</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/OSINT/google-dorks/index.html"><strong aria-hidden="true">2.1.</strong> Google Dorks</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">3.</strong> Programming</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/programming/go/index.html"><strong aria-hidden="true">3.1.</strong> Go</a></li><li class="chapter-item "><a href="../../../it/programming/python/index.html"><strong aria-hidden="true">3.2.</strong> Python</a></li><li class="chapter-item "><a href="../../../it/programming/rust/index.html"><strong aria-hidden="true">3.3.</strong> Rust</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">4.</strong> AI</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/AI/deepfake-audio/index.html"><strong aria-hidden="true">4.1.</strong> Deepfake audio</a></li><li class="chapter-item "><a href="../../../it/AI/transfer-learning/index.html"><strong aria-hidden="true">4.2.</strong> Transfer learning</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">5.</strong> System</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/system/linux/index.html"><strong aria-hidden="true">5.1.</strong> Linux</a></li><li class="chapter-item "><a href="../../../it/system/filesystem/index.html"><strong aria-hidden="true">5.2.</strong> File system</a></li></ol></li><li class="chapter-item "><a href="../../../it/tools/index.html"><strong aria-hidden="true">6.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/tools/docker/index.html"><strong aria-hidden="true">6.1.</strong> Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/tools/docker/dockerfile/index.html"><strong aria-hidden="true">6.1.1.</strong> Dockerfile</a></li></ol></li><li class="chapter-item "><a href="../../../it/tools/kubernetes/index.html"><strong aria-hidden="true">6.2.</strong> Kubernetes</a></li><li class="chapter-item "><a href="../../../it/tools/git/index.html"><strong aria-hidden="true">6.3.</strong> Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/tools/git/git-daemon.html"><strong aria-hidden="true">6.3.1.</strong> Quickly share your git repository</a></li></ol></li><li class="chapter-item "><a href="../../../it/tools/matplotlib/index.html"><strong aria-hidden="true">6.4.</strong> Matplotlib</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Technics</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/technics/natural-referencing/index.html"><strong aria-hidden="true">7.1.</strong> Natural Referencing</a></li><li class="chapter-item "><a href="../../../it/technics/web-scrapping/index.html"><strong aria-hidden="true">7.2.</strong> Web Scrapping</a></li><li class="chapter-item expanded "><a href="../../../it/technics/reverse-engineering/index.html" class="active"><strong aria-hidden="true">7.3.</strong> Reverse Engineering</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/technics/reverse-engineering/complete-analysis-example/index.html"><strong aria-hidden="true">7.3.1.</strong> Complete Analysis Example</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../it/pentest/index.html"><strong aria-hidden="true">8.</strong> Pentest</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../it/pentest/recognition/index.html"><strong aria-hidden="true">8.1.</strong> Recognition</a></li><li class="chapter-item "><a href="../../../it/pentest/scanning/index.html"><strong aria-hidden="true">8.2.</strong> Scanning</a></li><li class="chapter-item "><a href="../../../it/pentest/exploit/index.html"><strong aria-hidden="true">8.3.</strong> Exploit</a></li><li class="chapter-item "><a href="../../../it/pentest/persistence/index.html"><strong aria-hidden="true">8.4.</strong> Persistence</a></li><li class="chapter-item "><a href="../../../it/pentest/clearing-tracks/index.html"><strong aria-hidden="true">8.5.</strong> Clearing Tracks</a></li><li class="chapter-item "><a href="../../../it/pentest/useful-commands/index.html"><strong aria-hidden="true">8.6.</strong> Useful Commands</a></li></ol></li><li class="chapter-item "><li class="part-title">CTF Write Up</li><li class="chapter-item "><div><strong aria-hidden="true">9.</strong> Over The Wire</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../ctf-write-up/over-the-wire/bandit/index.html"><strong aria-hidden="true">9.1.</strong> Bandit</a></li><li class="chapter-item "><a href="../../../ctf-write-up/over-the-wire/leviathan/index.html"><strong aria-hidden="true">9.2.</strong> Leviathan</a></li><li class="chapter-item "><a href="../../../ctf-write-up/over-the-wire/natas/index.html"><strong aria-hidden="true">9.3.</strong> Natas</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">10.</strong> TryHackMe</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../ctf-write-up/try-hack-me/simple_ctf/index.html"><strong aria-hidden="true">10.1.</strong> Simple CTF</a></li><li class="chapter-item "><a href="../../../ctf-write-up/try-hack-me/vulnversity/index.html"><strong aria-hidden="true">10.2.</strong> Vulnversity</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Bilou4/bilou4.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/Bilou4/bilou4.github.io/edit/main/src/it/technics/reverse-engineering/index.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="reverse-engineering"><a class="header" href="#reverse-engineering">Reverse Engineering</a></h1>
+<h2 id="static-analysis"><a class="header" href="#static-analysis">Static analysis</a></h2>
+<h3 id="how-to-know-if-a-binary-is-packed"><a class="header" href="#how-to-know-if-a-binary-is-packed">How to know if a binary is packed</a></h3>
+<ul>
+<li><em>PEid</em>
+<ul>
+<li>Raw Size and Virtual Size are very different</li>
+<li>Character strings are random.</li>
+<li>Non-standard section names (UPX0, ...)</li>
+</ul>
+</li>
+<li><em>Dependency viewer</em>
+<ul>
+<li>Low number of imports</li>
+</ul>
+</li>
+</ul>
+<h3 id="extract-resource-section-from-a-binary"><a class="header" href="#extract-resource-section-from-a-binary">Extract resource section from a binary</a></h3>
+<ul>
+<li><em>Resource Hacker</em>
+<ul>
+<li>if a binary contains resources (section <strong>.rsrc</strong>), it's possible to view/extract it with this software).</li>
+</ul>
+</li>
+</ul>
+<h3 id="upx"><a class="header" href="#upx">UPX</a></h3>
+<p><em>UPX</em>, is a tool called packer, used to pack/unpack a binary.</p>
+<h2 id="dynamic-analysis"><a class="header" href="#dynamic-analysis">Dynamic analysis</a></h2>
+<ul>
+<li><em>procmon</em> - monitor the actions performed on the system when malware is launched</li>
+<li><em>process explorer</em> - obtain information on the process in memory (there may be differences between the binary on disk and what runs in memory - (strings present, DLLs loaded, etc.))</li>
+<li><em>inetsim</em> - simulate network responses to allow malware to continue executing normally (if in multiple VMs, change <code>DNS IP</code> and <code>bind_address</code> to listen on all interfaces, not just local)</li>
+<li><em>wireshark</em> - capture network traffic</li>
+<li><em>regshot</em> - capture windows registry before and after malware execution</li>
+</ul>
+<p>If you need to analyze a DLL, you can execute with <strong>cmd.exe</strong> using the following command:</p>
+<pre><code class="language-cmd">rundll32.exe &lt;dll_path&gt;, &lt;exported_func&gt;
+</code></pre>
+<div class="warning">
+    Malware may want to delete itself. This can fail if other software has a <b>handle</b> on it. For example, during static analysis, a <b>handle</b> can be kept on the malware and removal fails.
+</div>
+<h2 id="a-few-tips-on-using-ida"><a class="header" href="#a-few-tips-on-using-ida">A few tips on using IDA</a></h2>
+<ul>
+<li>
+<p>to identify a local variable for a function, IDA specifies negative addresses (relative to <strong>esp</strong>) - otherwise it's an argument.</p>
+<p><img src="img%5Cida-var-vs-args.png" alt="local variable vs arguments" /></p>
+</li>
+</ul>
+<h3 id="some-shortcuts"><a class="header" href="#some-shortcuts">Some shortcuts</a></h3>
+<ul>
+<li>
+<p>Rename what you understand, variables, functions... (keyboard shortcut: <strong><code>n</code></strong>)</p>
+</li>
+<li>
+<p>Add comments (keyboard shortcut: <strong><code>:</code></strong>)</p>
+</li>
+<li>
+<p>jump to a specific line (keyboard shortcut: <strong><code>g</code></strong>)</p>
+</li>
+<li>
+<p>display <em>cross</em>-references (X-ref) (keyboard shortcut: <strong><code>x</code></strong>)</p>
+</li>
+</ul>
+<h3 id="how-to-read"><a class="header" href="#how-to-read">How to read</a></h3>
+<pre><code class="language-assembly">mov dest, src
+xor edx, edx ; sets edx to 0
+</code></pre>
+<h4 id="arguments-are-pushed-on-the-stack-from-right-to-left"><a class="header" href="#arguments-are-pushed-on-the-stack-from-right-to-left">Arguments are pushed on the stack, from right to left.</a></h4>
+<p>From the windows documentation <a href="https://learn.microsoft.com/en-us/windows/win32/api/winsock2/nf-winsock2-socket">socket windows documentation</a></p>
+<pre><code class="language-c++">SOCKET WSAAPI socket(
+  [in] int af,
+  [in] int type,
+  [in] int protocol
+);
+</code></pre>
+<p><img src="img/Lab05-call-to-socket.png" alt="arguments order on the stack" /></p>
+<p>In this <code>socket</code> call, <code>protocol=6</code>, <code>type=1</code> and <code>af=2</code>.</p>
+<h2 id="quick-binary-analysis"><a class="header" href="#quick-binary-analysis">Quick binary analysis</a></h2>
+<p>In the <strong>functions</strong> tab, we search for the <strong>_main</strong> function, which is the entry point for our program.</p>
+<p><img src="img/Lab06-main-entry-point.png" alt="main entry point" /></p>
+<p>We finally realize that our binary contains a simple <code>if</code> displaying whether it has access to the Internet or not.</p>
+<p><img src="img/Lab06-a-simple-if.png" alt="a simple if" /></p>
+<blockquote>
+<p>The <code>printf</code> function is not recognized by IDA, but you can tell it's this function by a quick scan. A call to <code>_stbuf</code> and <code>_ftbuf</code> is made.</p>
+<p><img src="img/Lab06-printf.png" alt="printf" /></p>
+</blockquote>
+<p>The <code>InternetReadFile</code> function takes a buffer and buffer size as parameters. Here, we push 512 bytes (200h). Except that at declaration time, we notice that the <code>Buffer</code> variable (IDA didn't notice it was an array, so it just says it's a pointer) isn't 512 bytes (difference between <code>Buffer</code> and <code>var_20c</code>).</p>
+<p><img src="img/Lab06-buffer-size.png" alt="Buffer size" /></p>
+<p>To modify this interpretation of IDA, move to the Buffer declaration, then <code>ctrl+k</code>.</p>
+<p><img src="img/Lab06-ida-stack-resizing.png" alt="ida stack resizing" /></p>
+<p>After modification:</p>
+<p><img src="img/Lab06-ida-stack-after-modification.png" alt="ida stack resizing after modification" /></p>
+<p>After the <code>InternetReadFile</code> function, the program checks the beginning of the response and look for a specific command so that it knows what to do next.</p>
+<p><img src="img/Lab06-parse-html-page.png" alt="parse html page" /></p>
+<p>Valid commands are <code>[a, b, c, d, e]</code></p>
+<p><img src="img/Lab06-check-command-validity.png" alt="check command validity" /></p>
+<h3 id="dynamically-testing-commands"><a class="header" href="#dynamically-testing-commands">Dynamically testing commands</a></h3>
+<p>Appending a comment in the inetsim fake html page. (The <strong>a</strong> command should create a directory)</p>
+<p><img src="img/Lab06-inetsim-html-page.png" alt="inetsim html page" /></p>
+<p>Executing the malware</p>
+<p><img src="img/Lab06-malware-execution.png" alt="malware execution" /></p>
+<p>The new Temp directory is then created</p>
+<p><img src="img/Lab06-execution-result.png" alt="execution result" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../it/technics/web-scrapping/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../../it/technics/reverse-engineering/complete-analysis-example/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../it/technics/web-scrapping/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../../it/technics/reverse-engineering/complete-analysis-example/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../../mermaid.min.js"></script>
+        <script type="text/javascript" src="../../../mermaid-init.js"></script>
+    </body>
+</html>

